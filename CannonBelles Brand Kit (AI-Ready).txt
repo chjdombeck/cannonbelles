@@ -1,0 +1,212 @@
+﻿CannonBelles Brand Kit (AI-Ready)
+Use info from current website here:
+https://cannonbelles.com/
+For Coffee Shop + Artisanal Cheese (Dual Business Website)
+________________
+
+
+1. Brand Overview
+Brand Name: CannonBelles
+Location: Cannon Falls, Minnesota
+Business Structure:
+* Primary Brand: CannonBelles
+* Division 1: Coffee & Ice Cream Shop
+* Division 2: Artisanal Cheese
+Brand Essence:
+ Small-town charm meets elevated, handcrafted quality.
+Core Feeling:
+ Warm, welcoming, nostalgic, community-driven, handcrafted, premium but approachable.
+________________
+
+
+2. Brand Personality
+* Friendly & inviting (never corporate)
+* Playful but not childish
+* Nostalgic / classic Americana
+* Local-first, community-centered
+* Craft-focused and quality-driven
+Tone of Voice:
+* Simple
+* Warm
+* Slightly playful
+* Down-to-earth
+* Never overly salesy or “marketing-heavy”
+________________
+
+
+3. Brand Positioning
+CannonBelles is:
+ A local destination for high-quality coffee, ice cream, and artisanal cheese — rooted in community and craftsmanship.
+Not:
+* Trendy corporate café
+* Ultra-modern minimal luxury brand
+* Overly rustic or farmhouse cliché
+________________
+
+
+4. Logo Usage
+Primary Logo:
+* Red curved “CannonBelles” text
+* Cartoon cow head
+* Red bell collar
+Usage Guidelines:
+* Use on light backgrounds (preferred)
+* Maintain spacing around logo (no crowding)
+* Do NOT distort or recolor elements
+* Can use cow icon standalone for accents/icons
+________________
+
+
+5. Color Palette (Derived from Logo)
+Primary Colors
+* Cannon Red: #D91E18 (primary brand color)
+* Charcoal Black: #2B2B2B
+* Soft Gray: #E5E5E5
+Secondary Colors
+* Cream White: #F8F5F0
+* Muted Gray: #B0B0B0
+Accent Colors
+* Deep Red: #A4161A
+* Warm Beige: #EFE6D8
+________________
+
+
+6. Typography
+Headlines
+* Bold, rounded serif or retro-style font
+* (AI suggestion: Cooper, Fredoka, or similar rounded serif)
+Body Text
+* Clean sans-serif
+* (AI suggestion: Inter, Open Sans, or Lato)
+Style Guidelines
+* Headlines = bold, friendly, slightly playful
+* Body = simple, readable, clean
+________________
+
+
+7. Website Structure (CRITICAL FOR AI)
+Homepage Split Layout
+Above the fold:
+* Logo centered
+* Headline: welcoming + local
+* Two clear CTAs:
+Option 1 Layout (Recommended):
+[ CannonBelles Logo ]
+
+
+"Welcome to CannonBelles"
+
+
+[ Coffee & Ice Cream ]   [ Artisanal Cheese ]
+________________
+
+
+8. Section 1: Coffee & Ice Cream
+Vibe:
+ Fun, local hangout, family-friendly, relaxed
+Content Focus:
+* Coffee drinks
+* Ice cream offerings
+* Shop atmosphere
+* Community feel
+Suggested Headlines:
+* “Your Local Coffee Stop”
+* “Coffee, Ice Cream, and Community”
+Imagery Direction:
+* Smiling customers
+* Ice cream scoops
+* Coffee drinks
+* Cozy interior
+________________
+
+
+9. Section 2: Artisanal Cheese
+Vibe:
+ Craft, premium, slightly elevated but still approachable
+Content Focus:
+* Cheese selection
+* Craftsmanship
+* Quality ingredients
+* Specialty products
+Suggested Headlines:
+* “Handcrafted Artisanal Cheese”
+* “Quality You Can Taste”
+Imagery Direction:
+* Cheese boards
+* Close-up textures
+* Rustic presentation
+* Local sourcing feel
+________________
+
+
+10. Messaging Framework
+Core Message
+A place where community, quality, and craftsmanship come together.
+________________
+
+
+Supporting Themes
+* Locally rooted
+* Made with care
+* Simple pleasures done right
+* A place to gather
+________________
+
+
+Example Taglines (AI can use these)
+* “Simple. Local. Delicious.”
+* “Crafted for the Community”
+* “Where Cannon Falls Comes Together”
+________________
+
+
+11. UI / Design Direction
+Design Style
+* Clean but warm
+* Slightly rounded elements
+* Soft shadows
+* Not overly modern or techy
+Layout Feel
+* Spacious
+* Easy to navigate
+* Visual-first
+Buttons
+* Rounded edges
+* Red primary buttons
+* Soft hover animations
+________________
+
+
+12. Imagery Guidelines
+Use:
+* Real people
+* Real products
+* Warm lighting
+* Natural textures
+Avoid:
+* Stocky/artificial feeling images
+* Overly polished corporate visuals
+________________
+
+
+13. Key Conversion Elements
+* “Visit Us Today” CTA
+* Location + hours clearly visible
+* Menu or offerings preview
+* Strong homepage split navigation
+________________
+
+
+14. AI BUILD INSTRUCTIONS (IMPORTANT)
+When generating the website:
+* Prioritize clarity over complexity
+* Make the homepage immediately split into two experiences
+* Keep everything simple, welcoming, and visual
+* Do NOT overcomplicate with animations or heavy effects
+* Focus on local business trust and warmth
+
+
+Claude, please use these websites for inspiration and guidance:
+* https://www.germinalbio.it/it
+* https://www.tibicohealth.com/
+* https://toastcafeanddeli.co.uk/

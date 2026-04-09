@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CannonBelles — Coffee, Ice Cream & Artisanal Cheese · Cannon Falls, MN</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'cannon-red': '#D91E18',
+            'deep-red': '#A4161A',
+            'charcoal': '#2B2B2B',
+            'soft-gray': '#E5E5E5',
+            'cream': '#F8F5F0',
+            'muted': '#B0B0B0',
+            'beige': '#EFE6D8',
+            'warm-brown': '#7A5C3E',
+          },
+          fontFamily: {
+            'display': ['Playfair Display', 'Georgia', 'serif'],
+            'serif': ['Libre Baskerville', 'Georgia', 'serif'],
+            'sans': ['Inter', 'system-ui', 'sans-serif'],
+          },
+          letterSpacing: {
+            'tightest': '-0.04em',
+            'tighter': '-0.03em',
+            'wider': '0.08em',
+            'widest': '0.15em',
+          },
+        }
+      }
+    }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { background-color: #F8F5F0; font-family: 'Inter', sans-serif; color: #2B2B2B; -webkit-font-smoothing: antialiased; }
+
+    /* Noise texture */
+    .noise::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      mix-blend-mode: multiply;
+    }
+
+    .ornament-line { display: flex; align-items: center; gap: 1rem; }
+    .ornament-line::before, .ornament-line::after { content: ''; flex: 1; height: 1px; background: currentColor; opacity: 0.25; }
+
+    .img-hover { overflow: hidden; }
+    .img-hover img { transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+    .img-hover:hover img { transform: scale(1.04); }
+
+    /* Split hero */
+    .split-panel { position: relative; overflow: hidden; cursor: pointer; flex: 1; }
+    .split-panel::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at center, rgba(217,30,24,0.18) 0%, transparent 70%);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      pointer-events: none;
+    }
+    .split-panel:hover::after { opacity: 1; }
+
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: #D91E18; color: white;
+      padding: 0.875rem 2rem; border-radius: 3px;
+      font-family: 'Inter', sans-serif; font-size: 0.8125rem; font-weight: 600;
+      letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none;
+      transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+      box-shadow: 0 2px 8px rgba(169,22,26,0.28);
+    }
+    .btn-primary:hover { background: #A4161A; transform: translateY(-1px); box-shadow: 0 4px 18px rgba(169,22,26,0.38); }
+    .btn-primary:active { transform: translateY(0); }
+
+    .btn-outline {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: transparent; color: white;
+      padding: 0.8125rem 1.875rem; border-radius: 3px;
+      border: 1.5px solid rgba(255,255,255,0.65);
+      font-family: 'Inter', sans-serif; font-size: 0.8125rem; font-weight: 600;
+      letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none;
+      transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+    }
+    .btn-outline:hover { background: rgba(255,255,255,0.1); border-color: white; transform: translateY(-1px); }
+
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: #F8F5F0; box-shadow: 0 1px 0 rgba(43,43,43,0.09); }
+
+    .section-label { font-family: 'Inter', sans-serif; font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #D91E18; }
+
+    .card-shadow { box-shadow: 0 1px 2px rgba(43,43,43,0.06), 0 4px 12px rgba(43,43,43,0.07), 0 12px 32px rgba(43,43,43,0.05); }
+
+    .hover-lift { transition: transform 0.25s cubic-bezier(0.25,0.46,0.45,0.94), box-shadow 0.25s ease; }
+    .hover-lift:hover { transform: translateY(-4px); box-shadow: 0 2px 4px rgba(43,43,43,0.07), 0 8px 24px rgba(43,43,43,0.1), 0 20px 48px rgba(43,43,43,0.07); }
+
+    a:focus-visible, button:focus-visible { outline: 2px solid #D91E18; outline-offset: 3px; }
+  </style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav id="navbar">
+  <div class="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
+    <a href="#" class="flex items-center flex-shrink-0">
+      <img src="Logos.png" alt="CannonBelles" style="height:3.125rem; width:auto;" />
+    </a>
+    <div class="hidden md:flex items-center gap-8">
+      <a href="coffee.html" class="text-sm font-medium text-charcoal hover:text-cannon-red" style="transition: color 0.15s; font-family:'Inter',sans-serif; letter-spacing:0.02em;">Coffee & Ice Cream</a>
+      <a href="cheese.html" class="text-sm font-medium text-charcoal hover:text-cannon-red" style="transition: color 0.15s; font-family:'Inter',sans-serif; letter-spacing:0.02em;">Artisanal Cheese</a>
+      <a href="story.html" class="text-sm font-medium text-charcoal hover:text-cannon-red" style="transition: color 0.15s; font-family:'Inter',sans-serif; letter-spacing:0.02em;">Our Story</a>
+      <a href="#visit" class="text-sm font-medium text-charcoal hover:text-cannon-red" style="transition: color 0.15s; font-family:'Inter',sans-serif; letter-spacing:0.02em;">Visit Us</a>
+    </div>
+    <a href="#visit" class="btn-primary hidden md:inline-flex" style="padding:0.625rem 1.25rem; font-size:0.75rem;">
+      Find Us
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+    <button id="menu-btn" class="md:hidden flex flex-col gap-1.5 p-1" aria-label="Open menu">
+      <span class="block w-5 h-0.5 bg-charcoal rounded-full"></span>
+      <span class="block w-5 h-0.5 bg-charcoal rounded-full"></span>
+      <span class="block w-4 h-0.5 bg-charcoal rounded-full"></span>
+    </button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden px-6 py-5 space-y-4" style="background:#F8F5F0; border-top:1px solid #E5E5E5;">
+    <a href="coffee.html" class="block text-sm font-medium text-charcoal" style="font-family:'Inter',sans-serif;">Coffee & Ice Cream</a>
+    <a href="cheese.html" class="block text-sm font-medium text-charcoal" style="font-family:'Inter',sans-serif;">Artisanal Cheese</a>
+    <a href="story.html" class="block text-sm font-medium text-charcoal" style="font-family:'Inter',sans-serif;">Our Story</a>
+    <a href="#visit" class="block text-sm font-medium text-charcoal" style="font-family:'Inter',sans-serif;">Visit Us</a>
+  </div>
+</nav>
+
+
+<!-- HERO — SPLIT -->
+<section class="flex flex-col md:flex-row split-container" style="min-height:100vh; position:relative;">
+
+  <!-- Left: Coffee & Ice Cream -->
+  <a href="coffee.html" class="split-panel flex-1 relative flex flex-col items-center justify-end pb-16 px-8 text-center" style="min-height:50vh;">
+    <img src="https://placehold.co/900x900/7A4F2A/7A4F2A" alt="Coffee and ice cream" class="absolute inset-0 w-full h-full object-cover" style="filter: brightness(0.52) saturate(0.85);" />
+    <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.28) 50%, transparent 100%);"></div>
+    <div class="relative z-10">
+      <p class="section-label mb-3" style="color:rgba(239,230,216,0.85);">Coffee & Ice Cream</p>
+      <h2 class="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-none mb-4" style="letter-spacing:-0.03em;">Your Local<br/><em>Coffee Stop</em></h2>
+      <p class="mb-8 max-w-xs mx-auto" style="color:rgba(255,255,255,0.68); font-family:'Inter',sans-serif; font-size:0.9rem; line-height:1.7;">Handcrafted drinks, scoops of joy, and a place to belong — right in the heart of Cannon Falls.</p>
+      <span class="btn-primary">Explore the Shop</span>
+    </div>
+  </a>
+
+  <!-- Vertical divider -->
+  <div class="hidden md:block w-px relative z-10" style="background: rgba(255,255,255,0.15);"></div>
+
+  <!-- Right: Artisanal Cheese -->
+  <a href="cheese.html" class="split-panel flex-1 relative flex flex-col items-center justify-end pb-16 px-8 text-center" style="min-height:50vh;">
+    <img src="https://placehold.co/900x900/5C4A32/5C4A32" alt="Artisanal cheese" class="absolute inset-0 w-full h-full object-cover" style="filter: brightness(0.48) saturate(0.8);" />
+    <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.22) 50%, transparent 100%);"></div>
+    <div class="relative z-10">
+      <p class="section-label mb-3" style="color:rgba(239,230,216,0.85);">Artisanal Cheese</p>
+      <h2 class="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-none mb-4" style="letter-spacing:-0.03em;">Handcrafted<br/><em>With Care</em></h2>
+      <p class="mb-8 max-w-xs mx-auto" style="color:rgba(255,255,255,0.68); font-family:'Inter',sans-serif; font-size:0.9rem; line-height:1.7;">Small-batch artisanal cheese made with quality ingredients and time-honored tradition.</p>
+      <span class="btn-outline">Discover the Cheese</span>
+    </div>
+  </a>
+
+
+</section>
+
+<!-- Tagline bar -->
+<div style="background:#D91E18; padding:0.75rem 1.5rem; text-align:center;">
+  <p style="color:white; font-family:'Inter',sans-serif; font-size:0.6875rem; font-weight:600; letter-spacing:0.2em; text-transform:uppercase;">Simple · Local · Delicious &nbsp;·&nbsp; Cannon Falls, Minnesota</p>
+</div>
+
+
+<!-- COFFEE & ICE CREAM SECTION -->
+<section id="coffee" style="padding:6rem 0; background:#F8F5F0; scroll-margin-top:64px;">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <div class="text-center mb-16">
+      <p class="section-label mb-3">Coffee & Ice Cream Shop</p>
+      <h2 class="font-display text-4xl md:text-5xl font-bold text-charcoal mb-5" style="letter-spacing:-0.03em; line-height:1.1;">Coffee, Ice Cream<br/><em>& Community</em></h2>
+      <div class="ornament-line max-w-xs mx-auto text-xs" style="font-family:'Inter',sans-serif; letter-spacing:0.15em; color:#B0B0B0;">
+        <span>Your Cannon Falls Gathering Place</span>
+      </div>
+    </div>
+
+    <!-- Feature row -->
+    <div class="grid md:grid-cols-2 gap-12 items-center mb-20">
+      <div class="img-hover rounded-sm card-shadow" style="aspect-ratio:4/3; overflow:hidden;">
+        <img src="https://placehold.co/720x540/C8956A/ffffff?text=Coffee+Shop" alt="Coffee shop interior" class="w-full h-full object-cover" />
+      </div>
+      <div>
+        <p class="section-label mb-4">Est. in Cannon Falls</p>
+        <h3 class="font-display text-3xl md:text-4xl font-bold text-charcoal mb-5" style="letter-spacing:-0.03em; line-height:1.1;">A Place to Slow<br/>Down & Savor</h3>
+        <p style="color:rgba(43,43,43,0.72); font-family:'Inter',sans-serif; line-height:1.75; margin-bottom:1.25rem;">We believe the best things in life are simple — a perfectly pulled espresso, a scoop of something sweet, and good company. Our shop is the kind of place where everyone feels at home.</p>
+        <p style="color:rgba(43,43,43,0.72); font-family:'Inter',sans-serif; line-height:1.75; margin-bottom:2rem;">Made fresh daily, sourced thoughtfully, and served with a smile. That's the CannonBelles way.</p>
+        <a href="#visit" class="btn-primary">Come On In</a>
+      </div>
+    </div>
+
+    <!-- Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="hover-lift rounded-sm overflow-hidden card-shadow bg-white">
+        <div class="img-hover" style="aspect-ratio:4/3; overflow:hidden;">
+          <img src="https://placehold.co/560x420/A0522D/ffffff?text=Coffee+Drinks" alt="Coffee drinks" class="w-full h-full object-cover" />
+        </div>
+        <div style="padding:1.5rem;">
+          <p class="section-label mb-2">Espresso · Drip · Cold Brew</p>
+          <h4 class="font-display text-xl font-bold text-charcoal mb-3" style="letter-spacing:-0.02em;">Crafted Coffee</h4>
+          <p style="font-size:0.875rem; color:rgba(43,43,43,0.62); font-family:'Inter',sans-serif; line-height:1.7;">From your morning latte to an afternoon cold brew — every cup is made with care and quality beans.</p>
+        </div>
+      </div>
+      <div class="hover-lift rounded-sm overflow-hidden card-shadow bg-white">
+        <div class="img-hover" style="aspect-ratio:4/3; overflow:hidden;">
+          <img src="https://placehold.co/560x420/E8B4A0/ffffff?text=Ice+Cream" alt="Ice cream" class="w-full h-full object-cover" />
+        </div>
+        <div style="padding:1.5rem;">
+          <p class="section-label mb-2">Scoops · Sundaes · Shakes</p>
+          <h4 class="font-display text-xl font-bold text-charcoal mb-3" style="letter-spacing:-0.02em;">Sweet Scoops</h4>
+          <p style="font-size:0.875rem; color:rgba(43,43,43,0.62); font-family:'Inter',sans-serif; line-height:1.7;">Generous scoops of premium ice cream in classic and seasonal flavors. The kind that drips a little — the good kind.</p>
+        </div>
+      </div>
+      <div class="hover-lift rounded-sm overflow-hidden card-shadow bg-white">
+        <div class="img-hover" style="aspect-ratio:4/3; overflow:hidden;">
+          <img src="https://placehold.co/560x420/8B7355/ffffff?text=Cozy+Space" alt="Cozy shop" class="w-full h-full object-cover" />
+        </div>
+        <div style="padding:1.5rem;">
+          <p class="section-label mb-2">Gather · Relax · Connect</p>
+          <h4 class="font-display text-xl font-bold text-charcoal mb-3" style="letter-spacing:-0.02em;">A Town Hangout</h4>
+          <p style="font-size:0.875rem; color:rgba(43,43,43,0.62); font-family:'Inter',sans-serif; line-height:1.7;">Comfortable seating, friendly faces, and a neighborhood feel. Whether catching up or sitting solo — you belong here.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- QUOTE BANNER -->
+<div class="relative overflow-hidden noise" style="background:#2B2B2B; padding:5rem 1.5rem; position:relative;">
+  <div class="absolute inset-0" style="background: radial-gradient(ellipse at 25% 50%, rgba(217,30,24,0.15) 0%, transparent 55%), radial-gradient(ellipse at 75% 50%, rgba(122,92,62,0.15) 0%, transparent 55%); pointer-events:none;"></div>
+  <div class="relative max-w-3xl mx-auto text-center">
+    <p class="section-label mb-5" style="color:rgba(239,230,216,0.55);">Where Cannon Falls Comes Together</p>
+    <blockquote class="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6" style="letter-spacing:-0.03em; line-height:1.15;">
+      "A place where community,<br/>quality, and craftsmanship<br/><em>come together."</em>
+    </blockquote>
+    <p style="color:rgba(255,255,255,0.38); font-family:'Inter',sans-serif; font-size:0.8125rem; letter-spacing:0.06em;">— CannonBelles, Cannon Falls, MN</p>
+  </div>
+</div>
+
+
+<!-- ARTISANAL CHEESE SECTION -->
+<section id="cheese" style="padding:6rem 0; background:#EFE6D8; scroll-margin-top:64px;">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <div class="text-center mb-16">
+      <p class="section-label mb-3">Artisanal Cheese</p>
+      <h2 class="font-display text-4xl md:text-5xl font-bold text-charcoal mb-5" style="letter-spacing:-0.03em; line-height:1.1;">Handcrafted Cheese<br/><em>Quality You Can Taste</em></h2>
+      <div class="ornament-line max-w-xs mx-auto text-xs" style="font-family:'Inter',sans-serif; letter-spacing:0.15em; color:#B0B0B0;">
+        <span>Small-Batch · Locally Made · Time-Honored</span>
+      </div>
+    </div>
+
+    <!-- Editorial feature -->
+    <div class="grid md:grid-cols-5 rounded-sm overflow-hidden card-shadow mb-16" style="gap:0;">
+      <div class="md:col-span-3 img-hover" style="min-height:380px; overflow:hidden;">
+        <img src="https://placehold.co/900x600/8B7355/ffffff?text=Artisanal+Cheese" alt="Cheese board" class="w-full h-full object-cover" style="filter:saturate(0.88);" />
+      </div>
+      <div class="md:col-span-2 flex flex-col justify-center" style="background:#2B2B2B; padding:3.5rem;">
+        <p class="section-label mb-4" style="color:rgba(239,230,216,0.65);">Crafted with Intention</p>
+        <h3 class="font-display text-3xl md:text-4xl font-bold text-white mb-5" style="letter-spacing:-0.03em; line-height:1.1;">Made Here.<br/>Made Right.</h3>
+        <p style="color:rgba(255,255,255,0.62); font-family:'Inter',sans-serif; font-size:0.9rem; line-height:1.75; margin-bottom:2rem;">Every wheel and wedge is made using time-honored techniques and quality local ingredients. Our cheese is crafted in small batches — never rushed, never compromised.</p>
+        <a href="#visit" class="btn-outline" style="align-self:flex-start;">Shop the Cheese</a>
+      </div>
+    </div>
+
+    <!-- Cheese variety grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div class="hover-lift bg-white rounded-sm overflow-hidden card-shadow">
+        <div class="img-hover" style="aspect-ratio:1/1; overflow:hidden;">
+          <img src="https://placehold.co/400x400/C4A882/ffffff?text=Cheddar" alt="Cheddar" class="w-full h-full object-cover" />
+        </div>
+        <div style="padding:1.25rem;">
+          <h4 class="font-display text-lg font-bold text-charcoal mb-1" style="letter-spacing:-0.02em;">Aged Cheddar</h4>
+          <p style="font-size:0.8125rem; color:rgba(43,43,43,0.55); font-family:'Inter',sans-serif; line-height:1.65;">Sharp, rich, and full-bodied. Aged to perfection right here in Cannon Falls.</p>
+        </div>
+      </div>
+      <div class="hover-lift bg-white rounded-sm overflow-hidden card-shadow">
+        <div class="img-hover" style="aspect-ratio:1/1; overflow:hidden;">
+          <img src="https://placehold.co/400x400/D4C4A0/444444?text=Gouda" alt="Gouda" class="w-full h-full object-cover" />
+        </div>
+        <div style="padding:1.25rem;">
+          <h4 class="font-display text-lg font-bold text-charcoal mb-1" style="letter-spacing:-0.02em;">Smoked Gouda</h4>
+          <p style="font-size:0.8125rem; color:rgba(43,43,43,0.55); font-family:'Inter',sans-serif; line-height:1.65;">Gently smoked with a buttery finish. Perfect on a board or melted over everything.</p>
+        </div>
+      </div>
+      <div class="hover-lift bg-white rounded-sm overflow-hidden card-shadow">
+        <div class="img-hover" style="aspect-ratio:1/1; overflow:hidden;">
+          <img src="https://placehold.co/400x400/E8DCC8/444444?text=Curds" alt="Cheese curds" class="w-full h-full object-cover" />
+        </div>
+        <div style="padding:1.25rem;">
+          <h4 class="font-display text-lg font-bold text-charcoal mb-1" style="letter-spacing:-0.02em;">Fresh Curds</h4>
+          <p style="font-size:0.8125rem; color:rgba(43,43,43,0.55); font-family:'Inter',sans-serif; line-height:1.65;">Squeaky, fresh, and irresistible. A Minnesota classic made fresh in small batches.</p>
+        </div>
+      </div>
+      <div class="hover-lift bg-white rounded-sm overflow-hidden card-shadow">
+        <div class="img-hover" style="aspect-ratio:1/1; overflow:hidden;">
+          <img src="https://placehold.co/400x400/B8A88A/ffffff?text=Seasonal" alt="Seasonal cheese" class="w-full h-full object-cover" />
+        </div>
+        <div style="padding:1.25rem;">
+          <h4 class="font-display text-lg font-bold text-charcoal mb-1" style="letter-spacing:-0.02em;">Seasonal Varieties</h4>
+          <p style="font-size:0.8125rem; color:rgba(43,43,43,0.55); font-family:'Inter',sans-serif; line-height:1.65;">Rotating selections crafted with local flavors and the ingredients of the moment.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- OUR STORY -->
+<section id="about" style="padding:6rem 0; background:#F8F5F0; scroll-margin-top:64px;">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid md:grid-cols-2 gap-16 items-center">
+      <div>
+        <p class="section-label mb-4">Our Story</p>
+        <h2 class="font-display text-4xl md:text-5xl font-bold text-charcoal mb-6" style="letter-spacing:-0.03em; line-height:1.1;">Rooted in<br/><em>Cannon Falls</em></h2>
+        <p style="color:rgba(43,43,43,0.72); font-family:'Inter',sans-serif; line-height:1.75; margin-bottom:1.25rem;">CannonBelles started as a simple love for good food and this community. What began with handcrafted cheese grew into something more — a full neighborhood destination offering coffee, ice cream, and the kind of food that reminds you where you are.</p>
+        <p style="color:rgba(43,43,43,0.72); font-family:'Inter',sans-serif; line-height:1.75; margin-bottom:1.25rem;">We're not trying to be trendy or corporate. We're just a local business that cares deeply about quality, our neighbors, and the idea that the best things in life are made by hand.</p>
+        <p style="color:rgba(43,43,43,0.72); font-family:'Inter',sans-serif; line-height:1.75; margin-bottom:2.5rem;">Every cup brewed, every wheel aged, every scoop served — all made with Cannon Falls in mind.</p>
+        <div class="grid grid-cols-3 gap-6" style="border-top:1px solid #E5E5E5; padding-top:2rem;">
+          <div>
+            <p class="font-display text-2xl font-bold" style="color:#D91E18; margin-bottom:0.25rem;">Local</p>
+            <p style="font-size:0.8125rem; color:rgba(43,43,43,0.52); font-family:'Inter',sans-serif;">Rooted in Cannon Falls, MN</p>
+          </div>
+          <div>
+            <p class="font-display text-2xl font-bold" style="color:#D91E18; margin-bottom:0.25rem;">Craft</p>
+            <p style="font-size:0.8125rem; color:rgba(43,43,43,0.52); font-family:'Inter',sans-serif;">Small-batch, made by hand</p>
+          </div>
+          <div>
+            <p class="font-display text-2xl font-bold" style="color:#D91E18; margin-bottom:0.25rem;">Warm</p>
+            <p style="font-size:0.8125rem; color:rgba(43,43,43,0.52); font-family:'Inter',sans-serif;">Community-first always</p>
+          </div>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+        <div class="img-hover rounded-sm card-shadow" style="aspect-ratio:3/4; overflow:hidden;">
+          <img src="https://placehold.co/380x500/8B7355/ffffff?text=Our+Shop" alt="Shop" class="w-full h-full object-cover" />
+        </div>
+        <div class="flex flex-col gap-4">
+          <div class="img-hover rounded-sm card-shadow flex-1" style="overflow:hidden; min-height:180px;">
+            <img src="https://placehold.co/380x280/C8956A/ffffff?text=Brewing" alt="Brewing" class="w-full h-full object-cover" />
+          </div>
+          <div class="img-hover rounded-sm card-shadow flex-1" style="overflow:hidden; min-height:180px;">
+            <img src="https://placehold.co/380x280/A0886A/ffffff?text=Cheese+Making" alt="Cheese making" class="w-full h-full object-cover" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- TESTIMONIALS -->
+<div style="padding:5rem 1.5rem; background:#E5E5E5;">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-12">
+      <p class="section-label mb-3">What People Are Saying</p>
+      <h3 class="font-display text-3xl font-bold text-charcoal" style="letter-spacing:-0.02em;">Loved by the Community</h3>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-white rounded-sm card-shadow" style="padding:1.75rem;">
+        <div style="margin-bottom:1rem; color:#D91E18;">★★★★★</div>
+        <p class="font-display italic text-charcoal/80 leading-relaxed mb-5">"The cheese curds are the best I've ever had — fresh, squeaky, and just perfect. A true Cannon Falls treasure."</p>
+        <p style="font-size:0.75rem; font-weight:600; font-family:'Inter',sans-serif; letter-spacing:0.05em; color:#2B2B2B;">— Sarah M., Cannon Falls</p>
+      </div>
+      <div class="bg-white rounded-sm card-shadow" style="padding:1.75rem;">
+        <div style="margin-bottom:1rem; color:#D91E18;">★★★★★</div>
+        <p class="font-display italic text-charcoal/80 leading-relaxed mb-5">"We stop in every week. The coffee is always great and the staff feels like family. This is what a small-town shop should feel like."</p>
+        <p style="font-size:0.75rem; font-weight:600; font-family:'Inter',sans-serif; letter-spacing:0.05em; color:#2B2B2B;">— Dave & Linda K., Locals</p>
+      </div>
+      <div class="bg-white rounded-sm card-shadow" style="padding:1.75rem;">
+        <div style="margin-bottom:1rem; color:#D91E18;">★★★★★</div>
+        <p class="font-display italic text-charcoal/80 leading-relaxed mb-5">"I brought the aged cheddar to a dinner party and everyone wanted to know where it came from. Nothing like it in the cities."</p>
+        <p style="font-size:0.75rem; font-weight:600; font-family:'Inter',sans-serif; letter-spacing:0.05em; color:#2B2B2B;">— Tom R., Northfield</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- VISIT US -->
+<section id="visit" class="relative overflow-hidden noise" style="padding:6rem 1.5rem; background:#2B2B2B; scroll-margin-top:64px; position:relative;">
+  <div class="absolute inset-0" style="background: radial-gradient(ellipse at 15% 60%, rgba(217,30,24,0.12) 0%, transparent 50%), radial-gradient(ellipse at 85% 30%, rgba(122,92,62,0.12) 0%, transparent 50%); pointer-events:none;"></div>
+  <div class="relative max-w-7xl mx-auto">
+    <div class="grid md:grid-cols-2 gap-16 items-start">
+      <div>
+        <p class="section-label mb-4" style="color:rgba(239,230,216,0.65);">Come See Us</p>
+        <h2 class="font-display text-4xl md:text-5xl font-bold text-white mb-8" style="letter-spacing:-0.03em; line-height:1.1;">Visit Us in<br/><em>Cannon Falls</em></h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-10">
+          <div style="border:1px solid rgba(255,255,255,0.12); border-radius:3px; padding:1.5rem;">
+            <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:1rem;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#D91E18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <p style="font-size:0.6875rem; font-weight:600; color:rgba(255,255,255,0.5); font-family:'Inter',sans-serif; letter-spacing:0.18em; text-transform:uppercase;">Location</p>
+            </div>
+            <p style="color:white; font-weight:500; font-family:'Inter',sans-serif; margin-bottom:0.25rem;">Cannon Falls, Minnesota</p>
+            <p style="color:rgba(255,255,255,0.48); font-size:0.875rem; font-family:'Inter',sans-serif;">Downtown · Easy parking</p>
+          </div>
+          <div style="border:1px solid rgba(255,255,255,0.12); border-radius:3px; padding:1.5rem;">
+            <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:1rem;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#D91E18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <p style="font-size:0.6875rem; font-weight:600; color:rgba(255,255,255,0.5); font-family:'Inter',sans-serif; letter-spacing:0.18em; text-transform:uppercase;">Coffee Shop</p>
+            </div>
+            <p style="color:white; font-size:0.875rem; font-family:'Inter',sans-serif; margin-bottom:0.2rem;">Mon – Fri: 7am – 6pm</p>
+            <p style="color:white; font-size:0.875rem; font-family:'Inter',sans-serif; margin-bottom:0.2rem;">Sat: 8am – 5pm</p>
+            <p style="color:rgba(255,255,255,0.48); font-size:0.875rem; font-family:'Inter',sans-serif;">Sun: 9am – 3pm</p>
+          </div>
+          <div style="border:1px solid rgba(255,255,255,0.12); border-radius:3px; padding:1.5rem;">
+            <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:1rem;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#D91E18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <p style="font-size:0.6875rem; font-weight:600; color:rgba(255,255,255,0.5); font-family:'Inter',sans-serif; letter-spacing:0.18em; text-transform:uppercase;">Cheese Shop</p>
+            </div>
+            <p style="color:white; font-size:0.875rem; font-family:'Inter',sans-serif; margin-bottom:0.2rem;">Mon – Sat: 9am – 5pm</p>
+            <p style="color:rgba(255,255,255,0.48); font-size:0.875rem; font-family:'Inter',sans-serif;">Sun: By appointment</p>
+          </div>
+          <div style="border:1px solid rgba(255,255,255,0.12); border-radius:3px; padding:1.5rem;">
+            <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:1rem;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#D91E18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.5 3.18 2 2 0 012.48 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.61a16 16 0 006.28 6.28l1.38-1.38a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              <p style="font-size:0.6875rem; font-weight:600; color:rgba(255,255,255,0.5); font-family:'Inter',sans-serif; letter-spacing:0.18em; text-transform:uppercase;">Contact</p>
+            </div>
+            <p style="color:white; font-size:0.875rem; font-family:'Inter',sans-serif; margin-bottom:0.2rem;">cannonbelles.com</p>
+            <p style="color:rgba(255,255,255,0.48); font-size:0.875rem; font-family:'Inter',sans-serif;">Facebook & Instagram</p>
+          </div>
+        </div>
+        <a href="https://cannonbelles.com/" target="_blank" class="btn-primary">
+          Visit Our Website
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+        </a>
+      </div>
+      <div class="flex flex-col gap-4">
+        <div class="rounded-sm overflow-hidden card-shadow" style="aspect-ratio:16/9; background:#3A3A3A; position:relative; display:flex; align-items:center; justify-content:center;">
+          <img src="https://placehold.co/700x394/3A3A3A/666666?text=Cannon+Falls%2C+Minnesota" alt="Map" class="w-full h-full object-cover" style="opacity:0.6;" />
+          <div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center;">
+            <div style="text-align:center;">
+              <div style="width:2.5rem; height:2.5rem; background:#D91E18; border-radius:9999px; display:flex; align-items:center; justify-content:center; margin:0 auto 0.75rem;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <p style="color:white; font-weight:500; font-size:0.875rem; font-family:'Inter',sans-serif;">Cannon Falls, MN</p>
+            </div>
+          </div>
+        </div>
+        <div class="img-hover rounded-sm overflow-hidden card-shadow" style="aspect-ratio:16/9;">
+          <img src="https://placehold.co/700x394/7A5C3E/ffffff?text=Welcome+to+CannonBelles" alt="Storefront" class="w-full h-full object-cover" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer style="background:#F8F5F0; border-top:1px solid #E5E5E5; padding:3.5rem 1.5rem 2rem;">
+  <div class="max-w-7xl mx-auto">
+    <div class="grid md:grid-cols-4 gap-10 mb-10">
+      <div class="md:col-span-2">
+        <span style="display:inline-flex; align-items:center; justify-content:center; background:white; border-radius:9999px; width:64px; height:64px; box-shadow:0 1px 6px rgba(43,43,43,0.12); margin-bottom:1rem; flex-shrink:0;">
+          <img src="Logos.png" alt="CannonBelles" style="height:63px; width:auto;" />
+        </span>
+        <p style="font-size:0.875rem; color:rgba(43,43,43,0.58); font-family:'Inter',sans-serif; line-height:1.75; max-width:20rem;">Small-town charm meets elevated, handcrafted quality. Coffee, ice cream, and artisanal cheese — made with care in Cannon Falls, Minnesota.</p>
+      </div>
+      <div>
+        <p style="font-size:0.6875rem; font-weight:600; color:#2B2B2B; font-family:'Inter',sans-serif; letter-spacing:0.18em; text-transform:uppercase; margin-bottom:1rem;">Coffee & Ice Cream</p>
+        <ul style="space-y:0.625rem; font-family:'Inter',sans-serif;">
+          <li style="margin-bottom:0.625rem;"><a href="coffee.html" style="font-size:0.875rem; color:rgba(43,43,43,0.58); text-decoration:none; transition:color 0.15s;" onmouseover="this.style.color='#D91E18'" onmouseout="this.style.color='rgba(43,43,43,0.58)'">Our Menu</a></li>
+          <li style="margin-bottom:0.625rem;"><a href="coffee.html" style="font-size:0.875rem; color:rgba(43,43,43,0.58); text-decoration:none;" onmouseover="this.style.color='#D91E18'" onmouseout="this.style.color='rgba(43,43,43,0.58)'">Coffee Drinks</a></li>
+          <li style="margin-bottom:0.625rem;"><a href="coffee.html" style="font-size:0.875rem; color:rgba(43,43,43,0.58); text-decoration:none;" onmouseover="this.style.color='#D91E18'" onmouseout="this.style.color='rgba(43,43,43,0.58)'">Ice Cream Flavors</a></li>
+          <li><a href="#visit" style="font-size:0.875rem; color:rgba(43,43,43,0.58); text-decoration:none;" onmouseover="this.style.color='#D91E18'" onmouseout="this.style.color='rgba(43,43,43,0.58)'">Hours & Location</a></li>
+        </ul>
+      </div>
+      <div>
+        <p style="font-size:0.6875rem; font-weight:600; color:#2B2B2B; font-family:'Inter',sans-serif; letter-spacing:0.18em; text-transform:uppercase; margin-bottom:1rem;">Artisanal Cheese</p>
+        <ul style="font-family:'Inter',sans-serif;">
+          <li style="margin-bottom:0.625rem;"><a href="cheese.html" style="font-size:0.875rem; color:rgba(43,43,43,0.58); text-decoration:none;" onmouseover="this.style.color='#D91E18'" onmouseout="this.style.color='rgba(43,43,43,0.58)'">Cheese Selection</a></li>
+          <li style="margin-bottom:0.625rem;"><a href="cheese.html" style="font-size:0.875rem; color:rgba(43,43,43,0.58); text-decoration:none;" onmouseover="this.style.color='#D91E18'" onmouseout="this.style.color='rgba(43,43,43,0.58)'">Fresh Curds</a></li>
+          <li style="margin-bottom:0.625rem;"><a href="cheese.html" style="font-size:0.875rem; color:rgba(43,43,43,0.58); text-decoration:none;" onmouseover="this.style.color='#D91E18'" onmouseout="this.style.color='rgba(43,43,43,0.58)'">Aged Varieties</a></li>
+          <li><a href="story.html" style="font-size:0.875rem; color:rgba(43,43,43,0.58); text-decoration:none;" onmouseover="this.style.color='#D91E18'" onmouseout="this.style.color='rgba(43,43,43,0.58)'">Our Story</a></li>
+        </ul>
+      </div>
+    </div>
+    <div style="border-top:1px solid #E5E5E5; padding-top:1.75rem; display:flex; flex-direction:column; align-items:center; gap:0.75rem;">
+      <p style="font-size:0.75rem; color:rgba(43,43,43,0.38); font-family:'Inter',sans-serif; text-align:center;">© 2025 CannonBelles · Cannon Falls, Minnesota · All rights reserved</p>
+      <p style="font-size:0.75rem; color:rgba(43,43,43,0.38); font-family:'Inter',sans-serif; letter-spacing:0.1em;">Simple · Local · Delicious</p>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+  // Mobile menu
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+</script>
+
+</body>
+</html>
