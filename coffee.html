@@ -75,6 +75,14 @@
 
     a:focus-visible, button:focus-visible { outline: 2px solid #D91E18; outline-offset: 3px; }
 
+    @media (max-width: 767px) {
+      .section-py-lg { padding-top: 3.5rem !important; padding-bottom: 3.5rem !important; }
+      .hero-mobile-pad { padding-top: 6rem !important; padding-bottom: 4rem !important; }
+      .intro-img-grid { display: none !important; }
+      .stats-flex { flex-wrap: wrap; gap: 1.25rem !important; }
+      .cta-banner-pad { padding-top: 3rem !important; padding-bottom: 3rem !important; }
+    }
+
     /* Menu item */
     .menu-item {
       background: white;
@@ -95,30 +103,43 @@
 
 <!-- NAV -->
 <nav>
-  <div class="max-w-7xl mx-auto px-8 flex items-center justify-between" style="height:5rem;">
-    <a href="index.html" style="display:inline-flex; align-items:center; gap:0.5rem; font-size:0.875rem; font-weight:500; font-family:'Inter',sans-serif; color:rgba(43,43,43,0.55); text-decoration:none; transition:color 0.15s;" onmouseover="this.style.color='#D91E18'" onmouseout="this.style.color='rgba(43,43,43,0.55)'">
+  <div class="max-w-7xl mx-auto px-6 flex items-center justify-between" style="height:4.5rem;">
+    <a href="index.html" class="hidden md:inline-flex items-center gap-2" style="font-size:0.875rem; font-weight:500; font-family:'Inter',sans-serif; color:rgba(43,43,43,0.55); text-decoration:none; transition:color 0.15s;" onmouseover="this.style.color='#D91E18'" onmouseout="this.style.color='rgba(43,43,43,0.55)'">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
       Back to Home
     </a>
-    <a href="index.html">
-      <img src="Logos.png" alt="CannonBelles" style="height:3.125rem; width:auto;" />
+    <a href="index.html" class="md:hidden">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color:rgba(43,43,43,0.55);"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
     </a>
-    <div style="display:flex; gap:1.5rem; align-items:center;">
+    <a href="index.html">
+      <img src="Logos.png" alt="CannonBelles" style="height:2.75rem; width:auto;" />
+    </a>
+    <div class="hidden md:flex" style="gap:1.5rem; align-items:center;">
       <a href="cheese.html" style="font-size:0.875rem; font-weight:500; font-family:'Inter',sans-serif; color:rgba(43,43,43,0.55); text-decoration:none; transition:color 0.15s;" onmouseover="this.style.color='#D91E18'" onmouseout="this.style.color='rgba(43,43,43,0.55)'">Artisanal Cheese</a>
       <a href="story.html" style="font-size:0.875rem; font-weight:500; font-family:'Inter',sans-serif; color:rgba(43,43,43,0.55); text-decoration:none; transition:color 0.15s;" onmouseover="this.style.color='#D91E18'" onmouseout="this.style.color='rgba(43,43,43,0.55)'">Our Story</a>
     </div>
+    <button id="coffee-menu-btn" class="md:hidden flex flex-col gap-1.5 p-1" aria-label="Open menu">
+      <span class="block w-5 h-0.5 rounded-full" style="background:#2B2B2B;"></span>
+      <span class="block w-5 h-0.5 rounded-full" style="background:#2B2B2B;"></span>
+      <span class="block w-4 h-0.5 rounded-full" style="background:#2B2B2B;"></span>
+    </button>
+  </div>
+  <div id="coffee-mobile-menu" class="hidden md:hidden px-6 py-5 space-y-4" style="background:#F8F5F0; border-top:1px solid #E5E5E5;">
+    <a href="index.html" class="block text-sm font-medium" style="font-family:'Inter',sans-serif; color:#2B2B2B;">← Back to Home</a>
+    <a href="cheese.html" class="block text-sm font-medium" style="font-family:'Inter',sans-serif; color:#2B2B2B;">Artisanal Cheese</a>
+    <a href="story.html" class="block text-sm font-medium" style="font-family:'Inter',sans-serif; color:#2B2B2B;">Our Story</a>
   </div>
 </nav>
 
 
 <!-- HERO -->
-<div class="relative overflow-hidden" style="min-height:88vh; display:flex; align-items:flex-end; padding-bottom:6rem; padding-top:10rem;">
+<div class="relative overflow-hidden hero-mobile-pad" style="min-height:88vh; display:flex; align-items:flex-end; padding-bottom:6rem; padding-top:10rem;">
   <img src="https://placehold.co/1440x800/7A4F2A/7A4F2A" alt="Coffee shop" class="absolute inset-0 w-full h-full object-cover" style="filter:brightness(0.45) saturate(0.85);" />
   <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.3) 55%, transparent 100%);"></div>
   <div class="relative max-w-7xl mx-auto px-6 w-full">
     <div class="max-w-2xl">
       <p class="section-label mb-4" style="color:rgba(239,230,216,0.8);">CannonBelles · Cannon Falls, MN</p>
-      <h1 class="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-5" style="letter-spacing:-0.035em; line-height:1.05;">Coffee &<br/>Ice Cream</h1>
+      <h1 class="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-5" style="letter-spacing:-0.035em; line-height:1.05;">Coffee &<br/>Ice Cream</h1>
       <p style="color:rgba(255,255,255,0.68); font-family:'Inter',sans-serif; font-size:1.0625rem; line-height:1.75; max-width:32rem; margin-bottom:2rem;">Your local stop for handcrafted coffee drinks, premium ice cream, and the kind of warm, welcoming atmosphere that only a small-town shop can offer.</p>
       <div style="display:flex; gap:1rem; flex-wrap:wrap;">
         <a href="#menu" class="btn-primary">See Our Menu</a>
@@ -135,7 +156,7 @@
 
 
 <!-- INTRO / ATMOSPHERE -->
-<section style="padding:6rem 1.5rem; background:#F8F5F0;">
+<section class="section-py-lg" style="padding:6rem 1.5rem; background:#F8F5F0;">
   <div class="max-w-7xl mx-auto">
     <div class="grid md:grid-cols-2 gap-14 items-center">
       <div>
@@ -143,7 +164,7 @@
         <h2 class="font-display text-4xl md:text-5xl font-bold text-charcoal mb-6" style="letter-spacing:-0.03em; line-height:1.1;">A Place to Slow<br/>Down & Savor</h2>
         <p style="color:rgba(43,43,43,0.72); font-family:'Inter',sans-serif; line-height:1.75; margin-bottom:1.25rem;">We believe the best things in life are simple — a perfectly pulled espresso, a scoop of something sweet, and good company. Our coffee shop is the kind of place where everyone feels at home, whether you're a regular or visiting for the first time.</p>
         <p style="color:rgba(43,43,43,0.72); font-family:'Inter',sans-serif; line-height:1.75; margin-bottom:2rem;">Made fresh daily, sourced thoughtfully, served with a smile.</p>
-        <div style="display:flex; gap:2.5rem; border-top:1px solid #E5E5E5; padding-top:1.75rem;">
+        <div class="stats-flex" style="display:flex; gap:2.5rem; border-top:1px solid #E5E5E5; padding-top:1.75rem;">
           <div>
             <p class="font-display text-3xl font-bold" style="color:#D91E18; letter-spacing:-0.02em;">Daily</p>
             <p style="font-size:0.8125rem; color:rgba(43,43,43,0.52); font-family:'Inter',sans-serif; margin-top:0.2rem;">Fresh brewed</p>
@@ -158,7 +179,7 @@
           </div>
         </div>
       </div>
-      <div class="grid grid-cols-2 gap-4">
+      <div class="intro-img-grid grid grid-cols-2 gap-4">
         <div class="img-hover rounded-sm card-shadow" style="aspect-ratio:3/4; overflow:hidden;">
           <img src="https://placehold.co/380x500/C8956A/ffffff?text=Latte+Art" alt="Latte art" class="w-full h-full object-cover" />
         </div>
@@ -177,7 +198,7 @@
 
 
 <!-- COFFEE DRINKS SECTION -->
-<section id="menu" style="padding:6rem 1.5rem; background:#EFE6D8; scroll-margin-top:64px;">
+<section id="menu" class="section-py-lg" style="padding:6rem 1.5rem; background:#EFE6D8; scroll-margin-top:64px;">
   <div class="max-w-7xl mx-auto">
     <div class="text-center mb-14">
       <p class="section-label mb-3">What We Serve</p>
@@ -293,7 +314,7 @@
 
 
 <!-- ICE CREAM SECTION -->
-<section style="padding:6rem 1.5rem; background:#F8F5F0;">
+<section class="section-py-lg" style="padding:6rem 1.5rem; background:#F8F5F0;">
   <div class="max-w-7xl mx-auto">
 
     <div class="text-center mb-14">
@@ -339,7 +360,7 @@
 
 
 <!-- DARK ATMOSPHERE BANNER -->
-<div class="relative overflow-hidden" style="background:#2B2B2B; padding:5rem 1.5rem; position:relative;">
+<div class="relative overflow-hidden cta-banner-pad" style="background:#2B2B2B; padding:5rem 1.5rem; position:relative;">
   <div class="absolute inset-0" style="background: radial-gradient(ellipse at 30% 50%, rgba(217,30,24,0.12) 0%, transparent 55%); pointer-events:none;"></div>
   <div class="relative max-w-5xl mx-auto">
     <div class="grid md:grid-cols-3 gap-8 text-center">
@@ -370,7 +391,7 @@
 
 
 <!-- VISIT / HOURS -->
-<section id="visit" style="padding:6rem 1.5rem; background:#EFE6D8; scroll-margin-top:64px;">
+<section id="visit" class="section-py-lg" style="padding:6rem 1.5rem; background:#EFE6D8; scroll-margin-top:64px;">
   <div class="max-w-7xl mx-auto">
     <div class="grid md:grid-cols-2 gap-14 items-center">
       <div>
@@ -428,5 +449,11 @@
   </div>
 </footer>
 
+<script>
+  const coffeeMenuBtn = document.getElementById('coffee-menu-btn');
+  const coffeeMobileMenu = document.getElementById('coffee-mobile-menu');
+  coffeeMenuBtn.addEventListener('click', () => coffeeMobileMenu.classList.toggle('hidden'));
+  coffeeMobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => coffeeMobileMenu.classList.add('hidden')));
+</script>
 </body>
 </html>

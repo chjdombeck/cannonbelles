@@ -107,6 +107,14 @@
     .hover-lift:hover { transform: translateY(-4px); box-shadow: 0 2px 4px rgba(43,43,43,0.07), 0 8px 24px rgba(43,43,43,0.1), 0 20px 48px rgba(43,43,43,0.07); }
 
     a:focus-visible, button:focus-visible { outline: 2px solid #D91E18; outline-offset: 3px; }
+
+    @media (max-width: 767px) {
+      .section-py-lg { padding-top: 3.5rem !important; padding-bottom: 3.5rem !important; }
+      .editorial-dark-panel { padding: 2rem 1.5rem !important; }
+      .story-img-grid { display: none !important; }
+      .quote-text { font-size: 1.5rem !important; }
+      .visit-section-pad { padding-left: 1rem !important; padding-right: 1rem !important; }
+    }
   </style>
 </head>
 
@@ -152,7 +160,7 @@
     <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.28) 50%, transparent 100%);"></div>
     <div class="relative z-10">
       <p class="section-label mb-3" style="color:rgba(239,230,216,0.85);">Coffee & Ice Cream</p>
-      <h2 class="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-none mb-4" style="letter-spacing:-0.03em;">Your Local<br/><em>Coffee Stop</em></h2>
+      <h2 class="font-display text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-none mb-4" style="letter-spacing:-0.03em;">Your Local<br/><em>Coffee Stop</em></h2>
       <p class="mb-8 max-w-xs mx-auto" style="color:rgba(255,255,255,0.68); font-family:'Inter',sans-serif; font-size:0.9rem; line-height:1.7;">Handcrafted drinks, scoops of joy, and a place to belong — right in the heart of Cannon Falls.</p>
       <span class="btn-primary">Explore the Shop</span>
     </div>
@@ -167,7 +175,7 @@
     <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.22) 50%, transparent 100%);"></div>
     <div class="relative z-10">
       <p class="section-label mb-3" style="color:rgba(239,230,216,0.85);">Artisanal Cheese</p>
-      <h2 class="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-none mb-4" style="letter-spacing:-0.03em;">Handcrafted<br/><em>With Care</em></h2>
+      <h2 class="font-display text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-none mb-4" style="letter-spacing:-0.03em;">Handcrafted<br/><em>With Care</em></h2>
       <p class="mb-8 max-w-xs mx-auto" style="color:rgba(255,255,255,0.68); font-family:'Inter',sans-serif; font-size:0.9rem; line-height:1.7;">Small-batch artisanal cheese made with quality ingredients and time-honored tradition.</p>
       <span class="btn-outline">Discover the Cheese</span>
     </div>
@@ -183,7 +191,7 @@
 
 
 <!-- COFFEE & ICE CREAM SECTION -->
-<section id="coffee" style="padding:6rem 0; background:#F8F5F0; scroll-margin-top:64px;">
+<section id="coffee" class="section-py-lg" style="padding:6rem 0; background:#F8F5F0; scroll-margin-top:64px;">
   <div class="max-w-7xl mx-auto px-6">
 
     <div class="text-center mb-16">
@@ -251,7 +259,7 @@
   <div class="absolute inset-0" style="background: radial-gradient(ellipse at 25% 50%, rgba(217,30,24,0.15) 0%, transparent 55%), radial-gradient(ellipse at 75% 50%, rgba(122,92,62,0.15) 0%, transparent 55%); pointer-events:none;"></div>
   <div class="relative max-w-3xl mx-auto text-center">
     <p class="section-label mb-5" style="color:rgba(239,230,216,0.55);">Where Cannon Falls Comes Together</p>
-    <blockquote class="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6" style="letter-spacing:-0.03em; line-height:1.15;">
+    <blockquote class="quote-text font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6" style="letter-spacing:-0.03em; line-height:1.15;">
       "A place where community,<br/>quality, and craftsmanship<br/><em>come together."</em>
     </blockquote>
     <p style="color:rgba(255,255,255,0.38); font-family:'Inter',sans-serif; font-size:0.8125rem; letter-spacing:0.06em;">— CannonBelles, Cannon Falls, MN</p>
@@ -260,7 +268,7 @@
 
 
 <!-- ARTISANAL CHEESE SECTION -->
-<section id="cheese" style="padding:6rem 0; background:#EFE6D8; scroll-margin-top:64px;">
+<section id="cheese" class="section-py-lg" style="padding:6rem 0; background:#EFE6D8; scroll-margin-top:64px;">
   <div class="max-w-7xl mx-auto px-6">
 
     <div class="text-center mb-16">
@@ -276,7 +284,7 @@
       <div class="md:col-span-3 img-hover" style="min-height:380px; overflow:hidden;">
         <img src="https://placehold.co/900x600/8B7355/ffffff?text=Artisanal+Cheese" alt="Cheese board" class="w-full h-full object-cover" style="filter:saturate(0.88);" />
       </div>
-      <div class="md:col-span-2 flex flex-col justify-center" style="background:#2B2B2B; padding:3.5rem;">
+      <div class="md:col-span-2 flex flex-col justify-center editorial-dark-panel" style="background:#2B2B2B; padding:3.5rem;">
         <p class="section-label mb-4" style="color:rgba(239,230,216,0.65);">Crafted with Intention</p>
         <h3 class="font-display text-3xl md:text-4xl font-bold text-white mb-5" style="letter-spacing:-0.03em; line-height:1.1;">Made Here.<br/>Made Right.</h3>
         <p style="color:rgba(255,255,255,0.62); font-family:'Inter',sans-serif; font-size:0.9rem; line-height:1.75; margin-bottom:2rem;">Every wheel and wedge is made using time-honored techniques and quality local ingredients. Our cheese is crafted in small batches — never rushed, never compromised.</p>
@@ -329,7 +337,7 @@
 
 
 <!-- OUR STORY -->
-<section id="about" style="padding:6rem 0; background:#F8F5F0; scroll-margin-top:64px;">
+<section id="about" class="section-py-lg" style="padding:6rem 0; background:#F8F5F0; scroll-margin-top:64px;">
   <div class="max-w-7xl mx-auto px-6">
     <div class="grid md:grid-cols-2 gap-16 items-center">
       <div>
@@ -353,7 +361,7 @@
           </div>
         </div>
       </div>
-      <div class="grid grid-cols-2 gap-4">
+      <div class="story-img-grid grid grid-cols-2 gap-4">
         <div class="img-hover rounded-sm card-shadow" style="aspect-ratio:3/4; overflow:hidden;">
           <img src="https://placehold.co/380x500/8B7355/ffffff?text=Our+Shop" alt="Shop" class="w-full h-full object-cover" />
         </div>
