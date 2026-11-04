@@ -97,6 +97,21 @@
       transition: transform 0.25s cubic-bezier(0.25,0.46,0.45,0.94), box-shadow 0.25s ease;
     }
     .owner-card:hover { transform: translateY(-5px); box-shadow: 0 4px 8px rgba(43,43,43,0.08), 0 12px 32px rgba(43,43,43,0.1), 0 24px 56px rgba(43,43,43,0.08); }
+  /* ---- Mobile polish ---- */
+    .ribbon span { white-space: nowrap; }
+    @media (max-width: 767px) {
+      a.hover-lift[style*="aspect-ratio:16/9"] { aspect-ratio: 4/3 !important; }
+      .ribbon { letter-spacing: 0.14em !important; line-height: 1.9; text-wrap: balance; }
+      .nav-back-m { display: inline-flex; align-items: center; justify-content: center; padding: 0.75rem; margin-left: -0.75rem; }
+      .nav-back-m svg { width: 18px; height: 18px; }
+      nav button[aria-label="Open menu"] { padding: 0.75rem !important; margin-right: -0.75rem; }
+      [id$="mobile-menu"] a { padding-top: 0.5rem; padding-bottom: 0.5rem; font-size: 0.9375rem !important; }
+      [id$="mobile-menu"].space-y-4 > :not(:first-child) { margin-top: 0.25rem !important; }
+      footer a:not([style*="border-radius:9999px"]) { display: inline-block; padding-top: 0.5rem; padding-bottom: 0.5rem; }
+      a[href^="tel:"] { display: inline-block; padding-top: 0.35rem; padding-bottom: 0.35rem; }
+      .stats-flex { flex-wrap: nowrap !important; gap: 1rem !important; }
+      .stats-flex > * { flex: 1 1 0; min-width: 0; }
+    }
   </style>
 </head>
 
@@ -105,17 +120,30 @@
 <!-- NAV -->
 <nav>
   <div class="max-w-7xl mx-auto px-6 flex items-center justify-between" style="height:5.5rem;">
-    <a href="index.html" style="display:inline-flex; align-items:center; gap:0.5rem; font-size:0.875rem; font-weight:500; font-family:'Inter',sans-serif; color:rgba(43,43,43,0.55); text-decoration:none; transition:color 0.15s;" onmouseover="this.style.color='#D91E18'" onmouseout="this.style.color='rgba(43,43,43,0.55)'">
+    <a href="index.html" class="hidden md:inline-flex items-center gap-2" style="font-size:0.875rem; font-weight:500; font-family:'Inter',sans-serif; color:rgba(43,43,43,0.55); text-decoration:none; transition:color 0.15s;" onmouseover="this.style.color='#D91E18'" onmouseout="this.style.color='rgba(43,43,43,0.55)'">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
       Back to Home
+    </a>
+    <a href="index.html" class="md:hidden nav-back-m" aria-label="Back to Home" style="color:rgba(43,43,43,0.55);">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
     </a>
     <a href="index.html">
       <img src="Logos.png" alt="CannonBelles" style="height:4.5rem; width:auto; display:block;" />
     </a>
-    <div style="display:flex; gap:1.5rem; align-items:center;">
-      <a href="coffee.html" style="font-size:0.875rem; font-weight:500; font-family:'Inter',sans-serif; color:rgba(43,43,43,0.55); text-decoration:none; transition:color 0.15s;" onmouseover="this.style.color='#D91E18'" onmouseout="this.style.color='rgba(43,43,43,0.55)'">Coffee & Ice Cream</a>
+    <div class="hidden md:flex" style="gap:1.5rem; align-items:center;">
+      <a href="coffee.html" style="font-size:0.875rem; font-weight:500; font-family:'Inter',sans-serif; color:rgba(43,43,43,0.55); text-decoration:none; transition:color 0.15s;" onmouseover="this.style.color='#D91E18'" onmouseout="this.style.color='rgba(43,43,43,0.55)'">Coffee &amp; Ice Cream</a>
       <a href="cheese.html" style="font-size:0.875rem; font-weight:500; font-family:'Inter',sans-serif; color:rgba(43,43,43,0.55); text-decoration:none; transition:color 0.15s;" onmouseover="this.style.color='#D91E18'" onmouseout="this.style.color='rgba(43,43,43,0.55)'">Artisanal Cheese</a>
     </div>
+    <button id="story-menu-btn" class="md:hidden flex flex-col gap-1.5 p-1" aria-label="Open menu">
+      <span class="block w-5 h-0.5 rounded-full" style="background:#2B2B2B;"></span>
+      <span class="block w-5 h-0.5 rounded-full" style="background:#2B2B2B;"></span>
+      <span class="block w-4 h-0.5 rounded-full" style="background:#2B2B2B;"></span>
+    </button>
+  </div>
+  <div id="story-mobile-menu" class="hidden md:hidden px-6 py-5 space-y-4" style="background:#F8F5F0; border-top:1px solid #E5E5E5;">
+    <a href="index.html" class="block text-sm font-medium" style="font-family:'Inter',sans-serif; color:#2B2B2B;">← Back to Home</a>
+    <a href="coffee.html" class="block text-sm font-medium" style="font-family:'Inter',sans-serif; color:#2B2B2B;">Coffee &amp; Ice Cream</a>
+    <a href="cheese.html" class="block text-sm font-medium" style="font-family:'Inter',sans-serif; color:#2B2B2B;">Artisanal Cheese</a>
   </div>
 </nav>
 
@@ -135,7 +163,7 @@
 
 <!-- Accent strip -->
 <div style="background:#D91E18; padding:0.75rem 1.5rem; text-align:center;">
-  <p style="color:white; font-family:'Inter',sans-serif; font-size:0.6875rem; font-weight:600; letter-spacing:0.2em; text-transform:uppercase;">Rooted in Community &nbsp;·&nbsp; Crafted with Care &nbsp;·&nbsp; Cannon Falls, Minnesota</p>
+  <p class="ribbon" style="color:white; font-family:'Inter',sans-serif; font-size:0.6875rem; font-weight:600; letter-spacing:0.2em; text-transform:uppercase;"><span>Rooted in Community&nbsp;·</span> <span>Crafted with Care&nbsp;·</span> <span>Cannon Falls, Minnesota</span></p>
 </div>
 
 
@@ -375,10 +403,16 @@
       </div>
     </div>
     <div style="border-top:1px solid rgba(255,255,255,0.1); padding-top:1.5rem; text-align:center;">
-      <p style="font-size:0.75rem; color:rgba(255,255,255,0.3); font-family:'Inter',sans-serif;">© 2025 CannonBelles · Cannon Falls, Minnesota · Simple · Local · Delicious</p>
+      <p style="font-size:0.75rem; color:rgba(255,255,255,0.3); font-family:'Inter',sans-serif;">© 2026 CannonBelles · Cannon Falls, Minnesota · Simple · Local · Delicious</p>
     </div>
   </div>
 </footer>
 
+<script>
+  const storyMenuBtn = document.getElementById('story-menu-btn');
+  const storyMobileMenu = document.getElementById('story-mobile-menu');
+  storyMenuBtn.addEventListener('click', () => storyMobileMenu.classList.toggle('hidden'));
+  storyMobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => storyMobileMenu.classList.add('hidden')));
+</script>
 </body>
 </html>

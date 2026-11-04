@@ -96,6 +96,20 @@
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
     .menu-item:hover { transform: translateX(4px); box-shadow: 0 2px 4px rgba(43,43,43,0.07), 0 6px 16px rgba(43,43,43,0.08); }
+  /* ---- Mobile polish ---- */
+    .ribbon span { white-space: nowrap; }
+    @media (max-width: 767px) {
+      .ribbon { letter-spacing: 0.14em !important; line-height: 1.9; text-wrap: balance; }
+      .nav-back-m { display: inline-flex; align-items: center; justify-content: center; padding: 0.75rem; margin-left: -0.75rem; }
+      .nav-back-m svg { width: 18px; height: 18px; }
+      nav button[aria-label="Open menu"] { padding: 0.75rem !important; margin-right: -0.75rem; }
+      [id$="mobile-menu"] a { padding-top: 0.5rem; padding-bottom: 0.5rem; font-size: 0.9375rem !important; }
+      [id$="mobile-menu"].space-y-4 > :not(:first-child) { margin-top: 0.25rem !important; }
+      footer a:not([style*="border-radius:9999px"]) { display: inline-block; padding-top: 0.5rem; padding-bottom: 0.5rem; }
+      a[href^="tel:"] { display: inline-block; padding-top: 0.35rem; padding-bottom: 0.35rem; }
+      .stats-flex { flex-wrap: nowrap !important; gap: 1rem !important; }
+      .stats-flex > * { flex: 1 1 0; min-width: 0; }
+    }
   </style>
 </head>
 
@@ -108,7 +122,7 @@
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
       Back to Home
     </a>
-    <a href="index.html" class="md:hidden">
+    <a href="index.html" class="md:hidden nav-back-m" aria-label="Back to Home">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color:rgba(43,43,43,0.55);"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
     </a>
     <a href="index.html">
@@ -151,7 +165,7 @@
 
 <!-- Accent strip -->
 <div style="background:#D91E18; padding:0.75rem 1.5rem; text-align:center;">
-  <p style="color:white; font-family:'Inter',sans-serif; font-size:0.6875rem; font-weight:600; letter-spacing:0.2em; text-transform:uppercase;">Open Daily &nbsp;·&nbsp; Coffee · Espresso · Cold Brew · Ice Cream · Sundaes</p>
+  <p class="ribbon" style="color:white; font-family:'Inter',sans-serif; font-size:0.6875rem; font-weight:600; letter-spacing:0.2em; text-transform:uppercase;"><span>Open Daily&nbsp;·</span> <span>Coffee&nbsp;·</span> <span>Espresso&nbsp;·</span> <span>Cold Brew&nbsp;·</span> <span>Ice Cream&nbsp;·</span> <span>Sundaes</span></p>
 </div>
 
 
@@ -444,7 +458,7 @@
       </div>
     </div>
     <div style="border-top:1px solid rgba(255,255,255,0.1); padding-top:1.5rem; text-align:center;">
-      <p style="font-size:0.75rem; color:rgba(255,255,255,0.3); font-family:'Inter',sans-serif;">© 2025 CannonBelles · Cannon Falls, Minnesota · Simple · Local · Delicious</p>
+      <p style="font-size:0.75rem; color:rgba(255,255,255,0.3); font-family:'Inter',sans-serif;">© 2026 CannonBelles · Cannon Falls, Minnesota · Simple · Local · Delicious</p>
     </div>
   </div>
 </footer>

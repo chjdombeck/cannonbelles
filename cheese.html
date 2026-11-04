@@ -102,6 +102,20 @@
       border-bottom: 1px solid #E5E5E5;
     }
     .process-step:last-child { border-bottom: none; }
+  /* ---- Mobile polish ---- */
+    .ribbon span { white-space: nowrap; }
+    @media (max-width: 767px) {
+      .ribbon { letter-spacing: 0.14em !important; line-height: 1.9; text-wrap: balance; }
+      .nav-back-m { display: inline-flex; align-items: center; justify-content: center; padding: 0.75rem; margin-left: -0.75rem; }
+      .nav-back-m svg { width: 18px; height: 18px; }
+      nav button[aria-label="Open menu"] { padding: 0.75rem !important; margin-right: -0.75rem; }
+      [id$="mobile-menu"] a { padding-top: 0.5rem; padding-bottom: 0.5rem; font-size: 0.9375rem !important; }
+      [id$="mobile-menu"].space-y-4 > :not(:first-child) { margin-top: 0.25rem !important; }
+      footer a:not([style*="border-radius:9999px"]) { display: inline-block; padding-top: 0.5rem; padding-bottom: 0.5rem; }
+      a[href^="tel:"], .seasonal-link { display: inline-block; padding-top: 0.35rem; padding-bottom: 0.35rem; }
+      .stats-flex { flex-wrap: nowrap !important; gap: 1rem !important; }
+      .stats-flex > * { flex: 1 1 0; min-width: 0; }
+    }
   </style>
 </head>
 
@@ -114,7 +128,7 @@
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
       Back to Home
     </a>
-    <a href="index.html" class="md:hidden">
+    <a href="index.html" class="md:hidden nav-back-m" aria-label="Back to Home">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color:rgba(43,43,43,0.55);"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
     </a>
     <a href="index.html">
@@ -157,7 +171,7 @@
 
 <!-- Accent strip -->
 <div style="background:#D91E18; padding:0.75rem 1.5rem; text-align:center;">
-  <p style="color:white; font-family:'Inter',sans-serif; font-size:0.6875rem; font-weight:600; letter-spacing:0.2em; text-transform:uppercase;">Small-Batch &nbsp;·&nbsp; Handcrafted &nbsp;·&nbsp; Locally Made &nbsp;·&nbsp; Cannon Falls, Minnesota</p>
+  <p class="ribbon" style="color:white; font-family:'Inter',sans-serif; font-size:0.6875rem; font-weight:600; letter-spacing:0.2em; text-transform:uppercase;"><span>Small-Batch&nbsp;·</span> <span>Handcrafted&nbsp;·</span> <span>Locally Made&nbsp;·</span> <span>Cannon Falls, Minnesota</span></p>
 </div>
 
 
@@ -353,7 +367,7 @@
         <div style="padding:1.5rem;">
           <h3 class="font-display text-xl font-bold text-white mb-2" style="letter-spacing:-0.02em;">Seasonal Varieties</h3>
           <p style="font-size:0.875rem; color:rgba(255,255,255,0.55); font-family:'Inter',sans-serif; line-height:1.7; margin-bottom:1rem;">We're always experimenting. Our rotating seasonal varieties celebrate local flavors, special ingredients, and the creativity of small-batch cheesemaking. Ask us what's on right now.</p>
-          <a href="#visit" style="font-size:0.8125rem; font-weight:600; font-family:'Inter',sans-serif; color:#D91E18; text-decoration:none; letter-spacing:0.05em;">Ask about current varieties →</a>
+          <a href="#visit" class="seasonal-link" style="font-size:0.8125rem; font-weight:600; font-family:'Inter',sans-serif; color:#D91E18; text-decoration:none; letter-spacing:0.05em;">Ask about current varieties →</a>
         </div>
       </div>
 
@@ -441,7 +455,7 @@
     <div class="grid md:grid-cols-2 gap-14 items-center">
       <div>
         <p class="section-label mb-4">Where to Buy</p>
-        <h2 class="font-display text-4xl md:text-5xl font-bold text-charcoal mb-8" style="letter-spacing:-0.03em; line-height:1.1;">Find Our Cheese<br/><em>in Downtown Cannon Falls</em></h2>
+        <h2 class="font-display text-4xl md:text-5xl font-bold text-charcoal mb-8" style="letter-spacing:-0.03em; line-height:1.1;">Find Our Cheese<br/><em>Downtown</em></h2>
         <div style="display:flex; flex-direction:column; gap:1rem; margin-bottom:2.5rem;">
           <div style="display:flex; gap:1rem; align-items:flex-start;">
             <div style="width:2.5rem; height:2.5rem; background:white; border-radius:3px; display:flex; align-items:center; justify-content:center; flex-shrink:0; box-shadow:0 1px 4px rgba(43,43,43,0.08);">
@@ -498,7 +512,7 @@
       </div>
     </div>
     <div style="border-top:1px solid rgba(255,255,255,0.1); padding-top:1.5rem; text-align:center;">
-      <p style="font-size:0.75rem; color:rgba(255,255,255,0.3); font-family:'Inter',sans-serif;">© 2025 CannonBelles · Cannon Falls, Minnesota · Simple · Local · Delicious</p>
+      <p style="font-size:0.75rem; color:rgba(255,255,255,0.3); font-family:'Inter',sans-serif;">© 2026 CannonBelles · Cannon Falls, Minnesota · Simple · Local · Delicious</p>
     </div>
   </div>
 </footer>
