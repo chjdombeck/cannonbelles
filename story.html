@@ -97,10 +97,13 @@
       transition: transform 0.25s cubic-bezier(0.25,0.46,0.45,0.94), box-shadow 0.25s ease;
     }
     .owner-card:hover { transform: translateY(-5px); box-shadow: 0 4px 8px rgba(43,43,43,0.08), 0 12px 32px rgba(43,43,43,0.1), 0 24px 56px rgba(43,43,43,0.08); }
+    .owner-bio { padding: 2rem 1.75rem; border-top: 3px solid #D91E18; }
   /* ---- Mobile polish ---- */
     .ribbon span { white-space: nowrap; }
     @media (max-width: 767px) {
       a.hover-lift[style*="aspect-ratio:16/9"] { aspect-ratio: 4/3 !important; }
+      .owners-photo { aspect-ratio: 4/3 !important; }
+      .owner-bio { padding: 1.75rem 1.5rem; }
       .ribbon { letter-spacing: 0.14em !important; line-height: 1.9; text-wrap: balance; }
       .nav-back-m { display: inline-flex; align-items: center; justify-content: center; padding: 0.75rem; margin-left: -0.75rem; }
       .nav-back-m svg { width: 18px; height: 18px; }
@@ -150,7 +153,7 @@
 
 <!-- HERO -->
 <div class="relative overflow-hidden" style="min-height:88vh; display:flex; align-items:flex-end; padding-bottom:6rem; padding-top:10rem;">
-  <img src="images/owners-plant.jpg" alt="CannonBelles story" class="absolute inset-0 w-full h-full object-cover" style="filter:brightness(0.45) saturate(0.8);" />
+  <img src="images/charcuterie-board.jpg" alt="CannonBelles story" class="absolute inset-0 w-full h-full object-cover" style="filter:brightness(0.45) saturate(0.8);" />
   <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.25) 55%, transparent 100%);"></div>
   <div class="relative max-w-7xl mx-auto px-6 w-full">
     <div class="max-w-2xl">
@@ -203,34 +206,38 @@
       <p class="section-label mb-3">The People Behind It</p>
       <h2 class="font-display text-4xl md:text-5xl font-bold text-charcoal mb-5" style="letter-spacing:-0.03em; line-height:1.1;">Meet the<br/><em>Owners</em></h2>
       <div class="ornament-line max-w-xs mx-auto" style="color:#B0B0B0; font-family:'Inter',sans-serif; font-size:0.75rem; letter-spacing:0.15em;">
-        <span>The Faces of CannonBelles</span>
+        <span>Three Friends &amp; a Dairy Farm</span>
       </div>
     </div>
 
-    <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+    <!-- Group photo -->
+    <div class="max-w-5xl mx-auto mb-10 md:mb-12">
+      <div class="img-hover rounded-sm card-shadow owners-photo" style="aspect-ratio:16/8; overflow:hidden;">
+        <img src="images/owners-plant.jpg" alt="CannonBelles owners Deeann Lufkin, Kathy Hupf, and Jackie Ohmann at their cheese plant" class="w-full h-full object-cover" style="object-position:center 30%;" />
+      </div>
+    </div>
 
-      <div class="owner-card">
-        <div class="img-hover" style="aspect-ratio:4/3; overflow:hidden;">
-          <img src="https://placehold.co/600x450/C8956A/ffffff?text=Owner+Photo" alt="Owner" class="w-full h-full object-cover" />
-        </div>
-        <div style="padding:2rem;">
-          <p class="section-label mb-2">Co-Owner</p>
-          <h3 class="font-display text-2xl font-bold text-charcoal mb-1" style="letter-spacing:-0.02em;">Owner Name</h3>
-          <p style="font-size:0.8125rem; color:#D91E18; font-family:'Inter',sans-serif; font-weight:600; letter-spacing:0.05em; margin-bottom:1rem;">Coffee & Ice Cream Shop</p>
-          <p style="font-size:0.9rem; color:rgba(43,43,43,0.68); font-family:'Inter',sans-serif; line-height:1.75;">A lifelong Cannon Falls local with a passion for community, great coffee, and making everyone who walks through the door feel right at home. Placeholder, add your story here.</p>
-        </div>
+    <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+
+      <div class="owner-card owner-bio">
+        <p class="section-label mb-3">Head Cheesemaker</p>
+        <h3 class="font-display text-2xl font-bold text-charcoal mb-2" style="letter-spacing:-0.02em;">Deeann Lufkin</h3>
+        <p class="font-display italic" style="font-size:1.0625rem; color:#7A5C3E; margin-bottom:1rem; line-height:1.4;">From storm chaser to cheese creator</p>
+        <p style="font-size:0.9rem; color:rgba(43,43,43,0.68); font-family:'Inter',sans-serif; line-height:1.75;">A retired Air Force Reserve weather officer who flew with the Hurricane Hunters, Deeann now runs the cheese vat. She trained at the UW&#8209;River Falls Cheesemaker Short Course and serves on the board of the League of Minnesota Cheesemakers.</p>
       </div>
 
-      <div class="owner-card">
-        <div class="img-hover" style="aspect-ratio:4/3; overflow:hidden;">
-          <img src="https://placehold.co/600x450/8B7355/ffffff?text=Owner+Photo" alt="Owner" class="w-full h-full object-cover" />
-        </div>
-        <div style="padding:2rem;">
-          <p class="section-label mb-2">Co-Owner</p>
-          <h3 class="font-display text-2xl font-bold text-charcoal mb-1" style="letter-spacing:-0.02em;">Owner Name</h3>
-          <p style="font-size:0.8125rem; color:#D91E18; font-family:'Inter',sans-serif; font-weight:600; letter-spacing:0.05em; margin-bottom:1rem;">Artisanal Cheese</p>
-          <p style="font-size:0.9rem; color:rgba(43,43,43,0.68); font-family:'Inter',sans-serif; line-height:1.75;">The cheesemaker at heart, driven by a deep respect for traditional craft and the belief that quality ingredients and patience produce something truly special. Placeholder, add your story here.</p>
-        </div>
+      <div class="owner-card owner-bio">
+        <p class="section-label mb-3">Co-Owner</p>
+        <h3 class="font-display text-2xl font-bold text-charcoal mb-2" style="letter-spacing:-0.02em;">Kathy Hupf</h3>
+        <p class="font-display italic" style="font-size:1.0625rem; color:#7A5C3E; margin-bottom:1rem; line-height:1.4;">From milking cows to making cheese</p>
+        <p style="font-size:0.9rem; color:rgba(43,43,43,0.68); font-family:'Inter',sans-serif; line-height:1.75;">Kathy spent 18 years running her own dairy farm and holds a degree in animal husbandry. Today she brings that farm-girl grit, plus a background in marketing and leadership, to the business side of CannonBelles.</p>
+      </div>
+
+      <div class="owner-card owner-bio">
+        <p class="section-label mb-3">Co-Owner</p>
+        <h3 class="font-display text-2xl font-bold text-charcoal mb-2" style="letter-spacing:-0.02em;">Jackie Ohmann</h3>
+        <p class="font-display italic" style="font-size:1.0625rem; color:#7A5C3E; margin-bottom:1rem; line-height:1.4;">Spreading the good news&hellip; of cheese</p>
+        <p style="font-size:0.9rem; color:rgba(43,43,43,0.68); font-family:'Inter',sans-serif; line-height:1.75;">After 15 years as a Director of Christian Education, Jackie followed her family's entrepreneurial streak into cheese. Married to a dairy farmer, she's often the friendly face sharing CannonBelles with customers at local events.</p>
       </div>
 
     </div>
