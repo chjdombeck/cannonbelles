@@ -2,7 +2,7 @@ import Image from "next/image";
 import SubpageNav from "@/components/SubpageNav";
 import SubpageFooter from "@/components/SubpageFooter";
 import { MENU_SECTIONS, ORDER_ONLINE_URL } from "@/lib/menu";
-import { BUSINESS, ADDRESS_FULL, MAPS_URL, TEL_HREF, hoursCompact } from "@/lib/site";
+import { BUSINESS, ADDRESS_FULL, MAPS_URL, TEL_HREF, hoursCompact, shortTime } from "@/lib/site";
 
 export const metadata = {
   title: "Menu | CannonBelles Coffee & Ice Cream · Cannon Falls, MN",
@@ -198,6 +198,7 @@ export default function MenuPage() {
               {BUSINESS.hours.map((h) => (
                 <p key={h.short} className="visit-value">{hoursCompact(h)}</p>
               ))}
+              <p className="visit-sub">Kitchen open until {shortTime(BUSINESS.kitchenClose)} daily</p>
             </div>
             <div className="visit-row">
               <p className="visit-label">Call Ahead</p>
