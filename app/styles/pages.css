@@ -330,3 +330,62 @@
       :where(.pg-story) .stats-flex { flex-wrap: nowrap !important; gap: 1rem !important; }
       :where(.pg-story) .stats-flex > * { flex: 1 1 0; min-width: 0; }
     }
+
+/* ===== Menu page (app/menu/page.js) — also inherits the coffee page styles via "pg-coffee pg-menu" ===== */
+:where(.pg-menu) .menu-cats { position: sticky; top: 5.5rem; z-index: 90; background: rgba(248,245,240,0.96); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-bottom: 1px solid rgba(43,43,43,0.09); }
+:where(.pg-menu) .menu-cats-scroll { overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+:where(.pg-menu) .menu-cats-scroll::-webkit-scrollbar { display: none; }
+:where(.pg-menu) .menu-cats-inner { display: flex; gap: 0.5rem; width: max-content; margin: 0 auto; padding: 0.75rem 1.5rem; }
+:where(.pg-menu) .menu-cat { flex-shrink: 0; font-family: 'Inter', sans-serif; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #2B2B2B; text-decoration: none; padding: 0.55rem 1rem; border-radius: 9999px; border: 1px solid rgba(43,43,43,0.14); background: white; transition: color 0.15s, border-color 0.15s, transform 0.15s; }
+:where(.pg-menu) .menu-cat:hover { color: #D91E18; border-color: #D91E18; }
+:where(.pg-menu) .menu-cat:active { transform: scale(0.97); }
+
+:where(.pg-menu) .menu-section { padding: 5rem 1.5rem; scroll-margin-top: 9.5rem; }
+:where(.pg-menu) .menu-section-head { display: flex; gap: 1.25rem; align-items: flex-start; margin-bottom: 2.25rem; }
+:where(.pg-menu) .menu-icon { width: 2.75rem; height: 2.75rem; background: #D91E18; border-radius: 3px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.2rem; box-shadow: 0 2px 8px rgba(169,22,26,0.25); }
+:where(.pg-menu) .menu-section-note { font-family: 'Inter', sans-serif; font-size: 0.9375rem; line-height: 1.7; color: rgba(43,43,43,0.62); margin-top: 0.75rem; max-width: 40rem; }
+
+:where(.pg-menu) .menu-grid { display: grid; gap: 0.625rem; }
+:where(.pg-menu) .menu-item-name { font-family: 'Inter', sans-serif; font-weight: 600; font-size: 0.9375rem; color: #2B2B2B; }
+:where(.pg-menu) .menu-item-desc { font-family: 'Inter', sans-serif; font-size: 0.8125rem; line-height: 1.55; color: rgba(43,43,43,0.55); margin-top: 0.2rem; }
+
+:where(.pg-menu) .menu-group + .menu-group { margin-top: 2.75rem; }
+:where(.pg-menu) .menu-group-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.25rem 1rem; margin-bottom: 1rem; padding-bottom: 0.75rem; border-bottom: 1px solid rgba(43,43,43,0.1); }
+:where(.pg-menu) .menu-group-note { font-family: 'Inter', sans-serif; font-size: 0.8125rem; color: rgba(43,43,43,0.55); }
+
+:where(.pg-menu) .flavor-stack { display: grid; gap: 1.25rem; }
+:where(.pg-menu) .flavor-card { background: white; border-radius: 3px; padding: 1.75rem; box-shadow: 0 1px 2px rgba(43,43,43,0.05), 0 2px 8px rgba(43,43,43,0.05); }
+:where(.pg-menu) .flavor-card-head { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.25rem; padding-bottom: 0.875rem; border-bottom: 1px solid rgba(43,43,43,0.08); }
+:where(.pg-menu) .flavor-grid { display: grid; gap: 1rem 2.5rem; }
+:where(.pg-menu) .season-badge { font-family: 'Inter', sans-serif; font-size: 0.625rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: white; background: #D91E18; padding: 0.3rem 0.6rem; border-radius: 2px; }
+
+:where(.pg-menu) .chips-block { margin: 0 0 2.25rem; }
+:where(.pg-menu) .menu-grid + .chips-block { margin: 2.75rem 0 0; }
+:where(.pg-menu) .chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+:where(.pg-menu) .chip { font-family: 'Inter', sans-serif; font-size: 0.8125rem; font-weight: 500; color: #2B2B2B; background: white; border: 1px solid rgba(43,43,43,0.1); border-radius: 9999px; padding: 0.45rem 0.95rem; }
+:where(.pg-menu) .chips-footnote { font-family: 'Inter', sans-serif; font-size: 0.8125rem; font-style: italic; color: rgba(43,43,43,0.55); margin-top: 0.875rem; }
+
+:where(.pg-menu) .visit-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 3px; padding: 0.5rem 1.75rem; }
+:where(.pg-menu) .visit-row { padding: 1.25rem 0; }
+:where(.pg-menu) .visit-row + .visit-row { border-top: 1px solid rgba(255,255,255,0.08); }
+:where(.pg-menu) .visit-label { font-family: 'Inter', sans-serif; font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 0.5rem; }
+:where(.pg-menu) .visit-value { font-family: 'Inter', sans-serif; font-size: 0.9375rem; color: white; line-height: 1.7; }
+:where(.pg-menu) .visit-sub { font-family: 'Inter', sans-serif; font-size: 0.8125rem; color: rgba(255,255,255,0.45); margin-top: 0.15rem; }
+
+@media (min-width: 768px) {
+  :where(.pg-menu) .menu-grid { grid-template-columns: 1fr 1fr; gap: 0.75rem 1rem; }
+  :where(.pg-menu) .flavor-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (min-width: 1024px) {
+  :where(.pg-menu) .flavor-grid { grid-template-columns: 1fr 1fr 1fr; }
+}
+@media (max-width: 767px) {
+  :where(.pg-menu) .menu-section { padding: 3.5rem 1.25rem; }
+  :where(.pg-menu) .menu-section-head { gap: 1rem; margin-bottom: 1.75rem; }
+  :where(.pg-menu) .menu-icon { width: 2.25rem; height: 2.25rem; }
+  :where(.pg-menu) .flavor-card { padding: 1.25rem; }
+  :where(.pg-menu) .menu-item { padding: 1rem 1.25rem; }
+  :where(.pg-menu) .menu-grid { gap: 0.5rem; }
+  :where(.pg-menu) .menu-cats-inner { padding: 0.625rem 1.25rem; margin: 0; }
+  :where(.pg-menu) .visit-card { padding: 0.25rem 1.25rem; }
+}

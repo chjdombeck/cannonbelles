@@ -18,12 +18,12 @@ export default function HomeNav() {
         <Link href="/" className="flex items-center flex-shrink-0">
           <Image src="/Logos.png" alt="CannonBelles" width={1080} height={1080} sizes="72px" priority style={{ height: "4.5rem", width: "auto", display: "block" }} />
         </Link>
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-5 lg:gap-8">
           {LINKS.map((l) => (
-            <Link key={l.href} href={l.href} className="text-sm font-medium text-charcoal hover:text-cannon-red" style={linkStyle}>{l.label}</Link>
+            <Link key={l.href} href={l.href} className="text-sm font-medium text-charcoal hover:text-cannon-red whitespace-nowrap" style={linkStyle}>{l.label}</Link>
           ))}
         </div>
-        <a href="#visit" className="btn-primary hidden md:inline-flex" style={{ padding: "0.625rem 1.25rem", fontSize: "0.75rem" }}>
+        <a href="#visit" className="btn-primary hidden md:inline-flex whitespace-nowrap" style={{ padding: "0.625rem 1.25rem", fontSize: "0.75rem" }}>
           Find Us{" "}
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
             <path d="M5 12h14M12 5l7 7-7 7"></path>

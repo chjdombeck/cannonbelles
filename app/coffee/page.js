@@ -26,7 +26,7 @@ export default function CoffeePage() {
             <p style={{ color: "rgba(255,255,255,0.68)", fontFamily: "'Inter',sans-serif", fontSize: "1.0625rem", lineHeight: "1.75", maxWidth: "32rem", marginBottom: "2rem" }}>Your local stop for handcrafted coffee drinks, premium ice cream, and the kind of warm, welcoming atmosphere that only a small-town shop can offer.</p>
             {" "}
             <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-              <a href="#menu" className="btn-primary">See Our Menu</a>
+              <Link href="/menu" className="btn-primary">See Our Menu</Link>
               <a href="#visit" className="btn-ghost hv-2" style={{ color: "white", borderColor: "rgba(255,255,255,0.45)" }}>Hours &amp; Location</a>
             </div>
           </div>

@@ -10,9 +10,9 @@ const COLUMNS = [
   {
     title: "Coffee & Ice Cream",
     links: [
-      { href: "/coffee", label: "Our Menu" },
-      { href: "/coffee", label: "Coffee Drinks" },
-      { href: "/coffee", label: "Ice Cream Flavors" },
+      { href: "/menu", label: "Our Menu" },
+      { href: "/menu#coffee", label: "Coffee Drinks" },
+      { href: "/menu#ice-cream", label: "Ice Cream Flavors" },
       { href: "#visit", label: "Hours & Location" },
     ],
   },
