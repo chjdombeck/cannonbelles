@@ -8,11 +8,20 @@
 - If no reference image: design from scratch with high craft (see guardrails below).
 - Screenshot your output, compare against reference, fix mismatches, re-screenshot. Do at least 2 comparison rounds. Stop only when no visible differences remain or user says so.
 
+## Project Stack (Next.js)
+- Next.js 16 App Router (JavaScript), React 19, **Tailwind CSS 3.4** (pinned to match the original CDN prototype exactly; do not upgrade to v4 without a full visual diff).
+- Pages: `app/page.js` (home), `app/coffee/page.js`, `app/cheese/page.js`, `app/story/page.js`.
+- Shared header/footer: `components/HomeNav.js`, `components/HomeFooter.js`, `components/SubpageNav.js`, `components/SubpageFooter.js`.
+- **Business info (hours, address, phone, maps links) lives only in `lib/site.js`.** Change it there, never hardcode it in pages.
+- Styles: `app/globals.css` imports `app/styles/fonts.css` (self-hosted fonts in `public/fonts/`), `site-global.css`, `pages.css` (each page's own CSS scoped with `:where(.pg-<page>)`), `hover.css`, then Tailwind. Keep that order.
+- Photos live in `public/images/` and are rendered with `next/image` (auto-resized AVIF/WebP). Give every `<Image>` real `width`/`height` and an accurate `sizes`.
+- Old `.html` URLs redirect to the new routes (see `next.config.mjs`).
+- Deploys: Vercel builds on push. `main` = live site; other branches get preview URLs.
+
 ## Local Server
 - **Always serve on localhost** — never screenshot a `file:///` URL.
-- Start the dev server: `node serve.mjs` (serves the project root at `http://localhost:3000`)
-- `serve.mjs` lives in the project root. Start it in the background before taking any screenshots.
-- If the server is already running, do not start a second instance.
+- Dev server: `npm run dev` (http://localhost:3000). Production check: `npm run build` then `npx next start -p 3005`.
+- Start it in the background before taking any screenshots. If the server is already running, do not start a second instance.
 
 ## Screenshot Workflow
 - Puppeteer is installed at `C:/Users/nateh/AppData/Local/Temp/puppeteer-test/`. Chrome cache is at `C:/Users/nateh/.cache/puppeteer/`.
@@ -25,9 +34,9 @@
 - Check: spacing/padding, font size/weight/line-height, colors (exact hex), alignment, border-radius, shadows, image sizing
 
 ## Output Defaults
-- Single `index.html` file, all styles inline, unless user says otherwise
-- Tailwind CSS via CDN: `<script src="https://cdn.tailwindcss.com"></script>`
-- Placeholder images: `https://placehold.co/WIDTHxHEIGHT`
+- New pages go in `app/<route>/page.js`; reuse the shared nav/footer components and `lib/site.js`.
+- Tailwind is compiled at build time (never add the Tailwind CDN script).
+- Placeholder images: `https://placehold.co/WIDTHxHEIGHT` (add the host to `images.remotePatterns` if used with `next/image`)
 - Mobile-first responsive
 
 ## Brand Assets

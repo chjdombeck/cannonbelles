@@ -3,3 +3,8 @@ temporary screenshots/
 .DS_Store
 
 .vercel
+
+# Next.js
+.next/
+out/
+next-env.d.ts

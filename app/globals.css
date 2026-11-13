@@ -1,0 +1,12 @@
+/*
+  Order matters and mirrors the original static pages:
+  1. fonts, 2. the pages' own <style> rules, 3. Tailwind (the CDN injected its CSS after the page styles).
+*/
+@import "./styles/fonts.css";
+@import "./styles/site-global.css";
+@import "./styles/pages.css";
+@import "./styles/hover.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
