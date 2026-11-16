@@ -2,3 +2,75 @@
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body { background-color: #F8F5F0; font-family: 'Inter', sans-serif; color: #2B2B2B; -webkit-font-smoothing: antialiased; }
+
+/* ===== Holiday promotion (components/Holiday.js, components/GiftBoxes.js) — toggle with HOLIDAY.enabled ===== */
+.promo-bar {
+  display: flex; align-items: center; justify-content: center; gap: 0.5rem;
+  height: 2.25rem; padding: 0 1rem; background: #2B2B2B; color: #EFE6D8;
+  font-family: 'Inter', sans-serif; font-size: 0.8125rem; font-weight: 500; letter-spacing: 0.02em;
+  text-decoration: none; white-space: nowrap; overflow: hidden;
+}
+.promo-bar .promo-cta { color: #fff; font-weight: 600; text-decoration: underline; text-decoration-color: rgba(217,30,24,0.9); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+.promo-bar .promo-sep { opacity: 0.5; }
+.promo-bar .promo-short { display: none; }
+.promo-bar:hover .promo-cta { color: #F8F5F0; text-decoration-color: #fff; }
+.promo-bar:focus-visible { outline: 2px solid #D91E18; outline-offset: -2px; }
+@media (max-width: 520px) { .promo-bar .promo-full { display: none; } .promo-bar .promo-short { display: inline; } .promo-bar { font-size: 0.75rem; } }
+
+/* Space for the strip: anchors land below the taller fixed header */
+html.has-promo { scroll-padding-top: 2.25rem; }
+.has-promo .menu-cats { top: 7.75rem; }
+@media (max-width: 767px) { .has-promo #hero-split { padding-top: 7.75rem; } }
+
+/* 🎁 header button */
+.gift-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem;
+  height: 2.5rem; width: 2.5rem; padding: 0; border-radius: 9999px;
+  border: 1.5px solid rgba(217,30,24,0.55); background: #fff; color: #D91E18;
+  font-family: 'Inter', sans-serif; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+  text-decoration: none; white-space: nowrap; font-size: 0.75rem;
+  transition: border-color 0.2s, background 0.2s, transform 0.15s;
+}
+.gift-btn > span:first-child { font-size: 1.05rem; line-height: 1; }
+.gift-btn:hover { border-color: #D91E18; background: #FDF1F0; transform: translateY(-1px); }
+.gift-btn:active { transform: scale(0.97); }
+.gift-btn:focus-visible { outline: 2px solid #D91E18; outline-offset: 3px; }
+.gift-btn .gift-btn-label { display: none; }
+@media (min-width: 1024px) { .gift-btn-lg { width: auto; padding: 0 1rem; } .gift-btn-lg .gift-btn-label { display: inline; } }
+@media (min-width: 1280px) { .gift-btn-xl { width: auto; padding: 0 1rem; } .gift-btn-xl .gift-btn-label { display: inline; } }
+.gift-menu-link { color: #D91E18 !important; font-family: 'Inter', sans-serif; }
+
+/* Home page gift box section */
+.gifts-section { position: relative; overflow: hidden; background: #2B2B2B; padding: 5.5rem 1.5rem 5rem; scroll-margin-top: 88px; }
+.gifts-glow { position: absolute; inset: 0; pointer-events: none; background: radial-gradient(ellipse at 15% 0%, rgba(217,30,24,0.22) 0%, transparent 55%), radial-gradient(ellipse at 90% 100%, rgba(122,92,62,0.28) 0%, transparent 55%); }
+.gifts-head { text-align: center; max-width: 40rem; margin: 0 auto 3rem; }
+.gifts-label { font-family: 'Inter', sans-serif; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #EFE6D8; margin-bottom: 1rem; }
+.gifts-intro { font-family: 'Inter', sans-serif; color: rgba(255,255,255,0.62); line-height: 1.75; margin-top: 1.25rem; }
+.gifts-track { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; }
+.gift-card { display: flex; flex-direction: column; background: #F8F5F0; border-radius: 3px; overflow: hidden; text-decoration: none; color: inherit;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2), 0 8px 24px rgba(0,0,0,0.25); transition: transform 0.25s cubic-bezier(0.25,0.46,0.45,0.94), box-shadow 0.25s ease; }
+.gift-card:hover { transform: translateY(-4px); box-shadow: 0 2px 4px rgba(0,0,0,0.2), 0 16px 40px rgba(0,0,0,0.35); }
+.gift-card:focus-visible { outline: 2px solid #EFE6D8; outline-offset: 3px; }
+.gift-card-img { position: relative; aspect-ratio: 4 / 3; overflow: hidden; background: #EFE6D8; }
+.gift-card-img img { transition: transform 0.7s cubic-bezier(0.25,0.46,0.45,0.94); }
+.gift-card:hover .gift-card-img img { transform: scale(1.04); }
+.gift-soldout { position: absolute; top: 0.75rem; left: 0.75rem; background: #2B2B2B; color: #fff; font-family: 'Inter', sans-serif; font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.3rem 0.6rem; border-radius: 2px; }
+.gift-card-body { display: flex; flex-direction: column; flex: 1; padding: 1.25rem 1.375rem 1.375rem; }
+.gift-card-top { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; margin-bottom: 0.5rem; }
+.gift-price { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 1.0625rem; color: #D91E18; white-space: nowrap; }
+.gift-price span { font-weight: 500; font-size: 0.8125rem; color: rgba(43,43,43,0.55); }
+.gift-desc { font-family: 'Inter', sans-serif; font-size: 0.875rem; line-height: 1.6; color: rgba(43,43,43,0.65); flex: 1; }
+.gift-cta { display: inline-flex; align-items: center; gap: 0.4rem; margin-top: 1rem; font-family: 'Inter', sans-serif; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #D91E18; }
+.gifts-foot { display: flex; justify-content: center; margin-top: 2.75rem; }
+.gifts-foot .btn-primary { display: inline-flex; align-items: center; gap: 0.5rem; background: #D91E18; color: #fff; padding: 0.875rem 2rem; border-radius: 3px; font-family: 'Inter', sans-serif; font-size: 0.8125rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; box-shadow: 0 2px 8px rgba(169,22,26,0.4); transition: background 0.2s, transform 0.15s; }
+.gifts-foot .btn-primary:hover { background: #A4161A; transform: translateY(-1px); }
+@media (max-width: 1023px) { .gifts-track { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 767px) {
+  .gifts-section { padding: 4rem 0 3.5rem; }
+  .gifts-head { padding: 0 1.5rem; margin-bottom: 2rem; }
+  /* Swipeable row of cards on phones */
+  .gifts-track { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 1rem; padding: 0.25rem 1.5rem 1rem; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+  .gifts-track::-webkit-scrollbar { display: none; }
+  .gift-card { flex: 0 0 78%; scroll-snap-align: center; }
+  .gifts-foot { padding: 0 1.5rem; margin-top: 1.75rem; }
+}

@@ -4,6 +4,7 @@ import HomeNav from "@/components/HomeNav";
 import HomeFooter from "@/components/HomeFooter";
 import { BUSINESS, ADDRESS_SHORT, TEL_HREF, MAPS_EMBED_URL, ORDER_ONLINE_URL, SHOP_ALL_URL, hoursCompact } from "@/lib/site";
 import ExternalIcon from "@/components/ExternalIcon";
+import GiftBoxes from "@/components/GiftBoxes";
 
 export const metadata = {
   title: "CannonBelles | Coffee, Ice Cream & Artisanal Cheese · Cannon Falls, MN",
@@ -51,6 +52,8 @@ export default function HomePage() {
       <div style={{ background: "#D91E18", padding: "0.75rem 1.5rem", textAlign: "center" }}>
         <p className="ribbon" style={{ color: "white", fontFamily: "'Inter',sans-serif", fontSize: "0.6875rem", fontWeight: "600", letterSpacing: "0.2em", textTransform: "uppercase" }}><span>Simple · Local · Delicious&nbsp;·</span>{" "}<span>Cannon Falls, Minnesota</span></p>
       </div>
+      {/* HOLIDAY GIFT BOXES (toggle with HOLIDAY.enabled in lib/site.js) */}
+      <GiftBoxes />
       {/* COFFEE & ICE CREAM SECTION */}
       <section id="coffee" className="section-py-lg" style={{ padding: "6rem 0", background: "#F8F5F0", scrollMarginTop: "88px" }}>
         <div className="max-w-7xl mx-auto px-6">

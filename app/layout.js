@@ -1,4 +1,5 @@
 import "./globals.css";
+import { HOLIDAY } from "@/lib/site";
 
 export const metadata = {
   metadataBase: new URL("https://cannonbelles.vercel.app"),
@@ -14,7 +15,7 @@ const PRELOAD_FONTS = [
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={HOLIDAY.enabled ? "has-promo" : undefined}>
       <head>
         {PRELOAD_FONTS.map((href) => (
           <link key={href} rel="preload" href={href} as="font" type="font/woff2" crossOrigin="" />

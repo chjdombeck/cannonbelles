@@ -3,6 +3,10 @@ const nextConfig = {
   images: {
     formats: ["image/avif", "image/webp"],
     minimumCacheTTL: 60 * 60 * 24 * 365,
+    // Allow optimizing gift box photos from this store's Shopify file folder only (no open image proxy).
+    remotePatterns: [
+      { protocol: "https", hostname: "cdn.shopify.com", pathname: "/s/files/1/0828/0545/7116/**" },
+    ],
   },
   // Keep the old static-site addresses working (they've already been shared).
   async redirects() {
