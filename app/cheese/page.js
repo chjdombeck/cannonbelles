@@ -50,7 +50,7 @@ export default function CheesePage() {
                   <Image src="/images/charcuterie-board.jpg" alt="Cheese board" width={1600} height={1068} sizes="(max-width: 767px) 86vw, 24vw" className="w-full h-full object-cover" />
                 </div>
                 <div className="img-hover rounded-sm card-shadow" style={{ flex: "1", overflow: "hidden", minHeight: "170px" }}>
-                  <Image src="/images/cheesemakers-curds.jpg" alt="Curd making" width={750} height={624} sizes="(max-width: 767px) 77vw, 21vw" className="w-full h-full object-cover" />
+                  <Image src="/images/dill-curds.jpg" alt="CannonBelles dill cheese curds" width={1600} height={1066} sizes="(max-width: 767px) 77vw, 21vw" className="w-full h-full object-cover" />
                 </div>
               </div>
             </div>
@@ -322,7 +322,7 @@ export default function CheesePage() {
             </div>
             <div className="process-sticky" style={{ position: "sticky", top: "5rem" }}>
               <div className="img-hover rounded-sm card-shadow" style={{ aspectRatio: "3/4", overflow: "hidden", marginBottom: "1.25rem" }}>
-                <Image src="/images/cheesemakers-trio.jpg" alt="Cheesemaking" width={1600} height={1600} sizes="(max-width: 767px) 117vw, 57vw" className="w-full h-full object-cover" />
+                <Image src="/images/painted-desert-cheddar.jpg" alt="CannonBelles Painted Desert Cheddar" width={1402} height={1122} sizes="(max-width: 767px) 117vw, 57vw" className="w-full h-full object-cover" />
               </div>
               {" "}
               <div style={{ background: "#EFE6D8", borderRadius: "3px", padding: "1.5rem", borderLeft: "3px solid #D91E18" }}>

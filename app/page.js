@@ -264,7 +264,7 @@ export default function HomePage() {
                   <Image src="/images/espresso-pour.jpg" alt="Brewing" width={1600} height={1067} sizes="(max-width: 767px) 83vw, 23vw" className="w-full h-full object-cover" />
                 </div>
                 <div className="img-hover rounded-sm card-shadow flex-1" style={{ overflow: "hidden", minHeight: "180px" }}>
-                  <Image src="/images/cheesemakers-curds.jpg" alt="Cheese making" width={750} height={624} sizes="(max-width: 767px) 73vw, 20vw" className="w-full h-full object-cover" />
+                  <Image src="/images/queso-fresco-ribbon.jpg" alt="Award-winning CannonBelles Queso Fresco" width={1024} height={1024} sizes="(max-width: 767px) 73vw, 20vw" className="w-full h-full object-cover" />
                 </div>
               </div>
             </div>

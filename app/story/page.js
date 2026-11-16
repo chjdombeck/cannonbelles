@@ -47,7 +47,7 @@ export default function StoryPage() {
             </div>
             <div className="grid grid-cols-2 gap-4">
               <div className="img-hover rounded-sm card-shadow" style={{ aspectRatio: "3/4", overflow: "hidden" }}>
-                <Image src="/images/cheesemakers-trio.jpg" alt="Our roots" width={1600} height={1600} sizes="(max-width: 767px) 56vw, 28vw" className="w-full h-full object-cover" />
+                <Image src="/images/cheesemakers-duo.jpg" alt="CannonBelles co-owners Kathy Hupf and Jackie Ohmann, ready to make cheese" width={397} height={640} sizes="(max-width: 767px) 56vw, 28vw" className="w-full h-full object-cover" />
               </div>
               <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
                 <div className="img-hover rounded-sm card-shadow" style={{ flex: "1", overflow: "hidden", minHeight: "170px" }}>
@@ -69,18 +69,20 @@ export default function StoryPage() {
             {" "}
             <h2 className="font-display text-4xl md:text-5xl font-bold text-charcoal mb-5" style={{ letterSpacing: "-0.03em", lineHeight: "1.1" }}>Meet the<br /><em>Owners</em></h2>
             {" "}
-            <div className="ornament-line max-w-xs mx-auto" style={{ color: "#B0B0B0", fontFamily: "'Inter',sans-serif", fontSize: "0.75rem", letterSpacing: "0.15em" }}><span>Three Friends &amp; a Dairy Farm</span></div>
+            <div className="ornament-line max-w-xs mx-auto" style={{ color: "#B0B0B0", fontFamily: "'Inter',sans-serif", fontSize: "0.75rem", letterSpacing: "0.15em" }}><span>The Faces of CannonBelles</span></div>
           </div>
           {" "}
-          {/* Group photo */}
-          {" "}
-          <div className="max-w-5xl mx-auto mb-10 md:mb-12">
-            <div className="img-hover rounded-sm card-shadow owners-photo" style={{ aspectRatio: "16/8", overflow: "hidden" }}>
-              <Image src="/images/owners-plant.jpg" alt="CannonBelles owners Kathy Hupf, Jackie Ohmann, and Deeann Lufkin (left to right) at their cheese plant" width={1600} height={1068} sizes="(max-width: 767px) 99vw, 72vw" className="w-full h-full object-cover" style={{ objectPosition: "center 30%" }} />
+          {/* Owners photo placeholder: swap in a new photo of Kathy & Jackie when available */}
+          <div className="max-w-4xl mx-auto mb-10 md:mb-12">
+            <div className="owners-photo-placeholder">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z" />
+                <circle cx="12" cy="13" r="4" />
+              </svg>
+              <p className="owners-photo-placeholder-text">Photo of Kathy &amp; Jackie coming soon</p>
             </div>
           </div>
-          {" "}
-          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             <div className="owner-card owner-bio">
               <p className="section-label mb-3">Co-Owner</p>
               {" "}
@@ -98,15 +100,6 @@ export default function StoryPage() {
               <p className="font-display italic" style={{ fontSize: "1.0625rem", color: "#7A5C3E", marginBottom: "1rem", lineHeight: "1.4" }}>Spreading the good news… of cheese</p>
               {" "}
               <p style={{ fontSize: "0.9rem", color: "rgba(43,43,43,0.68)", fontFamily: "'Inter',sans-serif", lineHeight: "1.75" }}>After 15 years as a Director of Christian Education, Jackie followed her family's entrepreneurial streak into cheese. Married to a dairy farmer, she's often the friendly face sharing CannonBelles with customers at local events.</p>
-            </div>
-            <div className="owner-card owner-bio">
-              <p className="section-label mb-3">Head Cheesemaker</p>
-              {" "}
-              <h3 className="font-display text-2xl font-bold text-charcoal mb-2" style={{ letterSpacing: "-0.02em" }}>Deeann Lufkin</h3>
-              {" "}
-              <p className="font-display italic" style={{ fontSize: "1.0625rem", color: "#7A5C3E", marginBottom: "1rem", lineHeight: "1.4" }}>From storm chaser to cheese creator</p>
-              {" "}
-              <p style={{ fontSize: "0.9rem", color: "rgba(43,43,43,0.68)", fontFamily: "'Inter',sans-serif", lineHeight: "1.75" }}>A retired Air Force Reserve weather officer who flew with the Hurricane Hunters, Deeann now runs the cheese vat. She trained at the UW‑River Falls Cheesemaker Short Course and serves on the board of the League of Minnesota Cheesemakers.</p>
             </div>
           </div>
         </div>
