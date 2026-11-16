@@ -16,10 +16,10 @@ export function PromoBar() {
 }
 
 // 🎁 header button. Icon-only on phones/tablets; full label from `labelFrom` ("lg" or "xl"); "never" = always icon-only.
-export function GiftButton({ labelFrom = "lg", onClick }) {
+export function GiftButton({ labelFrom = "lg", onClick, className = "" }) {
   if (!HOLIDAY.enabled) return null;
   return (
-    <Link href={HOLIDAY.href} className={`gift-btn gift-btn-${labelFrom}`} aria-label={HOLIDAY.button} onClick={onClick}>
+    <Link href={HOLIDAY.href} className={`gift-btn gift-btn-${labelFrom} ${className}`} aria-label={HOLIDAY.button} onClick={onClick}>
       <span aria-hidden="true">🎁</span>
       <span className="gift-btn-label">{HOLIDAY.button}</span>
     </Link>

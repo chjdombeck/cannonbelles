@@ -45,8 +45,8 @@ export default function SubpageNav({ current }) {
             <Link key={p.href} className="hv-1 whitespace-nowrap" href={p.href} style={linkStyle}>{p.label}</Link>
           ))}
         </div>
-        <SocialLinks variant="header" className="hidden xl:flex" />
         <GiftButton labelFrom="never" />
+        <SocialLinks variant="header" className="hidden xl:flex" />
         <button className="md:hidden flex flex-col gap-1.5 p-1" aria-label="Open menu" aria-expanded={open} onClick={() => setOpen((o) => !o)}>
           <span className="block w-5 h-0.5 rounded-full" style={barStyle}></span>
           <span className="block w-5 h-0.5 rounded-full" style={barStyle}></span>

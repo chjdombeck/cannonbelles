@@ -26,10 +26,11 @@ export default function HomeNav() {
           {PAGES.map((l) => (
             <Link key={l.href} href={l.href} className="text-sm font-medium text-charcoal hover:text-cannon-red whitespace-nowrap" style={linkStyle}>{l.label}</Link>
           ))}
+          <GiftButton labelFrom="lg" />
         </div>
         <div className="flex items-center gap-3">
         <SocialLinks variant="header" className="hidden xl:flex mr-1" />
-        <GiftButton labelFrom="lg" />
+        <GiftButton labelFrom="lg" className="md:hidden" />
         <a href="#visit" className="btn-primary hidden md:inline-flex whitespace-nowrap" style={{ padding: "0.625rem 1.25rem", fontSize: "0.75rem" }}>
           Visit Us{" "}
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
