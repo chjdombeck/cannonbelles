@@ -15,7 +15,7 @@ export function PromoBar() {
   );
 }
 
-// 🎁 header button. Icon-only on phones/tablets; full label on wide screens (`labelFrom` = "lg" or "xl").
+// 🎁 header button. Icon-only on phones/tablets; full label from `labelFrom` ("lg" or "xl"); "never" = always icon-only.
 export function GiftButton({ labelFrom = "lg", onClick }) {
   if (!HOLIDAY.enabled) return null;
   return (

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { PAGES, COPYRIGHT_YEAR } from "@/lib/site";
+import SocialLinks from "@/components/SocialLinks";
 
 const base = { fontSize: "0.875rem", fontFamily: "'Inter',sans-serif", textDecoration: "none" };
 const inactive = { ...base, color: "rgba(255,255,255,0.5)" };
@@ -25,6 +26,7 @@ export default function SubpageFooter({ current }) {
               )
             )}
           </div>
+          <SocialLinks variant="dark" />
         </div>
         <div style={{ borderTop: "1px solid rgba(255,255,255,0.1)", paddingTop: "1.5rem", textAlign: "center" }}>
           <p style={{ fontSize: "0.75rem", color: "rgba(255,255,255,0.3)", fontFamily: "'Inter',sans-serif" }}>© {COPYRIGHT_YEAR} CannonBelles · Cannon Falls, Minnesota · Simple · Local · Delicious</p>

@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { PAGES } from "@/lib/site";
 import { PromoBar, GiftButton, GiftMenuLink } from "@/components/Holiday";
+import SocialLinks from "@/components/SocialLinks";
 
 const linkStyle = { fontSize: "0.875rem", fontWeight: "500", fontFamily: "'Inter',sans-serif", color: "rgba(43,43,43,0.55)", textDecoration: "none", transition: "color 0.15s" };
 const menuLinkStyle = { fontFamily: "'Inter',sans-serif", color: "#2B2B2B" };
@@ -44,7 +45,8 @@ export default function SubpageNav({ current }) {
             <Link key={p.href} className="hv-1 whitespace-nowrap" href={p.href} style={linkStyle}>{p.label}</Link>
           ))}
         </div>
-        <GiftButton labelFrom="xl" />
+        <SocialLinks variant="header" className="hidden xl:flex" />
+        <GiftButton labelFrom="never" />
         <button className="md:hidden flex flex-col gap-1.5 p-1" aria-label="Open menu" aria-expanded={open} onClick={() => setOpen((o) => !o)}>
           <span className="block w-5 h-0.5 rounded-full" style={barStyle}></span>
           <span className="block w-5 h-0.5 rounded-full" style={barStyle}></span>
@@ -58,6 +60,7 @@ export default function SubpageNav({ current }) {
         {others.map((p) => (
           <Link key={p.href} href={p.href} className="block text-sm font-medium" style={menuLinkStyle} onClick={() => setOpen(false)}>{p.label}</Link>
         ))}
+        <SocialLinks variant="header" className="menu-social" />
       </div>
     </nav>
   );

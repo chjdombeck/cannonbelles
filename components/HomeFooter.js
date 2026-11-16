@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { COPYRIGHT_YEAR } from "@/lib/site";
+import SocialLinks from "@/components/SocialLinks";
 
 const headingStyle = { fontSize: "0.6875rem", fontWeight: "600", color: "#2B2B2B", fontFamily: "'Inter',sans-serif", letterSpacing: "0.18em", textTransform: "uppercase", marginBottom: "1rem" };
 const linkStyle = { fontSize: "0.875rem", color: "rgba(43,43,43,0.58)", textDecoration: "none", transition: "color 0.15s" };
@@ -38,6 +39,7 @@ export default function HomeFooter() {
               <Image src="/Logos.png" alt="CannonBelles" width={1080} height={1080} sizes="96px" style={{ width: "100%", height: "100%", objectFit: "contain", display: "block" }} />
             </span>
             <p style={{ fontSize: "0.875rem", color: "rgba(43,43,43,0.58)", fontFamily: "'Inter',sans-serif", lineHeight: "1.75", maxWidth: "20rem" }}>Small-town charm meets elevated, handcrafted quality. Coffee, ice cream, and artisanal cheese, made with care in Cannon Falls, Minnesota.</p>
+            <SocialLinks variant="light" className="mt-5" />
           </div>
           {COLUMNS.map((col) => (
             <div key={col.title}>

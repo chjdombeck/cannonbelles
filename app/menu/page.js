@@ -2,12 +2,13 @@ import Image from "next/image";
 import SubpageNav from "@/components/SubpageNav";
 import SubpageFooter from "@/components/SubpageFooter";
 import { MENU_SECTIONS, ORDER_ONLINE_URL } from "@/lib/menu";
-import { BUSINESS, ADDRESS_FULL, MAPS_URL, TEL_HREF, hoursCompact, shortTime } from "@/lib/site";
+import { BUSINESS, ADDRESS_FULL, MAPS_URL, TEL_HREF, SHOP_ALL_URL, hoursCompact, shortTime } from "@/lib/site";
+import Link from "next/link";
 
 export const metadata = {
   title: "Menu | CannonBelles Coffee & Ice Cream · Cannon Falls, MN",
   description:
-    "Breakfast served all day, grilled cheese made with CannonBelles Queso Fresco, Loon's Nest espresso drinks, specialty mochas, Cedar Crest ice cream, and cheese to go in downtown Cannon Falls.",
+    "The CannonBelles menu: Loon's Nest espresso and coffee drinks, 30 flavored syrups, 16 Cedar Crest ice cream flavors daily, and breakfast and lunch made with CannonBelles Queso Fresco in downtown Cannon Falls.",
 };
 
 const ICONS = {
@@ -46,20 +47,13 @@ function ItemGrid({ items }) {
   );
 }
 
-function FlavorList({ list }) {
+function Highlight({ highlight }) {
   return (
-    <div className="flavor-card">
-      <div className="flavor-card-head">
-        <h3 className="font-display text-xl font-bold text-charcoal" style={{ letterSpacing: "-0.02em" }}>{list.title}</h3>
-        {list.seasonal && <span className="season-badge">Limited Time</span>}
-      </div>
-      <div className="flavor-grid">
-        {list.items.map((it) => (
-          <div key={it.name}>
-            <p className="menu-item-name">{it.name}</p>
-            <p className="menu-item-desc">{it.desc}</p>
-          </div>
-        ))}
+    <div className="menu-highlight">
+      <span className="menu-highlight-badge">Seasonal</span>
+      <div>
+        <p className="menu-highlight-title">{highlight.title}</p>
+        <p className="menu-highlight-text">{highlight.text}</p>
       </div>
     </div>
   );
@@ -92,7 +86,7 @@ function MenuSection({ section, alt }) {
           </div>
         </div>
 
-        {section.chips && section.id === "ice-cream" && <Chips chips={section.chips} />}
+        {section.highlight && <Highlight highlight={section.highlight} />}
 
         {section.items && <ItemGrid items={section.items} />}
 
@@ -106,15 +100,9 @@ function MenuSection({ section, alt }) {
           </div>
         ))}
 
-        {section.lists && (
-          <div className="flavor-stack">
-            {section.lists.map((l) => (
-              <FlavorList key={l.title} list={l} />
-            ))}
-          </div>
-        )}
-
-        {section.chips && section.id !== "ice-cream" && <Chips chips={section.chips} />}
+        {section.chipGroups?.map((c) => (
+          <Chips key={c.title} chips={c} />
+        ))}
       </div>
     </section>
   );
@@ -140,7 +128,7 @@ export default function MenuPage() {
             <p className="section-label mb-4" style={{ color: "rgba(239,230,216,0.8)" }}>CannonBelles · Cannon Falls, MN</p>
             <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-5" style={{ letterSpacing: "-0.035em", lineHeight: "1.05" }}>Our Menu</h1>
             <p style={{ color: "rgba(255,255,255,0.68)", fontFamily: "'Inter',sans-serif", fontSize: "1.0625rem", lineHeight: "1.75", maxWidth: "32rem", marginBottom: "2rem" }}>
-              Breakfast all day, grilled cheese made with our own Queso Fresco, Loon&apos;s Nest espresso, and Cedar Crest ice cream. Dine in, take out, or order ahead.
+              Loon&apos;s Nest espresso made your way, 16 ice cream flavors every day, and breakfast and lunch made with our own CannonBelles Queso Fresco. Dine in, take out, or order ahead.
             </p>
             <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
               <a href={ORDER_ONLINE_URL} target="_blank" rel="noopener" className="btn-primary">Order Online <ArrowOut /></a>
@@ -153,7 +141,7 @@ export default function MenuPage() {
       {/* Accent strip */}
       <div style={{ background: "#D91E18", padding: "0.75rem 1.5rem", textAlign: "center" }}>
         <p className="ribbon" style={{ color: "white", fontFamily: "'Inter',sans-serif", fontSize: "0.6875rem", fontWeight: "600", letterSpacing: "0.2em", textTransform: "uppercase" }}>
-          <span>Breakfast All Day&nbsp;·</span> <span>Lunch&nbsp;·</span> <span>Coffee &amp; Espresso&nbsp;·</span> <span>Ice Cream&nbsp;·</span> <span>Cheese To Go</span>
+          <span>Coffee &amp; Espresso&nbsp;·</span> <span>16 Ice Cream Flavors Daily&nbsp;·</span> <span>Breakfast&nbsp;·</span> <span>Lunch</span>
         </p>
       </div>
 
@@ -171,6 +159,21 @@ export default function MenuPage() {
       {MENU_SECTIONS.map((s, i) => (
         <MenuSection key={s.id} section={s} alt={i % 2 === 1} />
       ))}
+
+      {/* TAKE CHEESE HOME */}
+      <section className="menu-cheese-cta">
+        <div className="max-w-6xl mx-auto menu-cheese-inner">
+          <div>
+            <p className="section-label mb-2">From Our Cheese Plant</p>
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-charcoal" style={{ letterSpacing: "-0.02em", lineHeight: "1.15" }}>Take CannonBelles Cheese Home</h2>
+            <p className="menu-section-note">Grab curds, cheddar, gouda, and more from our shop case, or order online.</p>
+          </div>
+          <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
+            <a href={SHOP_ALL_URL} target="_blank" rel="noopener" className="btn-primary">Shop Cheese Online <ArrowOut /></a>
+            <Link href="/cheese" className="btn-ghost">Our Cheeses</Link>
+          </div>
+        </div>
+      </section>
 
       {/* VISIT / ORDER */}
       <section id="visit" className="relative overflow-hidden section-py-lg" style={{ padding: "5rem 1.5rem", background: "#2B2B2B", scrollMarginTop: "9.5rem" }}>

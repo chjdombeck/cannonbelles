@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { PAGES } from "@/lib/site";
 import { PromoBar, GiftButton, GiftMenuLink } from "@/components/Holiday";
+import SocialLinks from "@/components/SocialLinks";
 
 const linkStyle = { transition: "color 0.15s", fontFamily: "'Inter',sans-serif", letterSpacing: "0.02em" };
 const menuLinkStyle = { fontFamily: "'Inter',sans-serif" };
@@ -26,6 +27,7 @@ export default function HomeNav() {
           ))}
         </div>
         <div className="flex items-center gap-3">
+        <SocialLinks variant="header" className="hidden xl:flex mr-1" />
         <GiftButton labelFrom="lg" />
         <a href="#visit" className="btn-primary hidden md:inline-flex whitespace-nowrap" style={{ padding: "0.625rem 1.25rem", fontSize: "0.75rem" }}>
           Find Us{" "}
@@ -45,6 +47,7 @@ export default function HomeNav() {
         {LINKS.map((l) => (
           <Link key={l.href} href={l.href} className="block text-sm font-medium text-charcoal" style={menuLinkStyle} onClick={() => setOpen(false)}>{l.label}</Link>
         ))}
+        <SocialLinks variant="header" className="menu-social" />
       </div>
     </nav>
   );
