@@ -2,7 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import SubpageNav from "@/components/SubpageNav";
 import SubpageFooter from "@/components/SubpageFooter";
-import { BUSINESS, ADDRESS_FULL, TEL_HREF, MAPS_URL, hoursAligned } from "@/lib/site";
+import { BUSINESS, ADDRESS_FULL, TEL_HREF, MAPS_URL, ORDER_ONLINE_URL, hoursAligned } from "@/lib/site";
+import ExternalIcon from "@/components/ExternalIcon";
 
 export const metadata = {
   title: "Coffee & Ice Cream | CannonBelles · Cannon Falls, MN",
@@ -26,8 +27,8 @@ export default function CoffeePage() {
             <p style={{ color: "rgba(255,255,255,0.68)", fontFamily: "'Inter',sans-serif", fontSize: "1.0625rem", lineHeight: "1.75", maxWidth: "32rem", marginBottom: "2rem" }}>Your local stop for handcrafted coffee drinks, premium ice cream, and the kind of warm, welcoming atmosphere that only a small-town shop can offer.</p>
             {" "}
             <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-              <Link href="/menu" className="btn-primary">See Our Menu</Link>
-              <a href="#visit" className="btn-ghost hv-2" style={{ color: "white", borderColor: "rgba(255,255,255,0.45)" }}>Hours &amp; Location</a>
+              <a href={ORDER_ONLINE_URL} target="_blank" rel="noopener" className="btn-primary">Order Online <ExternalIcon /></a>
+              <Link href="/menu" className="btn-ghost hv-2" style={{ color: "white", borderColor: "rgba(255,255,255,0.45)" }}>See Our Menu</Link>
             </div>
           </div>
         </div>
@@ -357,7 +358,10 @@ export default function CoffeePage() {
                 </div>
               </div>
               {" "}
-              <a href={MAPS_URL} target="_blank" rel="noopener" className="btn-primary">Get Directions</a>
+              <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
+                <a href={ORDER_ONLINE_URL} target="_blank" rel="noopener" className="btn-primary">Order Online <ExternalIcon /></a>
+                <a href={MAPS_URL} target="_blank" rel="noopener" className="btn-ghost">Get Directions</a>
+              </div>
             </div>
             <div className="img-hover rounded-sm card-shadow" style={{ aspectRatio: "4/3", overflow: "hidden" }}>
               <Image src="/images/storefront-door.jpg" alt="Coffee shop exterior" width={1349} height={1349} sizes="(max-width: 767px) 88vw, 43vw" className="w-full h-full object-cover" />

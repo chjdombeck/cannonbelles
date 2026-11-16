@@ -2,7 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import SubpageNav from "@/components/SubpageNav";
 import SubpageFooter from "@/components/SubpageFooter";
-import { BUSINESS, ADDRESS_FULL, TEL_HREF, MAPS_URL, hoursAligned } from "@/lib/site";
+import { BUSINESS, ADDRESS_FULL, TEL_HREF, MAPS_URL, SHOP_ALL_URL, hoursAligned } from "@/lib/site";
+import ExternalIcon from "@/components/ExternalIcon";
 
 export const metadata = {
   title: "Artisanal Cheese | CannonBelles · Cannon Falls, MN",
@@ -26,8 +27,8 @@ export default function CheesePage() {
             <p style={{ color: "rgba(255,255,255,0.65)", fontFamily: "'Inter',sans-serif", fontSize: "1.0625rem", lineHeight: "1.75", maxWidth: "32rem", marginBottom: "2rem" }}>Small-batch, handcrafted cheese made right here in Cannon Falls using time-honored techniques and quality local ingredients. Taste the difference that care makes.</p>
             {" "}
             <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-              <a href="#selection" className="btn-primary">See Our Selection</a>
-              <a href="#process" className="btn-ghost-light">Our Process</a>
+              <a href={SHOP_ALL_URL} target="_blank" rel="noopener" className="btn-primary">Shop Online <ExternalIcon /></a>
+              <a href="#selection" className="btn-ghost-light">See Our Selection</a>
             </div>
           </div>
         </div>
@@ -342,7 +343,10 @@ export default function CheesePage() {
           {" "}
           <p style={{ color: "rgba(255,255,255,0.55)", fontFamily: "'Inter',sans-serif", lineHeight: "1.75", fontSize: "1rem", maxWidth: "32rem", margin: "0 auto 2.5rem" }}>When you buy from CannonBelles, you're supporting local craftsmanship and a small business that genuinely cares about what it makes.</p>
           {" "}
-          <a href="#visit" className="btn-primary">Where to Buy Our Cheese</a>
+          <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", justifyContent: "center" }}>
+            <a href={SHOP_ALL_URL} target="_blank" rel="noopener" className="btn-primary">Shop Cheese Online <ExternalIcon /></a>
+            <a href="#visit" className="btn-ghost-light">Buy In Person</a>
+          </div>
         </div>
       </div>
       {/* VISIT / HOURS */}
@@ -402,7 +406,10 @@ export default function CheesePage() {
                 </div>
               </div>
               {" "}
-              <a href={MAPS_URL} target="_blank" rel="noopener" className="btn-primary">Get Directions</a>
+              <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
+                <a href={SHOP_ALL_URL} target="_blank" rel="noopener" className="btn-primary">Shop Online <ExternalIcon /></a>
+                <a href={MAPS_URL} target="_blank" rel="noopener" className="btn-ghost">Get Directions</a>
+              </div>
             </div>
             <div className="img-hover rounded-sm card-shadow" style={{ aspectRatio: "4/3", overflow: "hidden" }}>
               <Image src="/images/queso-fresco-ribbon.jpg" alt="Cheese shop" width={1024} height={1024} sizes="(max-width: 767px) 88vw, 43vw" className="w-full h-full object-cover" />

@@ -2,7 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import HomeNav from "@/components/HomeNav";
 import HomeFooter from "@/components/HomeFooter";
-import { BUSINESS, ADDRESS_SHORT, TEL_HREF, MAPS_EMBED_URL, hoursCompact } from "@/lib/site";
+import { BUSINESS, ADDRESS_SHORT, TEL_HREF, MAPS_EMBED_URL, ORDER_ONLINE_URL, SHOP_ALL_URL, hoursCompact } from "@/lib/site";
+import ExternalIcon from "@/components/ExternalIcon";
 
 export const metadata = {
   title: "CannonBelles | Coffee, Ice Cream & Artisanal Cheese · Cannon Falls, MN",
@@ -164,7 +165,7 @@ export default function HomePage() {
               <p className="section-label mb-4" style={{ color: "rgba(239,230,216,0.65)" }}>Crafted with Intention</p>
               <h3 className="font-display text-3xl md:text-4xl font-bold text-white mb-5" style={{ letterSpacing: "-0.03em", lineHeight: "1.1" }}>Made Here.<br />Made Right.</h3>
               <p style={{ color: "rgba(255,255,255,0.62)", fontFamily: "'Inter',sans-serif", fontSize: "0.9rem", lineHeight: "1.75", marginBottom: "2rem" }}>Every wheel and wedge is made using time-honored techniques and quality local ingredients. Our cheese is crafted in small batches, never rushed, never compromised.</p>
-              <a href="#visit" className="btn-outline" style={{ alignSelf: "flex-start" }}>Shop the Cheese</a>
+              <a href={SHOP_ALL_URL} target="_blank" rel="noopener" className="btn-outline" style={{ alignSelf: "flex-start" }}>Shop the Cheese <ExternalIcon /></a>
             </div>
           </div>
           {" "}
@@ -369,11 +370,8 @@ export default function HomePage() {
                 </div>
               </div>
               {" "}
-              <a href="https://cannonbelles.com/" target="_blank" className="btn-primary">
-                Visit Our Website{" "}
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"></path>
-                </svg>
+              <a href={ORDER_ONLINE_URL} target="_blank" rel="noopener" className="btn-primary">
+                Order Online <ExternalIcon />
               </a>
             </div>
             <div className="flex flex-col gap-4">
