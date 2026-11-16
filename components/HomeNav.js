@@ -9,9 +9,10 @@ import SocialLinks from "@/components/SocialLinks";
 
 const linkStyle = { transition: "color 0.15s", fontFamily: "'Inter',sans-serif", letterSpacing: "0.02em" };
 const menuLinkStyle = { fontFamily: "'Inter',sans-serif" };
-const LINKS = [...PAGES, { href: "#visit", label: "Visit Us" }];
+const LINKS = [...PAGES, { href: "#visit", label: "Visit Us" }]; // phone menu
 
-// Header for the home page: logo, page links, "Find Us" button, mobile menu.
+// Header for the home page: logo, page links, red "Visit Us" button (jumps to #visit), mobile menu.
+// The phone menu (no red button) keeps a "Visit Us" link.
 export default function HomeNav() {
   const [open, setOpen] = useState(false);
   return (
@@ -22,15 +23,15 @@ export default function HomeNav() {
           <Image src="/Logos.png" alt="CannonBelles" width={1080} height={1080} sizes="72px" priority style={{ height: "4.5rem", width: "auto", display: "block" }} />
         </Link>
         <div className="hidden md:flex items-center gap-5 lg:gap-8">
-          {LINKS.map((l) => (
-            <Link key={l.href} href={l.href} className={`text-sm font-medium text-charcoal hover:text-cannon-red whitespace-nowrap${l.href === "#visit" ? " hidden lg:inline" : ""}`} style={linkStyle}>{l.label}</Link>
+          {PAGES.map((l) => (
+            <Link key={l.href} href={l.href} className="text-sm font-medium text-charcoal hover:text-cannon-red whitespace-nowrap" style={linkStyle}>{l.label}</Link>
           ))}
         </div>
         <div className="flex items-center gap-3">
         <SocialLinks variant="header" className="hidden xl:flex mr-1" />
         <GiftButton labelFrom="lg" />
         <a href="#visit" className="btn-primary hidden md:inline-flex whitespace-nowrap" style={{ padding: "0.625rem 1.25rem", fontSize: "0.75rem" }}>
-          Find Us{" "}
+          Visit Us{" "}
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
             <path d="M5 12h14M12 5l7 7-7 7"></path>
           </svg>
