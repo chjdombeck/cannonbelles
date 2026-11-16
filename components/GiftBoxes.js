@@ -19,9 +19,9 @@ export default async function GiftBoxes() {
           <p className="gifts-intro">Handcrafted in Cannon Falls and packed with local favorites. Order online and share a little CannonBelles this season.</p>
         </div>
 
-        <div className="gifts-track" role="list">
+        <div className="gifts-track">
           {boxes.map((b) => (
-            <a key={b.handle} href={b.url} target="_blank" rel="noopener" className="gift-card" role="listitem">
+            <a key={b.handle} href={b.url} target="_blank" rel="noopener" className="gift-card">
               <div className="gift-card-img">
                 <Image src={b.image.src} alt={b.name} width={b.image.width} height={b.image.height} sizes="(max-width: 767px) 78vw, (max-width: 1023px) 45vw, 380px" className="w-full h-full object-cover" />
                 {!b.available && <span className="gift-soldout">Sold out</span>}

@@ -4,10 +4,14 @@ import SubpageNav from "@/components/SubpageNav";
 import SubpageFooter from "@/components/SubpageFooter";
 import { BUSINESS, ADDRESS_FULL, TEL_HREF, MAPS_URL, SHOP_ALL_URL, hoursAligned } from "@/lib/site";
 import ExternalIcon from "@/components/ExternalIcon";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = pageMetadata({
+  path: "/cheese",
   title: "Artisanal Cheese | CannonBelles · Cannon Falls, MN",
-};
+  description:
+    "Award-winning artisanal cheese made in Cannon Falls, MN: cheese curds, cheddar, gouda, Queso Fresco, and more. Buy in our downtown shop or order online.",
+});
 
 export default function CheesePage() {
   return (
@@ -16,7 +20,7 @@ export default function CheesePage() {
       <SubpageNav current="/cheese" />
       {/* HERO */}
       <div className="relative overflow-hidden hero-mobile-pad" style={{ minHeight: "88vh", display: "flex", alignItems: "flex-end", paddingBottom: "6rem", paddingTop: "10rem" }}>
-        <Image src="/images/cheese-flatlay.jpg" alt="Artisanal cheese" width={1600} height={1066} sizes="(max-width: 767px) 286vw, 100vw" priority className="absolute inset-0 w-full h-full object-cover" style={{ filter: "brightness(0.42) saturate(0.78)" }} />
+        <Image src="/images/cheese-flatlay.jpg" alt="Artisanal cheese" width={1600} height={1066} sizes="(max-width: 767px) 286vw, 100vw" priority fetchPriority="high" className="absolute inset-0 w-full h-full object-cover" style={{ filter: "brightness(0.42) saturate(0.78)" }} />
         <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.3) 55%, transparent 100%)" }}></div>
         <div className="relative max-w-7xl mx-auto px-6 w-full">
           <div className="max-w-2xl">
@@ -283,7 +287,7 @@ export default function CheesePage() {
                   <div style={{ width: "2.25rem", height: "2.25rem", background: "#D91E18", borderRadius: "3px", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: "0", marginTop: "0.1rem" }}><span style={{ color: "white", fontWeight: "700", fontFamily: "'Inter',sans-serif", fontSize: "0.875rem" }}>1</span></div>
                   {" "}
                   <div>
-                    <h4 className="font-display text-lg font-bold text-charcoal mb-1" style={{ letterSpacing: "-0.01em" }}>Quality Milk</h4>
+                    <h3 className="font-display text-lg font-bold text-charcoal mb-1" style={{ letterSpacing: "-0.01em" }}>Quality Milk</h3>
                     {" "}
                     <p style={{ fontSize: "0.875rem", color: "rgba(43,43,43,0.62)", fontFamily: "'Inter',sans-serif", lineHeight: "1.7" }}>It starts with good milk. We source locally and select for quality, because great cheese is only as good as what goes into it.</p>
                   </div>
@@ -293,7 +297,7 @@ export default function CheesePage() {
                   <div style={{ width: "2.25rem", height: "2.25rem", background: "#D91E18", borderRadius: "3px", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: "0", marginTop: "0.1rem" }}><span style={{ color: "white", fontWeight: "700", fontFamily: "'Inter',sans-serif", fontSize: "0.875rem" }}>2</span></div>
                   {" "}
                   <div>
-                    <h4 className="font-display text-lg font-bold text-charcoal mb-1" style={{ letterSpacing: "-0.01em" }}>Culturing &amp; Setting</h4>
+                    <h3 className="font-display text-lg font-bold text-charcoal mb-1" style={{ letterSpacing: "-0.01em" }}>Culturing &amp; Setting</h3>
                     {" "}
                     <p style={{ fontSize: "0.875rem", color: "rgba(43,43,43,0.62)", fontFamily: "'Inter',sans-serif", lineHeight: "1.7" }}>We add cultures and rennet to develop flavor and structure. This step is where the character of each cheese begins to take shape.</p>
                   </div>
@@ -303,7 +307,7 @@ export default function CheesePage() {
                   <div style={{ width: "2.25rem", height: "2.25rem", background: "#D91E18", borderRadius: "3px", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: "0", marginTop: "0.1rem" }}><span style={{ color: "white", fontWeight: "700", fontFamily: "'Inter',sans-serif", fontSize: "0.875rem" }}>3</span></div>
                   {" "}
                   <div>
-                    <h4 className="font-display text-lg font-bold text-charcoal mb-1" style={{ letterSpacing: "-0.01em" }}>Pressing &amp; Shaping</h4>
+                    <h3 className="font-display text-lg font-bold text-charcoal mb-1" style={{ letterSpacing: "-0.01em" }}>Pressing &amp; Shaping</h3>
                     {" "}
                     <p style={{ fontSize: "0.875rem", color: "rgba(43,43,43,0.62)", fontFamily: "'Inter',sans-serif", lineHeight: "1.7" }}>Each batch is carefully pressed and shaped by hand. No shortcuts, no assembly lines, just attention to detail in every step.</p>
                   </div>
@@ -313,7 +317,7 @@ export default function CheesePage() {
                   <div style={{ width: "2.25rem", height: "2.25rem", background: "#D91E18", borderRadius: "3px", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: "0", marginTop: "0.1rem" }}><span style={{ color: "white", fontWeight: "700", fontFamily: "'Inter',sans-serif", fontSize: "0.875rem" }}>4</span></div>
                   {" "}
                   <div>
-                    <h4 className="font-display text-lg font-bold text-charcoal mb-1" style={{ letterSpacing: "-0.01em" }}>Aging &amp; Finishing</h4>
+                    <h3 className="font-display text-lg font-bold text-charcoal mb-1" style={{ letterSpacing: "-0.01em" }}>Aging &amp; Finishing</h3>
                     {" "}
                     <p style={{ fontSize: "0.875rem", color: "rgba(43,43,43,0.62)", fontFamily: "'Inter',sans-serif", lineHeight: "1.7" }}>Good things take time. Our aged varieties are carefully tended through the aging process to develop the depth of flavor that makes them special.</p>
                   </div>

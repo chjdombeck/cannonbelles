@@ -4,12 +4,14 @@ import SubpageFooter from "@/components/SubpageFooter";
 import { MENU_SECTIONS, ORDER_ONLINE_URL } from "@/lib/menu";
 import { BUSINESS, ADDRESS_FULL, MAPS_URL, TEL_HREF, SHOP_ALL_URL, hoursCompact, shortTime } from "@/lib/site";
 import Link from "next/link";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = pageMetadata({
+  path: "/menu",
   title: "Menu | CannonBelles Coffee & Ice Cream · Cannon Falls, MN",
   description:
-    "The CannonBelles menu: Loon's Nest espresso and coffee drinks, 30 flavored syrups, 16 Cedar Crest ice cream flavors daily, and breakfast and lunch made with CannonBelles Queso Fresco in downtown Cannon Falls.",
-};
+    "The CannonBelles menu: Loon's Nest espresso drinks, 30 syrups, 16 ice cream flavors daily, and breakfast and lunch made with our own Queso Fresco.",
+});
 
 const ICONS = {
   egg: <path d="M12 3c-3.5 0-7 5.2-7 10a7 7 0 0014 0c0-4.8-3.5-10-7-10z" />,
@@ -121,7 +123,7 @@ export default function MenuPage() {
 
       {/* HERO */}
       <div className="relative overflow-hidden hero-mobile-pad" style={{ minHeight: "64vh", display: "flex", alignItems: "flex-end", paddingBottom: "5rem", paddingTop: "10rem" }}>
-        <Image src="/images/latte-art.jpg" alt="Latte art on a wooden table" width={1068} height={1600} sizes="100vw" priority className="absolute inset-0 w-full h-full object-cover" style={{ filter: "brightness(0.45) saturate(0.85)", objectPosition: "center 40%" }} />
+        <Image src="/images/latte-art.jpg" alt="Latte art on a wooden table" width={1068} height={1600} sizes="100vw" priority fetchPriority="high" className="absolute inset-0 w-full h-full object-cover" style={{ filter: "brightness(0.45) saturate(0.85)", objectPosition: "center 40%" }} />
         <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.3) 55%, transparent 100%)" }}></div>
         <div className="relative max-w-7xl mx-auto px-6 w-full">
           <div className="max-w-2xl">

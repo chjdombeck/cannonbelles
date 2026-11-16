@@ -5,10 +5,14 @@ import HomeFooter from "@/components/HomeFooter";
 import { BUSINESS, ADDRESS_SHORT, TEL_HREF, MAPS_EMBED_URL, ORDER_ONLINE_URL, SHOP_ALL_URL, hoursCompact } from "@/lib/site";
 import ExternalIcon from "@/components/ExternalIcon";
 import GiftBoxes from "@/components/GiftBoxes";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "CannonBelles | Coffee, Ice Cream & Artisanal Cheese · Cannon Falls, MN",
-};
+export const metadata = pageMetadata({
+  path: "/",
+  title: "CannonBelles | Coffee, Ice Cream & Cheese in Cannon Falls, MN",
+  description:
+    "Coffee, 16 ice cream flavors daily, breakfast, lunch, and award-winning artisanal cheese in downtown Cannon Falls, MN. Order online or shop our cheese.",
+});
 
 export default function HomePage() {
   return (
@@ -16,10 +20,11 @@ export default function HomePage() {
       {/* NAVIGATION */}
       <HomeNav />
       {/* HERO — SPLIT */}
+      <h1 className="sr-only">CannonBelles Coffee &amp; Ice Cream and Artisanal Cheese in Cannon Falls, Minnesota</h1>
       <section className="flex flex-col md:flex-row split-container" id="hero-split" style={{ minHeight: "100vh", position: "relative" }}>
         {/* Left: Coffee & Ice Cream */}
         <Link href="/coffee" className="split-panel flex-1 relative flex flex-col items-center justify-end pb-16 px-8 text-center" style={{ minHeight: "50vh" }}>
-          <Image src="/images/shop-interior.jpg" alt="Coffee and ice cream" width={1600} height={1068} sizes="(max-width: 767px) 163vw, 94vw" priority className="absolute inset-0 w-full h-full object-cover" style={{ filter: "brightness(0.52) saturate(0.85)" }} />
+          <Image src="/images/shop-interior.jpg" alt="Coffee and ice cream" width={1600} height={1068} sizes="(max-width: 767px) 163vw, 94vw" priority fetchPriority="high" className="absolute inset-0 w-full h-full object-cover" style={{ filter: "brightness(0.52) saturate(0.85)" }} />
           <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.28) 50%, transparent 100%)" }}></div>
           <div className="relative z-10">
             <p className="section-label mb-3" style={{ color: "rgba(239,230,216,0.85)" }}>Coffee &amp; Ice Cream</p>
@@ -35,7 +40,7 @@ export default function HomePage() {
         <div className="hidden md:block w-px relative z-10" style={{ background: "rgba(255,255,255,0.15)" }}></div>
         {/* Right: Artisanal Cheese */}
         <Link href="/cheese" className="split-panel flex-1 relative flex flex-col items-center justify-end pb-16 px-8 text-center" style={{ minHeight: "50vh" }}>
-          <Image src="/images/painted-desert-cheddar.jpg" alt="Artisanal cheese" width={1402} height={1122} sizes="(max-width: 767px) 136vw, 79vw" priority className="absolute inset-0 w-full h-full object-cover" style={{ filter: "brightness(0.48) saturate(0.8)" }} />
+          <Image src="/images/painted-desert-cheddar.jpg" alt="Artisanal cheese" width={1402} height={1122} sizes="(max-width: 767px) 136vw, 79vw" loading="eager" className="absolute inset-0 w-full h-full object-cover" style={{ filter: "brightness(0.48) saturate(0.8)" }} />
           <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.22) 50%, transparent 100%)" }}></div>
           <div className="relative z-10">
             <p className="section-label mb-3" style={{ color: "rgba(239,230,216,0.85)" }}>Artisanal Cheese</p>

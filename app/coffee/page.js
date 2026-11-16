@@ -4,10 +4,14 @@ import SubpageNav from "@/components/SubpageNav";
 import SubpageFooter from "@/components/SubpageFooter";
 import { BUSINESS, ADDRESS_FULL, TEL_HREF, MAPS_URL, ORDER_ONLINE_URL, hoursAligned } from "@/lib/site";
 import ExternalIcon from "@/components/ExternalIcon";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = pageMetadata({
+  path: "/coffee",
   title: "Coffee & Ice Cream | CannonBelles · Cannon Falls, MN",
-};
+  description:
+    "Loon's Nest espresso drinks, Cedar Crest ice cream, and a cozy downtown shop at 402 Mill St W in Cannon Falls, MN. Open 7 days. Order online for pickup.",
+});
 
 export default function CoffeePage() {
   return (
@@ -16,7 +20,7 @@ export default function CoffeePage() {
       <SubpageNav current="/coffee" />
       {/* HERO */}
       <div className="relative overflow-hidden hero-mobile-pad" style={{ minHeight: "88vh", display: "flex", alignItems: "flex-end", paddingBottom: "6rem", paddingTop: "10rem" }}>
-        <Image src="/images/shop-interior.jpg" alt="Coffee shop" width={1600} height={1068} sizes="(max-width: 767px) 286vw, 100vw" priority className="absolute inset-0 w-full h-full object-cover" style={{ filter: "brightness(0.45) saturate(0.85)" }} />
+        <Image src="/images/shop-interior.jpg" alt="Coffee shop" width={1600} height={1068} sizes="(max-width: 767px) 286vw, 100vw" priority fetchPriority="high" className="absolute inset-0 w-full h-full object-cover" style={{ filter: "brightness(0.45) saturate(0.85)" }} />
         <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.3) 55%, transparent 100%)" }}></div>
         <div className="relative max-w-7xl mx-auto px-6 w-full">
           <div className="max-w-2xl">

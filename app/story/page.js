@@ -2,10 +2,14 @@ import Image from "next/image";
 import Link from "next/link";
 import SubpageNav from "@/components/SubpageNav";
 import SubpageFooter from "@/components/SubpageFooter";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = pageMetadata({
+  path: "/story",
   title: "Our Story | CannonBelles · Cannon Falls, MN",
-};
+  description:
+    "Meet Kathy Hupf and Jackie Ohmann, the owners behind CannonBelles, and learn how a love of handcrafted cheese grew into a Cannon Falls favorite.",
+});
 
 export default function StoryPage() {
   return (
@@ -14,7 +18,7 @@ export default function StoryPage() {
       <SubpageNav current="/story" />
       {/* HERO */}
       <div className="relative overflow-hidden" style={{ minHeight: "88vh", display: "flex", alignItems: "flex-end", paddingBottom: "6rem", paddingTop: "10rem" }}>
-        <Image src="/images/charcuterie-board.jpg" alt="CannonBelles story" width={1600} height={1068} sizes="(max-width: 767px) 286vw, 100vw" priority className="absolute inset-0 w-full h-full object-cover" style={{ filter: "brightness(0.45) saturate(0.8)" }} />
+        <Image src="/images/charcuterie-board.jpg" alt="CannonBelles story" width={1600} height={1068} sizes="(max-width: 767px) 286vw, 100vw" priority fetchPriority="high" className="absolute inset-0 w-full h-full object-cover" style={{ filter: "brightness(0.45) saturate(0.8)" }} />
         <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.25) 55%, transparent 100%)" }}></div>
         <div className="relative max-w-7xl mx-auto px-6 w-full">
           <div className="max-w-2xl">
@@ -124,7 +128,7 @@ export default function StoryPage() {
                   <div>
                     <p style={{ fontSize: "0.75rem", fontWeight: "600", fontFamily: "'Inter',sans-serif", letterSpacing: "0.15em", textTransform: "uppercase", color: "#B0B0B0", marginBottom: "0.35rem" }}>The Beginning</p>
                     {" "}
-                    <h4 className="font-display text-xl font-bold text-charcoal mb-2" style={{ letterSpacing: "-0.01em" }}>A Passion for Craft</h4>
+                    <h3 className="font-display text-xl font-bold text-charcoal mb-2" style={{ letterSpacing: "-0.01em" }}>A Passion for Craft</h3>
                     {" "}
                     <p style={{ fontSize: "0.875rem", color: "rgba(43,43,43,0.65)", fontFamily: "'Inter',sans-serif", lineHeight: "1.75" }}>It started with a love of handcrafted cheese and a commitment to making something real, something the community of Cannon Falls could be proud of.</p>
                   </div>
@@ -140,7 +144,7 @@ export default function StoryPage() {
                   <div>
                     <p style={{ fontSize: "0.75rem", fontWeight: "600", fontFamily: "'Inter',sans-serif", letterSpacing: "0.15em", textTransform: "uppercase", color: "#B0B0B0", marginBottom: "0.35rem" }}>Growing Roots</p>
                     {" "}
-                    <h4 className="font-display text-xl font-bold text-charcoal mb-2" style={{ letterSpacing: "-0.01em" }}>The Community Responds</h4>
+                    <h3 className="font-display text-xl font-bold text-charcoal mb-2" style={{ letterSpacing: "-0.01em" }}>The Community Responds</h3>
                     {" "}
                     <p style={{ fontSize: "0.875rem", color: "rgba(43,43,43,0.65)", fontFamily: "'Inter',sans-serif", lineHeight: "1.75" }}>Word spread quickly. Neighbors, farmers markets, and loyal regulars made it clear: Cannon Falls was hungry for something local, honest, and made with care.</p>
                   </div>
@@ -156,7 +160,7 @@ export default function StoryPage() {
                   <div>
                     <p style={{ fontSize: "0.75rem", fontWeight: "600", fontFamily: "'Inter',sans-serif", letterSpacing: "0.15em", textTransform: "uppercase", color: "#B0B0B0", marginBottom: "0.35rem" }}>Expanding the Vision</p>
                     {" "}
-                    <h4 className="font-display text-xl font-bold text-charcoal mb-2" style={{ letterSpacing: "-0.01em" }}>Coffee &amp; Ice Cream Opens</h4>
+                    <h3 className="font-display text-xl font-bold text-charcoal mb-2" style={{ letterSpacing: "-0.01em" }}>Coffee &amp; Ice Cream Opens</h3>
                     {" "}
                     <p style={{ fontSize: "0.875rem", color: "rgba(43,43,43,0.65)", fontFamily: "'Inter',sans-serif", lineHeight: "1.75" }}>The same spirit that built the cheese business carried into a full coffee and ice cream shop, a warm, welcoming space for the whole community to gather.</p>
                   </div>
@@ -172,7 +176,7 @@ export default function StoryPage() {
                   <div>
                     <p style={{ fontSize: "0.75rem", fontWeight: "600", fontFamily: "'Inter',sans-serif", letterSpacing: "0.15em", textTransform: "uppercase", color: "#B0B0B0", marginBottom: "0.35rem" }}>Today</p>
                     {" "}
-                    <h4 className="font-display text-xl font-bold text-charcoal mb-2" style={{ letterSpacing: "-0.01em" }}>A Cannon Falls Destination</h4>
+                    <h3 className="font-display text-xl font-bold text-charcoal mb-2" style={{ letterSpacing: "-0.01em" }}>A Cannon Falls Destination</h3>
                     {" "}
                     <p style={{ fontSize: "0.875rem", color: "rgba(43,43,43,0.65)", fontFamily: "'Inter',sans-serif", lineHeight: "1.75" }}>CannonBelles is now two businesses under one name, united by the same values that started it all: local, handcrafted, and made for the community.</p>
                   </div>
