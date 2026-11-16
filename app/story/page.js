@@ -79,19 +79,10 @@ export default function StoryPage() {
           {/* Owners photo (casual for now; swap in a professional photo of Kathy & Jackie when available) */}
           <div className="owners-photo-frame">
             <div className="img-hover rounded-sm card-shadow" style={{ aspectRatio: "4/5", overflow: "hidden" }}>
-              <Image src="/images/cheesemakers-duo.jpg" alt="CannonBelles owners Kathy Hupf and Jackie Ohmann" width={397} height={640} sizes="(max-width: 767px) 88vw, 340px" className="w-full h-full object-cover" style={{ objectPosition: "center 25%" }} />
+              <Image src="/images/cheesemakers-duo.jpg" alt="CannonBelles owners Jackie Ohmann (left) and Kathy Hupf (right)" width={397} height={640} sizes="(max-width: 767px) 88vw, 340px" className="w-full h-full object-cover" style={{ objectPosition: "center 25%" }} />
             </div>
           </div>
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            <div className="owner-card owner-bio">
-              <p className="section-label mb-3">Co-Owner</p>
-              {" "}
-              <h3 className="font-display text-2xl font-bold text-charcoal mb-2" style={{ letterSpacing: "-0.02em" }}>Kathy Hupf</h3>
-              {" "}
-              <p className="font-display italic" style={{ fontSize: "1.0625rem", color: "#7A5C3E", marginBottom: "1rem", lineHeight: "1.4" }}>From milking cows to making cheese</p>
-              {" "}
-              <p style={{ fontSize: "0.9rem", color: "rgba(43,43,43,0.68)", fontFamily: "'Inter',sans-serif", lineHeight: "1.75" }}>Kathy spent 18 years running her own dairy farm and holds a degree in animal husbandry. Today she brings that farm-girl grit, plus a background in marketing and leadership, to the business side of CannonBelles.</p>
-            </div>
             <div className="owner-card owner-bio">
               <p className="section-label mb-3">Co-Owner</p>
               {" "}
@@ -100,6 +91,15 @@ export default function StoryPage() {
               <p className="font-display italic" style={{ fontSize: "1.0625rem", color: "#7A5C3E", marginBottom: "1rem", lineHeight: "1.4" }}>Spreading the good news… of cheese</p>
               {" "}
               <p style={{ fontSize: "0.9rem", color: "rgba(43,43,43,0.68)", fontFamily: "'Inter',sans-serif", lineHeight: "1.75" }}>After 15 years as a Director of Christian Education, Jackie followed her family's entrepreneurial streak into cheese. Married to a dairy farmer, she's often the friendly face sharing CannonBelles with customers at local events.</p>
+            </div>
+            <div className="owner-card owner-bio">
+              <p className="section-label mb-3">Co-Owner</p>
+              {" "}
+              <h3 className="font-display text-2xl font-bold text-charcoal mb-2" style={{ letterSpacing: "-0.02em" }}>Kathy Hupf</h3>
+              {" "}
+              <p className="font-display italic" style={{ fontSize: "1.0625rem", color: "#7A5C3E", marginBottom: "1rem", lineHeight: "1.4" }}>From milking cows to making cheese</p>
+              {" "}
+              <p style={{ fontSize: "0.9rem", color: "rgba(43,43,43,0.68)", fontFamily: "'Inter',sans-serif", lineHeight: "1.75" }}>Kathy spent 18 years running her own dairy farm and holds a degree in animal husbandry. Today she brings that farm-girl grit, plus a background in marketing and leadership, to the business side of CannonBelles.</p>
             </div>
           </div>
         </div>

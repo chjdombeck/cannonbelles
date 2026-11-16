@@ -4,6 +4,7 @@ import SubpageNav from "@/components/SubpageNav";
 import SubpageFooter from "@/components/SubpageFooter";
 import { BUSINESS, ADDRESS_FULL, TEL_HREF, MAPS_URL, ORDER_ONLINE_URL, hoursAligned } from "@/lib/site";
 import ExternalIcon from "@/components/ExternalIcon";
+import CoffeeMenuList from "@/components/CoffeeMenuList";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
@@ -111,45 +112,9 @@ export default function CoffeePage() {
                 <h3 className="font-display text-2xl font-bold text-charcoal" style={{ letterSpacing: "-0.02em" }}>Espresso Drinks</h3>
               </div>
               {" "}
-              <div style={{ display: "flex", flexDirection: "column", gap: "0.625rem" }}>
-                <div className="menu-item">
-                  <div>
-                    <p style={{ fontWeight: "600", fontFamily: "'Inter',sans-serif", fontSize: "0.9375rem", color: "#2B2B2B" }}>Latte</p>
-                    {" "}
-                    <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.52)", fontFamily: "'Inter',sans-serif", marginTop: "0.15rem" }}>Espresso with steamed milk</p>
-                  </div>
-                </div>
-                <div className="menu-item">
-                  <div>
-                    <p style={{ fontWeight: "600", fontFamily: "'Inter',sans-serif", fontSize: "0.9375rem", color: "#2B2B2B" }}>Cappuccino</p>
-                    {" "}
-                    <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.52)", fontFamily: "'Inter',sans-serif", marginTop: "0.15rem" }}>Double shot with foamed milk</p>
-                  </div>
-                </div>
-                <div className="menu-item">
-                  <div>
-                    <p style={{ fontWeight: "600", fontFamily: "'Inter',sans-serif", fontSize: "0.9375rem", color: "#2B2B2B" }}>Americano</p>
-                    {" "}
-                    <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.52)", fontFamily: "'Inter',sans-serif", marginTop: "0.15rem" }}>Espresso with hot water</p>
-                  </div>
-                </div>
-                <div className="menu-item">
-                  <div>
-                    <p style={{ fontWeight: "600", fontFamily: "'Inter',sans-serif", fontSize: "0.9375rem", color: "#2B2B2B" }}>Mocha</p>
-                    {" "}
-                    <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.52)", fontFamily: "'Inter',sans-serif", marginTop: "0.15rem" }}>Espresso, chocolate, steamed milk</p>
-                  </div>
-                </div>
-                <div className="menu-item">
-                  <div>
-                    <p style={{ fontWeight: "600", fontFamily: "'Inter',sans-serif", fontSize: "0.9375rem", color: "#2B2B2B" }}>Macchiato</p>
-                    {" "}
-                    <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.52)", fontFamily: "'Inter',sans-serif", marginTop: "0.15rem" }}>Espresso marked with foam</p>
-                  </div>
-                </div>
-              </div>
+              <CoffeeMenuList names={["Latte","Mocha","Cappuccino","Caramel Macchiato","Americano"]} />
             </div>
-            {/* Brewed & Cold */}
+            {/* Coffee, Tea & More */}
             <div>
               <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "1.25rem" }}>
                 <div style={{ width: "2.25rem", height: "2.25rem", background: "#D91E18", borderRadius: "3px", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: "0" }}>
@@ -157,52 +122,19 @@ export default function CoffeePage() {
                     <path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"></path>
                   </svg>
                 </div>
-                <h3 className="font-display text-2xl font-bold text-charcoal" style={{ letterSpacing: "-0.02em" }}>Brewed &amp; Cold</h3>
+                <h3 className="font-display text-2xl font-bold text-charcoal" style={{ letterSpacing: "-0.02em" }}>Coffee, Tea &amp; More</h3>
               </div>
               {" "}
-              <div style={{ display: "flex", flexDirection: "column", gap: "0.625rem" }}>
-                <div className="menu-item">
-                  <div>
-                    <p style={{ fontWeight: "600", fontFamily: "'Inter',sans-serif", fontSize: "0.9375rem", color: "#2B2B2B" }}>Drip Coffee</p>
-                    {" "}
-                    <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.52)", fontFamily: "'Inter',sans-serif", marginTop: "0.15rem" }}>Fresh brewed, always hot</p>
-                  </div>
-                </div>
-                <div className="menu-item">
-                  <div>
-                    <p style={{ fontWeight: "600", fontFamily: "'Inter',sans-serif", fontSize: "0.9375rem", color: "#2B2B2B" }}>Cold Brew</p>
-                    {" "}
-                    <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.52)", fontFamily: "'Inter',sans-serif", marginTop: "0.15rem" }}>Slow-steeped, smooth &amp; bold</p>
-                  </div>
-                </div>
-                <div className="menu-item">
-                  <div>
-                    <p style={{ fontWeight: "600", fontFamily: "'Inter',sans-serif", fontSize: "0.9375rem", color: "#2B2B2B" }}>Iced Latte</p>
-                    {" "}
-                    <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.52)", fontFamily: "'Inter',sans-serif", marginTop: "0.15rem" }}>Espresso over ice with milk</p>
-                  </div>
-                </div>
-                <div className="menu-item">
-                  <div>
-                    <p style={{ fontWeight: "600", fontFamily: "'Inter',sans-serif", fontSize: "0.9375rem", color: "#2B2B2B" }}>Seasonal Specialty</p>
-                    {" "}
-                    <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.52)", fontFamily: "'Inter',sans-serif", marginTop: "0.15rem" }}>Ask us what's featured today</p>
-                  </div>
-                </div>
-                <div className="menu-item">
-                  <div>
-                    <p style={{ fontWeight: "600", fontFamily: "'Inter',sans-serif", fontSize: "0.9375rem", color: "#2B2B2B" }}>Hot Chocolate</p>
-                    {" "}
-                    <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.52)", fontFamily: "'Inter',sans-serif", marginTop: "0.15rem" }}>Rich, creamy, kid-approved</p>
-                  </div>
-                </div>
-              </div>
+              <CoffeeMenuList names={["Brewed Coffee","Cold Brew","Chai Latte","London Fog","Hot Chocolate"]} />
             </div>
           </div>
           {" "}
           {/* Note */}
           {" "}
-          <p style={{ textAlign: "center", fontSize: "0.8125rem", color: "rgba(43,43,43,0.45)", fontFamily: "'Inter',sans-serif", fontStyle: "italic" }}>Menu items may vary. Ask our staff about daily specials and seasonal offerings.</p>
+          <div style={{ textAlign: "center" }}>
+            <p style={{ fontSize: "0.9375rem", color: "rgba(43,43,43,0.65)", fontFamily: "'Inter',sans-serif", marginBottom: "1.25rem" }}>Plus rotating seasonal drink specials, smoothies, frappes, sodas, and 30 flavored syrups.</p>
+            <Link href="/menu" className="btn-primary">See the Full Menu</Link>
+          </div>
         </div>
       </section>
       {/* ICE CREAM SECTION */}
@@ -213,37 +145,37 @@ export default function CoffeePage() {
             {" "}
             <h2 className="font-display text-4xl md:text-5xl font-bold text-charcoal mb-5" style={{ letterSpacing: "-0.03em", lineHeight: "1.1" }}>Ice Cream &amp;<br /><em>Frozen Treats</em></h2>
             {" "}
-            <div className="ornament-line max-w-xs mx-auto" style={{ color: "#B0B0B0", fontFamily: "'Inter',sans-serif", fontSize: "0.75rem", letterSpacing: "0.15em" }}><span>Premium Scoops · Sundaes · Shakes</span></div>
+            <div className="ornament-line max-w-xs mx-auto" style={{ color: "#B0B0B0", fontFamily: "'Inter',sans-serif", fontSize: "0.75rem", letterSpacing: "0.15em" }}><span>16 Flavors Offered Daily</span></div>
           </div>
           {" "}
           {/* Big image + text */}
           {" "}
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
             <div>
-              <p style={{ color: "rgba(43,43,43,0.72)", fontFamily: "'Inter',sans-serif", lineHeight: "1.75", marginBottom: "1.25rem" }}>We scoop premium ice cream in flavors that rotate with the seasons, from classic vanilla bean and rich chocolate to creative seasonal specials that keep things interesting.</p>
+              <p style={{ color: "rgba(43,43,43,0.72)", fontFamily: "'Inter',sans-serif", lineHeight: "1.75", marginBottom: "1.25rem" }}>We scoop 16 flavors of Cedar Crest ice cream every day, with flavors that rotate throughout the year. Ask what&apos;s in the case when you stop in.</p>
               {" "}
-              <p style={{ color: "rgba(43,43,43,0.72)", fontFamily: "'Inter',sans-serif", lineHeight: "1.75", marginBottom: "2rem" }}>Build your perfect sundae, blend up a thick shake, or keep it simple with a single scoop on a fresh cone. There's no wrong order.</p>
+              <p style={{ color: "rgba(43,43,43,0.72)", fontFamily: "'Inter',sans-serif", lineHeight: "1.75", marginBottom: "2rem" }}>Try a sundae, malt, or milkshake, share an ice cream flight, or take a pint or quart home. There&apos;s no wrong order.</p>
               {" "}
               <div className="grid grid-cols-2 gap-4">
                 <div className="hover-lift rounded-sm card-shadow bg-white" style={{ padding: "1.25rem" }}>
-                  <p className="font-display font-bold text-lg text-charcoal mb-1" style={{ letterSpacing: "-0.02em" }}>Scoops &amp; Cones</p>
+                  <p className="font-display font-bold text-lg text-charcoal mb-1" style={{ letterSpacing: "-0.02em" }}>Cups &amp; Cones</p>
                   {" "}
-                  <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.55)", fontFamily: "'Inter',sans-serif", lineHeight: "1.6" }}>Single, double, or triple. In a cup or on a fresh waffle cone.</p>
+                  <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.55)", fontFamily: "'Inter',sans-serif", lineHeight: "1.6" }}>In a cup or a waffle, cake, or gluten-free cone.</p>
                 </div>
                 <div className="hover-lift rounded-sm card-shadow bg-white" style={{ padding: "1.25rem" }}>
                   <p className="font-display font-bold text-lg text-charcoal mb-1" style={{ letterSpacing: "-0.02em" }}>Sundaes</p>
                   {" "}
-                  <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.55)", fontFamily: "'Inter',sans-serif", lineHeight: "1.6" }}>Loaded with toppings, hot fudge, whipped cream, and a cherry.</p>
+                  <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.55)", fontFamily: "'Inter',sans-serif", lineHeight: "1.6" }}>Classic sundaes, made to order.</p>
                 </div>
                 <div className="hover-lift rounded-sm card-shadow bg-white" style={{ padding: "1.25rem" }}>
-                  <p className="font-display font-bold text-lg text-charcoal mb-1" style={{ letterSpacing: "-0.02em" }}>Shakes</p>
+                  <p className="font-display font-bold text-lg text-charcoal mb-1" style={{ letterSpacing: "-0.02em" }}>Malts &amp; Shakes</p>
                   {" "}
-                  <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.55)", fontFamily: "'Inter',sans-serif", lineHeight: "1.6" }}>Thick, creamy milkshakes blended fresh in every flavor.</p>
+                  <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.55)", fontFamily: "'Inter',sans-serif", lineHeight: "1.6" }}>Malts and milkshakes, blended to order.</p>
                 </div>
                 <div className="hover-lift rounded-sm card-shadow bg-white" style={{ padding: "1.25rem" }}>
-                  <p className="font-display font-bold text-lg text-charcoal mb-1" style={{ letterSpacing: "-0.02em" }}>Seasonal</p>
+                  <p className="font-display font-bold text-lg text-charcoal mb-1" style={{ letterSpacing: "-0.02em" }}>Floats &amp; Affogato</p>
                   {" "}
-                  <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.55)", fontFamily: "'Inter',sans-serif", lineHeight: "1.6" }}>Rotating flavors that celebrate the best of each season.</p>
+                  <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.55)", fontFamily: "'Inter',sans-serif", lineHeight: "1.6" }}>Coffee and root beer floats, or ice cream with a shot of espresso.</p>
                 </div>
               </div>
             </div>
