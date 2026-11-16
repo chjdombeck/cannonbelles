@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { PAGES } from "@/lib/site";
+import { PAGES, ORDER_ONLINE_URL } from "@/lib/site";
 import { PromoBar, GiftButton, GiftMenuLink } from "@/components/Holiday";
 import SocialLinks from "@/components/SocialLinks";
 
@@ -56,6 +56,7 @@ export default function SubpageNav({ current }) {
       </div>
       <div id="subpage-mobile-menu" className={`${open ? "" : "hidden "}md:hidden px-6 py-5 space-y-4`} style={{ background: "#F8F5F0", borderTop: "1px solid #E5E5E5" }}>
         <GiftMenuLink onClick={() => setOpen(false)} />
+        <a href={ORDER_ONLINE_URL} target="_blank" rel="noopener" className="block text-sm font-semibold" style={{ fontFamily: "'Inter',sans-serif", color: "#2B2B2B" }} onClick={() => setOpen(false)}>Order Online ↗</a>
         <Link href="/" className="block text-sm font-medium" style={menuLinkStyle} onClick={() => setOpen(false)}>← Back to Home</Link>
         {others.map((p) => (
           <Link key={p.href} href={p.href} className="block text-sm font-medium" style={menuLinkStyle} onClick={() => setOpen(false)}>{p.label}</Link>
