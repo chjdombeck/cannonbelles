@@ -118,8 +118,6 @@ export default function CoffeePage() {
                     {" "}
                     <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.52)", fontFamily: "'Inter',sans-serif", marginTop: "0.15rem" }}>Espresso with steamed milk</p>
                   </div>
-                  {" "}
-                  <p style={{ fontWeight: "600", fontFamily: "'Inter',sans-serif", color: "#D91E18", whiteSpace: "nowrap", fontSize: "0.9375rem" }}>$4.50+</p>
                 </div>
                 <div className="menu-item">
                   <div>
@@ -127,8 +125,6 @@ export default function CoffeePage() {
                     {" "}
                     <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.52)", fontFamily: "'Inter',sans-serif", marginTop: "0.15rem" }}>Double shot with foamed milk</p>
                   </div>
-                  {" "}
-                  <p style={{ fontWeight: "600", fontFamily: "'Inter',sans-serif", color: "#D91E18", whiteSpace: "nowrap", fontSize: "0.9375rem" }}>$4.25+</p>
                 </div>
                 <div className="menu-item">
                   <div>
@@ -136,8 +132,6 @@ export default function CoffeePage() {
                     {" "}
                     <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.52)", fontFamily: "'Inter',sans-serif", marginTop: "0.15rem" }}>Espresso with hot water</p>
                   </div>
-                  {" "}
-                  <p style={{ fontWeight: "600", fontFamily: "'Inter',sans-serif", color: "#D91E18", whiteSpace: "nowrap", fontSize: "0.9375rem" }}>$3.75+</p>
                 </div>
                 <div className="menu-item">
                   <div>
@@ -145,8 +139,6 @@ export default function CoffeePage() {
                     {" "}
                     <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.52)", fontFamily: "'Inter',sans-serif", marginTop: "0.15rem" }}>Espresso, chocolate, steamed milk</p>
                   </div>
-                  {" "}
-                  <p style={{ fontWeight: "600", fontFamily: "'Inter',sans-serif", color: "#D91E18", whiteSpace: "nowrap", fontSize: "0.9375rem" }}>$5.00+</p>
                 </div>
                 <div className="menu-item">
                   <div>
@@ -154,8 +146,6 @@ export default function CoffeePage() {
                     {" "}
                     <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.52)", fontFamily: "'Inter',sans-serif", marginTop: "0.15rem" }}>Espresso marked with foam</p>
                   </div>
-                  {" "}
-                  <p style={{ fontWeight: "600", fontFamily: "'Inter',sans-serif", color: "#D91E18", whiteSpace: "nowrap", fontSize: "0.9375rem" }}>$4.75+</p>
                 </div>
               </div>
             </div>
@@ -177,8 +167,6 @@ export default function CoffeePage() {
                     {" "}
                     <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.52)", fontFamily: "'Inter',sans-serif", marginTop: "0.15rem" }}>Fresh brewed, always hot</p>
                   </div>
-                  {" "}
-                  <p style={{ fontWeight: "600", fontFamily: "'Inter',sans-serif", color: "#D91E18", whiteSpace: "nowrap", fontSize: "0.9375rem" }}>$2.50+</p>
                 </div>
                 <div className="menu-item">
                   <div>
@@ -186,8 +174,6 @@ export default function CoffeePage() {
                     {" "}
                     <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.52)", fontFamily: "'Inter',sans-serif", marginTop: "0.15rem" }}>Slow-steeped, smooth &amp; bold</p>
                   </div>
-                  {" "}
-                  <p style={{ fontWeight: "600", fontFamily: "'Inter',sans-serif", color: "#D91E18", whiteSpace: "nowrap", fontSize: "0.9375rem" }}>$4.50+</p>
                 </div>
                 <div className="menu-item">
                   <div>
@@ -195,8 +181,6 @@ export default function CoffeePage() {
                     {" "}
                     <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.52)", fontFamily: "'Inter',sans-serif", marginTop: "0.15rem" }}>Espresso over ice with milk</p>
                   </div>
-                  {" "}
-                  <p style={{ fontWeight: "600", fontFamily: "'Inter',sans-serif", color: "#D91E18", whiteSpace: "nowrap", fontSize: "0.9375rem" }}>$5.00+</p>
                 </div>
                 <div className="menu-item">
                   <div>
@@ -204,8 +188,6 @@ export default function CoffeePage() {
                     {" "}
                     <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.52)", fontFamily: "'Inter',sans-serif", marginTop: "0.15rem" }}>Ask us what's featured today</p>
                   </div>
-                  {" "}
-                  <p style={{ fontWeight: "600", fontFamily: "'Inter',sans-serif", color: "#D91E18", whiteSpace: "nowrap", fontSize: "0.9375rem" }}>$5.25+</p>
                 </div>
                 <div className="menu-item">
                   <div>
@@ -213,8 +195,6 @@ export default function CoffeePage() {
                     {" "}
                     <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.52)", fontFamily: "'Inter',sans-serif", marginTop: "0.15rem" }}>Rich, creamy, kid-approved</p>
                   </div>
-                  {" "}
-                  <p style={{ fontWeight: "600", fontFamily: "'Inter',sans-serif", color: "#D91E18", whiteSpace: "nowrap", fontSize: "0.9375rem" }}>$3.75+</p>
                 </div>
               </div>
             </div>
@@ -222,7 +202,7 @@ export default function CoffeePage() {
           {" "}
           {/* Note */}
           {" "}
-          <p style={{ textAlign: "center", fontSize: "0.8125rem", color: "rgba(43,43,43,0.45)", fontFamily: "'Inter',sans-serif", fontStyle: "italic" }}>Menu items and pricing may vary. Ask our staff about daily specials and seasonal offerings.</p>
+          <p style={{ textAlign: "center", fontSize: "0.8125rem", color: "rgba(43,43,43,0.45)", fontFamily: "'Inter',sans-serif", fontStyle: "italic" }}>Menu items may vary. Ask our staff about daily specials and seasonal offerings.</p>
         </div>
       </section>
       {/* ICE CREAM SECTION */}
