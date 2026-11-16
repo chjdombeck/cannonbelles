@@ -51,7 +51,7 @@ export default function StoryPage() {
             </div>
             <div className="grid grid-cols-2 gap-4">
               <div className="img-hover rounded-sm card-shadow" style={{ aspectRatio: "3/4", overflow: "hidden" }}>
-                <Image src="/images/cheesemakers-duo.jpg" alt="CannonBelles co-owners Kathy Hupf and Jackie Ohmann, ready to make cheese" width={397} height={640} sizes="(max-width: 767px) 56vw, 28vw" className="w-full h-full object-cover" />
+                <Image src="/images/storefront-sidewalk.jpg" alt="CannonBelles Coffee & Ice Cream storefront on Mill Street in downtown Cannon Falls" width={600} height={600} sizes="(max-width: 767px) 56vw, 28vw" className="w-full h-full object-cover" style={{ objectPosition: "30% center" }} />
               </div>
               <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
                 <div className="img-hover rounded-sm card-shadow" style={{ flex: "1", overflow: "hidden", minHeight: "170px" }}>
@@ -76,14 +76,10 @@ export default function StoryPage() {
             <div className="ornament-line max-w-xs mx-auto" style={{ color: "#B0B0B0", fontFamily: "'Inter',sans-serif", fontSize: "0.75rem", letterSpacing: "0.15em" }}><span>The Faces of CannonBelles</span></div>
           </div>
           {" "}
-          {/* Owners photo placeholder: swap in a new photo of Kathy & Jackie when available */}
-          <div className="max-w-4xl mx-auto mb-10 md:mb-12">
-            <div className="owners-photo-placeholder">
-              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                <path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z" />
-                <circle cx="12" cy="13" r="4" />
-              </svg>
-              <p className="owners-photo-placeholder-text">Photo of Kathy &amp; Jackie coming soon</p>
+          {/* Owners photo (casual for now; swap in a professional photo of Kathy & Jackie when available) */}
+          <div className="owners-photo-frame">
+            <div className="img-hover rounded-sm card-shadow" style={{ aspectRatio: "4/5", overflow: "hidden" }}>
+              <Image src="/images/cheesemakers-duo.jpg" alt="CannonBelles owners Kathy Hupf and Jackie Ohmann" width={397} height={640} sizes="(max-width: 767px) 88vw, 340px" className="w-full h-full object-cover" style={{ objectPosition: "center 25%" }} />
             </div>
           </div>
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
