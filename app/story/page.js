@@ -90,7 +90,9 @@ export default function StoryPage() {
               {" "}
               <p className="font-display italic" style={{ fontSize: "1.0625rem", color: "#7A5C3E", marginBottom: "1rem", lineHeight: "1.4" }}>Spreading the good news… of cheese</p>
               {" "}
-              <p style={{ fontSize: "0.9rem", color: "rgba(43,43,43,0.68)", fontFamily: "'Inter',sans-serif", lineHeight: "1.75" }}>After 15 years as a Director of Christian Education, Jackie followed her family's entrepreneurial streak into cheese. Married to a dairy farmer, she's often the friendly face sharing CannonBelles with customers at local events.</p>
+              <p style={{ fontSize: "0.9rem", color: "rgba(43,43,43,0.68)", fontFamily: "'Inter',sans-serif", lineHeight: "1.75", marginBottom: "0.875rem" }}>For 15 years, Jackie Ohmann dedicated her life to ministry as a Director of Christian Education, but deep down, entrepreneurship was in her DNA. Coming from a family of business owners, it was only a matter of time before she jumped headfirst into building something of her own. Enter: cheese.</p>
+              <p style={{ fontSize: "0.9rem", color: "rgba(43,43,43,0.68)", fontFamily: "'Inter',sans-serif", lineHeight: "1.75", marginBottom: "0.875rem" }}>Marrying a dairy farmer sealed her fate in the world of dairy, but let&apos;s be honest, she was already a die-hard cheese lover. Whether she&apos;s dreaming up new ways to cook with CannonBelles cheese, meeting customers at events, or sharing her passion with her daughter Grace (future cheesemaker in training!), Jackie brings heart, hustle, and a whole lot of flavor to everything she does.</p>
+              <p style={{ fontSize: "0.9rem", color: "rgba(43,43,43,0.68)", fontFamily: "'Inter',sans-serif", lineHeight: "1.75" }}>Now, instead of spreading just the Good News, she&apos;s also spreading butter, queso fresco, and the magic of Minnesota-made cheese. And she wouldn&apos;t have it any other way!</p>
             </div>
             <div className="owner-card owner-bio">
               <p className="section-label mb-3">Co-Owner</p>
@@ -99,7 +101,9 @@ export default function StoryPage() {
               {" "}
               <p className="font-display italic" style={{ fontSize: "1.0625rem", color: "#7A5C3E", marginBottom: "1rem", lineHeight: "1.4" }}>From milking cows to making cheese</p>
               {" "}
-              <p style={{ fontSize: "0.9rem", color: "rgba(43,43,43,0.68)", fontFamily: "'Inter',sans-serif", lineHeight: "1.75" }}>Kathy spent 18 years running her own dairy farm and holds a degree in animal husbandry. Today she brings that farm-girl grit, plus a background in marketing and leadership, to the business side of CannonBelles.</p>
+              <p style={{ fontSize: "0.9rem", color: "rgba(43,43,43,0.68)", fontFamily: "'Inter',sans-serif", lineHeight: "1.75", marginBottom: "0.875rem" }}>Kathy Hupf&apos;s love for dairy runs deeper than a fresh wheel of aged cheddar. She grew up on a dairy farm, earned a degree in animal husbandry, and spent 18 years wrangling cows and running her own dairy farm, mastering the art of early mornings, hard work, and the magic of milk. Now, instead of managing a herd, she&apos;s helping to craft award-winning cheese. A full-circle dairy dream!</p>
+              <p style={{ fontSize: "0.9rem", color: "rgba(43,43,43,0.68)", fontFamily: "'Inter',sans-serif", lineHeight: "1.75", marginBottom: "0.875rem" }}>With a strong background in marketing, organization, and leadership, Kathy is a powerhouse behind the scenes at CannonBelles. She brings her passion for local food, her can-do farm-girl grit, and her endless enthusiasm for all things dairy to the world of cheesemaking.</p>
+              <p style={{ fontSize: "0.9rem", color: "rgba(43,43,43,0.68)", fontFamily: "'Inter',sans-serif", lineHeight: "1.75" }}>Whether she&apos;s helping promote local cheese, strategizing business growth, or just taste-testing (for quality control, of course!), she&apos;s all in. From cows to curds, Kathy&apos;s journey proves that once dairy gets in your veins, there&apos;s no turning back!</p>
             </div>
           </div>
         </div>
