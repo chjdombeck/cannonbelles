@@ -181,47 +181,48 @@ export default function HomePage() {
           {" "}
           <div className="cheese-grid grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-5">
             <div className="hover-lift bg-white rounded-sm overflow-hidden card-shadow">
-              <div className="img-hover" style={{ aspectRatio: "1/1", overflow: "hidden" }}>
-                <Image src="/images/cheddar-board.jpg" alt="Cheddar" width={1600} height={1066} sizes="(max-width: 767px) 64vw, 31vw" className="w-full h-full object-cover" />
+              <div className="img-hover" style={{ aspectRatio: "1/1", overflow: "hidden", position: "relative" }}>
+                <Image src="/images/queso-fresco-ribbon.jpg" alt="CannonBelles Queso Fresco" width={1024} height={1024} sizes="(max-width: 767px) 50vw, 25vw" className="w-full h-full object-cover" />
+                <span className="signature-tab">Signature Cheese</span>
+              </div>
+              {" "}
+              <div style={{ padding: "1.25rem" }}>
+                <h4 className="font-display text-lg font-bold text-charcoal mb-1" style={{ letterSpacing: "-0.02em" }}>Queso Fresco</h4>
+                {" "}
+                <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.55)", fontFamily: "'Inter',sans-serif", lineHeight: "1.65" }}>Our award winner: mild, creamy, and the cheese in every grilled cheese we serve.</p>
+              </div>
+            </div>
+            <div className="hover-lift bg-white rounded-sm overflow-hidden card-shadow">
+              <div className="img-hover" style={{ aspectRatio: "1/1", overflow: "hidden", position: "relative" }}>
+                <Image src="/images/cheddar-board.jpg" alt="Aged Cheddar" width={1600} height={1066} sizes="(max-width: 767px) 50vw, 25vw" className="w-full h-full object-cover" />
               </div>
               {" "}
               <div style={{ padding: "1.25rem" }}>
                 <h4 className="font-display text-lg font-bold text-charcoal mb-1" style={{ letterSpacing: "-0.02em" }}>Aged Cheddar</h4>
                 {" "}
-                <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.55)", fontFamily: "'Inter',sans-serif", lineHeight: "1.65" }}>Sharp, rich, and full-bodied. Aged to perfection right here in Cannon Falls.</p>
+                <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.55)", fontFamily: "'Inter',sans-serif", lineHeight: "1.65" }}>Sharp, rich, and full-bodied. Aged more than 12 months right here in Cannon Falls.</p>
               </div>
             </div>
             <div className="hover-lift bg-white rounded-sm overflow-hidden card-shadow">
-              <div className="img-hover" style={{ aspectRatio: "1/1", overflow: "hidden" }}>
-                <Image src="/images/gouda-rustic.jpg" alt="Gouda" width={1600} height={1065} sizes="(max-width: 767px) 64vw, 31vw" className="w-full h-full object-cover" />
+              <div className="img-hover" style={{ aspectRatio: "1/1", overflow: "hidden", position: "relative" }}>
+                <Image src="/images/gouda-rustic.jpg" alt="Gouda" width={1600} height={1065} sizes="(max-width: 767px) 50vw, 25vw" className="w-full h-full object-cover" />
               </div>
               {" "}
               <div style={{ padding: "1.25rem" }}>
-                <h4 className="font-display text-lg font-bold text-charcoal mb-1" style={{ letterSpacing: "-0.02em" }}>Smoked Gouda</h4>
+                <h4 className="font-display text-lg font-bold text-charcoal mb-1" style={{ letterSpacing: "-0.02em" }}>Gouda</h4>
                 {" "}
-                <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.55)", fontFamily: "'Inter',sans-serif", lineHeight: "1.65" }}>Gently smoked with a buttery finish. Perfect on a board or melted over everything.</p>
+                <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.55)", fontFamily: "'Inter',sans-serif", lineHeight: "1.65" }}>Creamy and mellow with a buttery finish. Aged at least 3 months.</p>
               </div>
             </div>
             <div className="hover-lift bg-white rounded-sm overflow-hidden card-shadow">
-              <div className="img-hover" style={{ aspectRatio: "1/1", overflow: "hidden" }}>
-                <Image src="/images/dill-curds.jpg" alt="Cheese curds" width={1600} height={1066} sizes="(max-width: 767px) 64vw, 31vw" className="w-full h-full object-cover" />
+              <div className="img-hover" style={{ aspectRatio: "1/1", overflow: "hidden", position: "relative" }}>
+                <Image src="/images/dill-curds.jpg" alt="Cheese curds" width={1600} height={1066} sizes="(max-width: 767px) 50vw, 25vw" className="w-full h-full object-cover" />
               </div>
               {" "}
               <div style={{ padding: "1.25rem" }}>
-                <h4 className="font-display text-lg font-bold text-charcoal mb-1" style={{ letterSpacing: "-0.02em" }}>Fresh Curds</h4>
+                <h4 className="font-display text-lg font-bold text-charcoal mb-1" style={{ letterSpacing: "-0.02em" }}>Cheese Curds</h4>
                 {" "}
-                <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.55)", fontFamily: "'Inter',sans-serif", lineHeight: "1.65" }}>Squeaky, fresh, and irresistible. A Minnesota classic made fresh in small batches.</p>
-              </div>
-            </div>
-            <div className="hover-lift bg-white rounded-sm overflow-hidden card-shadow">
-              <div className="img-hover" style={{ aspectRatio: "1/1", overflow: "hidden" }}>
-                <Image src="/images/cranberry-cheddar.jpg" alt="Seasonal cheese" width={1600} height={1200} sizes="(max-width: 767px) 57vw, 28vw" className="w-full h-full object-cover" />
-              </div>
-              {" "}
-              <div style={{ padding: "1.25rem" }}>
-                <h4 className="font-display text-lg font-bold text-charcoal mb-1" style={{ letterSpacing: "-0.02em" }}>Seasonal Varieties</h4>
-                {" "}
-                <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.55)", fontFamily: "'Inter',sans-serif", lineHeight: "1.65" }}>Rotating selections crafted with local flavors and the ingredients of the moment.</p>
+                <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.55)", fontFamily: "'Inter',sans-serif", lineHeight: "1.65" }}>Squeaky and fresh in eight flavors, from plain and dill to Grim Reaper.</p>
               </div>
             </div>
           </div>

@@ -4,6 +4,9 @@ import SubpageNav from "@/components/SubpageNav";
 import SubpageFooter from "@/components/SubpageFooter";
 import { BUSINESS, ADDRESS_FULL, TEL_HREF, MAPS_URL, SHOP_ALL_URL, hoursAligned } from "@/lib/site";
 import ExternalIcon from "@/components/ExternalIcon";
+import CheeseCatalog from "@/components/CheeseCatalog";
+import StoreFinder from "@/components/StoreFinder";
+import { CANNON_FALLS_STOCKISTS } from "@/lib/cheeses";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
@@ -96,181 +99,10 @@ export default function CheesePage() {
             {" "}
             <h2 className="font-display text-4xl md:text-5xl font-bold text-charcoal mb-5" style={{ letterSpacing: "-0.03em", lineHeight: "1.1" }}>Our Cheese<br /><em>Selection</em></h2>
             {" "}
-            <div className="ornament-line max-w-xs mx-auto" style={{ color: "#B0B0B0", fontFamily: "'Inter',sans-serif", fontSize: "0.75rem", letterSpacing: "0.15em" }}><span>Handcrafted in Small Batches</span></div>
+            <div className="ornament-line max-w-xs mx-auto" style={{ color: "#B0B0B0", fontFamily: "'Inter',sans-serif", fontSize: "0.75rem", letterSpacing: "0.15em" }}><span>Every Cheese We Make, by Type</span></div>
           </div>
           {" "}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* Aged Cheddar */}
-            <div className="cheese-card">
-              <div className="img-hover" style={{ aspectRatio: "16/10", overflow: "hidden" }}>
-                <Image src="/images/cheddar-board.jpg" alt="Aged Cheddar" width={1600} height={1066} sizes="(max-width: 767px) 88vw, 29vw" className="w-full h-full object-cover" />
-              </div>
-              {" "}
-              <div style={{ padding: "1.5rem" }}>
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: "0.5rem" }}>
-                  <h3 className="font-display text-xl font-bold text-charcoal" style={{ letterSpacing: "-0.02em" }}>Aged Cheddar</h3>
-                  <span style={{ fontSize: "0.6875rem", fontWeight: "600", fontFamily: "'Inter',sans-serif", letterSpacing: "0.15em", textTransform: "uppercase", color: "#D91E18", background: "rgba(217,30,24,0.08)", padding: "0.2rem 0.6rem", borderRadius: "2px" }}>Signature</span>
-                </div>
-                {" "}
-                <p style={{ fontSize: "0.875rem", color: "rgba(43,43,43,0.6)", fontFamily: "'Inter',sans-serif", lineHeight: "1.7", marginBottom: "1rem" }}>Sharp, rich, and full-bodied with a firm texture. Aged right here in Cannon Falls to develop deep, complex flavor that keeps you coming back.</p>
-                {" "}
-                <div style={{ display: "flex", gap: "1.5rem", paddingTop: "1rem", borderTop: "1px solid #E5E5E5" }}>
-                  <div>
-                    <p style={{ fontSize: "0.6875rem", fontWeight: "600", fontFamily: "'Inter',sans-serif", letterSpacing: "0.15em", textTransform: "uppercase", color: "#B0B0B0", marginBottom: "0.2rem" }}>Texture</p>
-                    {" "}
-                    <p style={{ fontSize: "0.8125rem", fontFamily: "'Inter',sans-serif", color: "#2B2B2B" }}>Firm, crumbly</p>
-                  </div>
-                  <div>
-                    <p style={{ fontSize: "0.6875rem", fontWeight: "600", fontFamily: "'Inter',sans-serif", letterSpacing: "0.15em", textTransform: "uppercase", color: "#B0B0B0", marginBottom: "0.2rem" }}>Flavor</p>
-                    {" "}
-                    <p style={{ fontSize: "0.8125rem", fontFamily: "'Inter',sans-serif", color: "#2B2B2B" }}>Sharp, nutty</p>
-                  </div>
-                  <div>
-                    <p style={{ fontSize: "0.6875rem", fontWeight: "600", fontFamily: "'Inter',sans-serif", letterSpacing: "0.15em", textTransform: "uppercase", color: "#B0B0B0", marginBottom: "0.2rem" }}>Age</p>
-                    {" "}
-                    <p style={{ fontSize: "0.8125rem", fontFamily: "'Inter',sans-serif", color: "#2B2B2B" }}>6–12 months</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/* Smoked Gouda */}
-            <div className="cheese-card">
-              <div className="img-hover" style={{ aspectRatio: "16/10", overflow: "hidden" }}>
-                <Image src="/images/gouda-rustic.jpg" alt="Smoked Gouda" width={1600} height={1065} sizes="(max-width: 767px) 88vw, 29vw" className="w-full h-full object-cover" />
-              </div>
-              {" "}
-              <div style={{ padding: "1.5rem" }}>
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: "0.5rem" }}>
-                  <h3 className="font-display text-xl font-bold text-charcoal" style={{ letterSpacing: "-0.02em" }}>Smoked Gouda</h3>
-                  <span style={{ fontSize: "0.6875rem", fontWeight: "600", fontFamily: "'Inter',sans-serif", letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A5C3E", background: "rgba(122,92,62,0.1)", padding: "0.2rem 0.6rem", borderRadius: "2px" }}>Popular</span>
-                </div>
-                {" "}
-                <p style={{ fontSize: "0.875rem", color: "rgba(43,43,43,0.6)", fontFamily: "'Inter',sans-serif", lineHeight: "1.7", marginBottom: "1rem" }}>Gently smoked over natural wood for a rich, buttery flavor with a subtle smokiness. Melts beautifully, perfect for boards, sandwiches, or straight off the wedge.</p>
-                {" "}
-                <div style={{ display: "flex", gap: "1.5rem", paddingTop: "1rem", borderTop: "1px solid #E5E5E5" }}>
-                  <div>
-                    <p style={{ fontSize: "0.6875rem", fontWeight: "600", fontFamily: "'Inter',sans-serif", letterSpacing: "0.15em", textTransform: "uppercase", color: "#B0B0B0", marginBottom: "0.2rem" }}>Texture</p>
-                    {" "}
-                    <p style={{ fontSize: "0.8125rem", fontFamily: "'Inter',sans-serif", color: "#2B2B2B" }}>Semi-firm</p>
-                  </div>
-                  <div>
-                    <p style={{ fontSize: "0.6875rem", fontWeight: "600", fontFamily: "'Inter',sans-serif", letterSpacing: "0.15em", textTransform: "uppercase", color: "#B0B0B0", marginBottom: "0.2rem" }}>Flavor</p>
-                    {" "}
-                    <p style={{ fontSize: "0.8125rem", fontFamily: "'Inter',sans-serif", color: "#2B2B2B" }}>Buttery, smoky</p>
-                  </div>
-                  <div>
-                    <p style={{ fontSize: "0.6875rem", fontWeight: "600", fontFamily: "'Inter',sans-serif", letterSpacing: "0.15em", textTransform: "uppercase", color: "#B0B0B0", marginBottom: "0.2rem" }}>Age</p>
-                    {" "}
-                    <p style={{ fontSize: "0.8125rem", fontFamily: "'Inter',sans-serif", color: "#2B2B2B" }}>3–4 months</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/* Fresh Curds */}
-            <div className="cheese-card">
-              <div className="img-hover" style={{ aspectRatio: "16/10", overflow: "hidden" }}>
-                <Image src="/images/bacon-curds.jpg" alt="Fresh Curds" width={1600} height={1066} sizes="(max-width: 767px) 88vw, 29vw" className="w-full h-full object-cover" />
-              </div>
-              {" "}
-              <div style={{ padding: "1.5rem" }}>
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: "0.5rem" }}>
-                  <h3 className="font-display text-xl font-bold text-charcoal" style={{ letterSpacing: "-0.02em" }}>Fresh Curds</h3>
-                  <span style={{ fontSize: "0.6875rem", fontWeight: "600", fontFamily: "'Inter',sans-serif", letterSpacing: "0.15em", textTransform: "uppercase", color: "#2B6B2B", background: "rgba(43,107,43,0.1)", padding: "0.2rem 0.6rem", borderRadius: "2px" }}>Fresh Daily</span>
-                </div>
-                {" "}
-                <p style={{ fontSize: "0.875rem", color: "rgba(43,43,43,0.6)", fontFamily: "'Inter',sans-serif", lineHeight: "1.7", marginBottom: "1rem" }}>Squeaky, fresh, and irresistible. Made fresh every day in small batches so you always get the real deal. A true Minnesota classic: plain, seasoned, or fried.</p>
-                {" "}
-                <div style={{ display: "flex", gap: "1.5rem", paddingTop: "1rem", borderTop: "1px solid #E5E5E5" }}>
-                  <div>
-                    <p style={{ fontSize: "0.6875rem", fontWeight: "600", fontFamily: "'Inter',sans-serif", letterSpacing: "0.15em", textTransform: "uppercase", color: "#B0B0B0", marginBottom: "0.2rem" }}>Texture</p>
-                    {" "}
-                    <p style={{ fontSize: "0.8125rem", fontFamily: "'Inter',sans-serif", color: "#2B2B2B" }}>Soft, squeaky</p>
-                  </div>
-                  <div>
-                    <p style={{ fontSize: "0.6875rem", fontWeight: "600", fontFamily: "'Inter',sans-serif", letterSpacing: "0.15em", textTransform: "uppercase", color: "#B0B0B0", marginBottom: "0.2rem" }}>Flavor</p>
-                    {" "}
-                    <p style={{ fontSize: "0.8125rem", fontFamily: "'Inter',sans-serif", color: "#2B2B2B" }}>Mild, fresh</p>
-                  </div>
-                  <div>
-                    <p style={{ fontSize: "0.6875rem", fontWeight: "600", fontFamily: "'Inter',sans-serif", letterSpacing: "0.15em", textTransform: "uppercase", color: "#B0B0B0", marginBottom: "0.2rem" }}>Age</p>
-                    {" "}
-                    <p style={{ fontSize: "0.8125rem", fontFamily: "'Inter',sans-serif", color: "#2B2B2B" }}>Same day</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/* Pepper Jack */}
-            <div className="cheese-card">
-              <div className="img-hover" style={{ aspectRatio: "16/10", overflow: "hidden" }}>
-                <Image src="/images/grim-reaper-cheddar.jpg" alt="Pepper Jack" width={1600} height={1200} sizes="(max-width: 767px) 88vw, 29vw" className="w-full h-full object-cover" />
-              </div>
-              {" "}
-              <div style={{ padding: "1.5rem" }}>
-                <h3 className="font-display text-xl font-bold text-charcoal mb-2" style={{ letterSpacing: "-0.02em" }}>Pepper Jack</h3>
-                {" "}
-                <p style={{ fontSize: "0.875rem", color: "rgba(43,43,43,0.6)", fontFamily: "'Inter',sans-serif", lineHeight: "1.7", marginBottom: "1rem" }}>A creamy Monterey Jack base studded with spicy peppers. Bold enough to add kick, smooth enough to balance it. Great on burgers, tacos, or a charcuterie board.</p>
-                {" "}
-                <div style={{ display: "flex", gap: "1.5rem", paddingTop: "1rem", borderTop: "1px solid #E5E5E5" }}>
-                  <div>
-                    <p style={{ fontSize: "0.6875rem", fontWeight: "600", fontFamily: "'Inter',sans-serif", letterSpacing: "0.15em", textTransform: "uppercase", color: "#B0B0B0", marginBottom: "0.2rem" }}>Texture</p>
-                    {" "}
-                    <p style={{ fontSize: "0.8125rem", fontFamily: "'Inter',sans-serif", color: "#2B2B2B" }}>Semi-soft</p>
-                  </div>
-                  <div>
-                    <p style={{ fontSize: "0.6875rem", fontWeight: "600", fontFamily: "'Inter',sans-serif", letterSpacing: "0.15em", textTransform: "uppercase", color: "#B0B0B0", marginBottom: "0.2rem" }}>Flavor</p>
-                    {" "}
-                    <p style={{ fontSize: "0.8125rem", fontFamily: "'Inter',sans-serif", color: "#2B2B2B" }}>Creamy, spicy</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/* Colby */}
-            <div className="cheese-card">
-              <div className="img-hover" style={{ aspectRatio: "16/10", overflow: "hidden" }}>
-                <Image src="/images/colby.jpg" alt="Colby" width={1600} height={1200} sizes="(max-width: 767px) 88vw, 29vw" className="w-full h-full object-cover" />
-              </div>
-              {" "}
-              <div style={{ padding: "1.5rem" }}>
-                <h3 className="font-display text-xl font-bold text-charcoal mb-2" style={{ letterSpacing: "-0.02em" }}>Colby</h3>
-                {" "}
-                <p style={{ fontSize: "0.875rem", color: "rgba(43,43,43,0.6)", fontFamily: "'Inter',sans-serif", lineHeight: "1.7", marginBottom: "1rem" }}>Mild, smooth, and approachable. Colby is the crowd-pleaser of the cheese world. A Wisconsin-style classic made with the same care we put into every product.</p>
-                {" "}
-                <div style={{ display: "flex", gap: "1.5rem", paddingTop: "1rem", borderTop: "1px solid #E5E5E5" }}>
-                  <div>
-                    <p style={{ fontSize: "0.6875rem", fontWeight: "600", fontFamily: "'Inter',sans-serif", letterSpacing: "0.15em", textTransform: "uppercase", color: "#B0B0B0", marginBottom: "0.2rem" }}>Texture</p>
-                    {" "}
-                    <p style={{ fontSize: "0.8125rem", fontFamily: "'Inter',sans-serif", color: "#2B2B2B" }}>Firm, moist</p>
-                  </div>
-                  <div>
-                    <p style={{ fontSize: "0.6875rem", fontWeight: "600", fontFamily: "'Inter',sans-serif", letterSpacing: "0.15em", textTransform: "uppercase", color: "#B0B0B0", marginBottom: "0.2rem" }}>Flavor</p>
-                    {" "}
-                    <p style={{ fontSize: "0.8125rem", fontFamily: "'Inter',sans-serif", color: "#2B2B2B" }}>Mild, buttery</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/* Seasonal */}
-            <div className="cheese-card" style={{ background: "#2B2B2B" }}>
-              <div style={{ aspectRatio: "16/10", background: "linear-gradient(135deg, rgba(217,30,24,0.2), rgba(122,92,62,0.3))", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                <div style={{ textAlign: "center", padding: "2rem" }}>
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.4)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ margin: "0 auto 0.75rem" }}>
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <path d="M12 8v4l3 3"></path>
-                  </svg>
-                  {" "}
-                  <p style={{ color: "rgba(255,255,255,0.5)", fontFamily: "'Inter',sans-serif", fontSize: "0.8125rem", letterSpacing: "0.08em" }}>Changes with the season</p>
-                </div>
-              </div>
-              {" "}
-              <div style={{ padding: "1.5rem" }}>
-                <h3 className="font-display text-xl font-bold text-white mb-2" style={{ letterSpacing: "-0.02em" }}>Seasonal Varieties</h3>
-                {" "}
-                <p style={{ fontSize: "0.875rem", color: "rgba(255,255,255,0.55)", fontFamily: "'Inter',sans-serif", lineHeight: "1.7", marginBottom: "1rem" }}>We're always experimenting. Our rotating seasonal varieties celebrate local flavors, special ingredients, and the creativity of small-batch cheesemaking. Ask us what's on right now.</p>
-                {" "}
-                <a href="#visit" className="seasonal-link" style={{ fontSize: "0.8125rem", fontWeight: "600", fontFamily: "'Inter',sans-serif", color: "#D91E18", textDecoration: "none", letterSpacing: "0.05em" }}>Ask about current varieties →</a>
-              </div>
-            </div>
-          </div>
+          <CheeseCatalog />
         </div>
       </section>
       {/* OUR PROCESS */}
@@ -289,7 +121,7 @@ export default function CheesePage() {
                   <div>
                     <h3 className="font-display text-lg font-bold text-charcoal mb-1" style={{ letterSpacing: "-0.01em" }}>Quality Milk</h3>
                     {" "}
-                    <p style={{ fontSize: "0.875rem", color: "rgba(43,43,43,0.62)", fontFamily: "'Inter',sans-serif", lineHeight: "1.7" }}>It starts with good milk. We source locally and select for quality, because great cheese is only as good as what goes into it.</p>
+                    <p style={{ fontSize: "0.875rem", color: "rgba(43,43,43,0.62)", fontFamily: "'Inter',sans-serif", lineHeight: "1.7" }}>It starts with good milk. Ours comes from Square Deal Dairy in Randolph, a fourth-generation family dairy farm just five miles from our cheese plant. Fresh, local milk from neighbors we know is where every great cheese begins.</p>
                   </div>
                 </div>
                 {" "}
@@ -371,9 +203,10 @@ export default function CheesePage() {
                     </svg>
                   </div>
                   <div>
-                    <p style={{ fontWeight: "600", fontFamily: "'Inter',sans-serif", color: "#2B2B2B", marginBottom: "0.2rem" }}>{ADDRESS_FULL}</p>
+                    <p style={{ fontWeight: "700", fontFamily: "'Inter',sans-serif", color: "#2B2B2B", marginBottom: "0.15rem" }}>CannonBelles Coffee &amp; Ice Cream</p>
+                    <p style={{ fontWeight: "500", fontFamily: "'Inter',sans-serif", color: "#2B2B2B", marginBottom: "0.2rem" }}>{ADDRESS_FULL}</p>
                     {" "}
-                    <p style={{ fontSize: "0.875rem", color: "rgba(43,43,43,0.55)", fontFamily: "'Inter',sans-serif" }}>Full selection at CannonBelles Coffee &amp; Ice Cream</p>
+                    <p style={{ fontSize: "0.875rem", color: "rgba(43,43,43,0.55)", fontFamily: "'Inter',sans-serif" }}>Our full cheese selection, every day we&apos;re open</p>
                   </div>
                 </div>
                 <div style={{ display: "flex", gap: "1rem", alignItems: "flex-start" }}>
@@ -408,6 +241,15 @@ export default function CheesePage() {
                     </p>
                   </div>
                 </div>
+                <div className="also-cf">
+                  <p className="also-cf-title">Also in Cannon Falls</p>
+                  <ul>
+                    {CANNON_FALLS_STOCKISTS.map((st) => (
+                      <li key={st.name}><span className="also-cf-name">{st.name}</span> <span className="also-cf-where">{st.where}</span></li>
+                    ))}
+                  </ul>
+                  <a href="#stores" className="also-cf-more">See every store that carries our cheese →</a>
+                </div>
               </div>
               {" "}
               <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
@@ -421,6 +263,8 @@ export default function CheesePage() {
           </div>
         </div>
       </section>
+      {/* WHERE TO BUY: map + list of stores by city */}
+      <StoreFinder />
       {/* FOOTER */}
       <SubpageFooter current="/cheese" />
     </div>

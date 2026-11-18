@@ -76,6 +76,27 @@ function Chips({ chips }) {
 }
 
 function MenuSection({ section, alt }) {
+  const content = (
+    <>
+      {section.highlight && <Highlight highlight={section.highlight} />}
+
+      {section.items && <ItemGrid items={section.items} />}
+
+      {section.groups?.map((g) => (
+        <div key={g.title} className="menu-group">
+          <div className="menu-group-head">
+            <h3 className="font-display text-xl md:text-2xl font-bold text-charcoal" style={{ letterSpacing: "-0.02em" }}>{g.title}</h3>
+            {g.note && <p className="menu-group-note">{g.note}</p>}
+          </div>
+          <ItemGrid items={g.items} />
+        </div>
+      ))}
+
+      {section.chipGroups?.map((c) => (
+        <Chips key={c.title} chips={c} />
+      ))}
+    </>
+  );
   return (
     <section id={section.id} className="menu-section section-py-lg" style={{ background: alt ? "#EFE6D8" : "#F8F5F0" }}>
       <div className="max-w-6xl mx-auto">
@@ -88,23 +109,14 @@ function MenuSection({ section, alt }) {
           </div>
         </div>
 
-        {section.highlight && <Highlight highlight={section.highlight} />}
-
-        {section.items && <ItemGrid items={section.items} />}
-
-        {section.groups?.map((g) => (
-          <div key={g.title} className="menu-group">
-            <div className="menu-group-head">
-              <h3 className="font-display text-xl md:text-2xl font-bold text-charcoal" style={{ letterSpacing: "-0.02em" }}>{g.title}</h3>
-              {g.note && <p className="menu-group-note">{g.note}</p>}
+        {section.image ? (
+          <div className="menu-with-photo">
+            <div className="menu-photo card-shadow">
+              <Image src={section.image.src} alt={section.image.alt} width={section.image.width} height={section.image.height} sizes="(max-width: 767px) 92vw, 40vw" className="w-full h-full object-cover" style={{ objectPosition: section.image.position }} />
             </div>
-            <ItemGrid items={g.items} />
+            <div className="menu-with-photo-body">{content}</div>
           </div>
-        ))}
-
-        {section.chipGroups?.map((c) => (
-          <Chips key={c.title} chips={c} />
-        ))}
+        ) : content}
       </div>
     </section>
   );
