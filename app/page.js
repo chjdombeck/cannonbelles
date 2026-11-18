@@ -194,18 +194,18 @@ export default function HomePage() {
             </div>
             <div className="hover-lift bg-white rounded-sm overflow-hidden card-shadow">
               <div className="img-hover" style={{ aspectRatio: "1/1", overflow: "hidden", position: "relative" }}>
-                <Image src="/images/cheddar-board.jpg" alt="Aged Cheddar" width={1600} height={1066} sizes="(max-width: 767px) 50vw, 25vw" className="w-full h-full object-cover" />
+                <Image src="/images/cheese/aged-cheddar.jpg" alt="CannonBelles Aged Cheddar" width={1536} height={1024} sizes="(max-width: 767px) 50vw, 25vw" className="w-full h-full object-cover" />
               </div>
               {" "}
               <div style={{ padding: "1.25rem" }}>
                 <h4 className="font-display text-lg font-bold text-charcoal mb-1" style={{ letterSpacing: "-0.02em" }}>Aged Cheddar</h4>
                 {" "}
-                <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.55)", fontFamily: "'Inter',sans-serif", lineHeight: "1.65" }}>Sharp, rich, and full-bodied. Aged more than 12 months right here in Cannon Falls.</p>
+                <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.55)", fontFamily: "'Inter',sans-serif", lineHeight: "1.65" }}>Bold, sharp, and full-bodied. Aged 8+ years right here in Cannon Falls.</p>
               </div>
             </div>
             <div className="hover-lift bg-white rounded-sm overflow-hidden card-shadow">
               <div className="img-hover" style={{ aspectRatio: "1/1", overflow: "hidden", position: "relative" }}>
-                <Image src="/images/gouda-rustic.jpg" alt="Gouda" width={1600} height={1065} sizes="(max-width: 767px) 50vw, 25vw" className="w-full h-full object-cover" />
+                <Image src="/images/cheese/gouda.jpg" alt="CannonBelles Gouda" width={1264} height={843} sizes="(max-width: 767px) 50vw, 25vw" className="w-full h-full object-cover" />
               </div>
               {" "}
               <div style={{ padding: "1.25rem" }}>
@@ -216,7 +216,7 @@ export default function HomePage() {
             </div>
             <div className="hover-lift bg-white rounded-sm overflow-hidden card-shadow">
               <div className="img-hover" style={{ aspectRatio: "1/1", overflow: "hidden", position: "relative" }}>
-                <Image src="/images/dill-curds.jpg" alt="Cheese curds" width={1600} height={1066} sizes="(max-width: 767px) 50vw, 25vw" className="w-full h-full object-cover" />
+                <Image src="/images/cheese/curds-dill.jpg" alt="CannonBelles dill cheese curds" width={1600} height={1066} sizes="(max-width: 767px) 50vw, 25vw" className="w-full h-full object-cover" />
               </div>
               {" "}
               <div style={{ padding: "1.25rem" }}>

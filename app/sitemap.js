@@ -8,6 +8,7 @@ export default function sitemap() {
     { url: `${SITE_URL}/menu`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${SITE_URL}/coffee`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${SITE_URL}/cheese`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${SITE_URL}/fundraising`, lastModified: now, changeFrequency: "yearly", priority: 0.6 },
     { url: `${SITE_URL}/story`, lastModified: now, changeFrequency: "yearly", priority: 0.6 },
   ];
 }

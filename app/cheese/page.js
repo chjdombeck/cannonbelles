@@ -50,14 +50,14 @@ export default function CheesePage() {
           <div className="grid md:grid-cols-2 gap-14 items-center">
             <div className="intro-img-grid grid grid-cols-2 gap-4">
               <div className="img-hover rounded-sm card-shadow" style={{ aspectRatio: "3/4", overflow: "hidden" }}>
-                <Image src="/images/tuscan-cheddar.jpg" alt="Cheese wheel" width={1600} height={1600} sizes="(max-width: 767px) 103vw, 28vw" className="w-full h-full object-cover" />
+                <Image src="/images/cheese/tuscan-cheddar.jpg" alt="CannonBelles Tuscan Cheddar" width={1600} height={1600} sizes="(max-width: 767px) 103vw, 28vw" className="w-full h-full object-cover" />
               </div>
               <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
                 <div className="img-hover rounded-sm card-shadow" style={{ flex: "1", overflow: "hidden", minHeight: "170px" }}>
                   <Image src="/images/charcuterie-board.jpg" alt="Cheese board" width={1600} height={1068} sizes="(max-width: 767px) 86vw, 24vw" className="w-full h-full object-cover" />
                 </div>
                 <div className="img-hover rounded-sm card-shadow" style={{ flex: "1", overflow: "hidden", minHeight: "170px" }}>
-                  <Image src="/images/dill-curds.jpg" alt="CannonBelles dill cheese curds" width={1600} height={1066} sizes="(max-width: 767px) 77vw, 21vw" className="w-full h-full object-cover" />
+                  <Image src="/images/cheese/curds-dill.jpg" alt="CannonBelles dill cheese curds" width={1600} height={1066} sizes="(max-width: 767px) 77vw, 21vw" className="w-full h-full object-cover" />
                 </div>
               </div>
             </div>
@@ -121,7 +121,7 @@ export default function CheesePage() {
                   <div>
                     <h3 className="font-display text-lg font-bold text-charcoal mb-1" style={{ letterSpacing: "-0.01em" }}>Quality Milk</h3>
                     {" "}
-                    <p style={{ fontSize: "0.875rem", color: "rgba(43,43,43,0.62)", fontFamily: "'Inter',sans-serif", lineHeight: "1.7" }}>It starts with good milk. Ours comes from Square Deal Dairy in Randolph, a fourth-generation family dairy farm just five miles from our cheese plant. Fresh, local milk from neighbors we know is where every great cheese begins.</p>
+                    <p style={{ fontSize: "0.875rem", color: "rgba(43,43,43,0.62)", fontFamily: "'Inter',sans-serif", lineHeight: "1.7" }}>It starts with good milk. Ours comes from Square Deal Dairy in Randolph, a fifth-generation family dairy farm just five miles from our cheese plant. Fresh, local milk from neighbors we know is where every great cheese begins.</p>
                   </div>
                 </div>
                 {" "}
@@ -258,7 +258,7 @@ export default function CheesePage() {
               </div>
             </div>
             <div className="img-hover rounded-sm card-shadow" style={{ aspectRatio: "4/3", overflow: "hidden" }}>
-              <Image src="/images/queso-fresco-ribbon.jpg" alt="Cheese shop" width={1024} height={1024} sizes="(max-width: 767px) 88vw, 43vw" className="w-full h-full object-cover" />
+              <Image src="/images/cheese/grim-reaper-cheddar.jpg" alt="CannonBelles Grim Reaper Cheddar" width={1600} height={1200} sizes="(max-width: 767px) 88vw, 43vw" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
