@@ -111,8 +111,19 @@ function MenuSection({ section, alt }) {
 
         {section.image ? (
           <div className="menu-with-photo">
-            <div className="menu-photo card-shadow">
-              <Image src={section.image.src} alt={section.image.alt} width={section.image.width} height={section.image.height} sizes="(max-width: 767px) 92vw, 40vw" className="w-full h-full object-cover" style={{ objectPosition: section.image.position }} />
+            <div className="menu-photo-col">
+              <div className="menu-photo card-shadow">
+                <Image src={section.image.src} alt={section.image.alt} width={section.image.width} height={section.image.height} sizes="(max-width: 767px) 92vw, 40vw" className="w-full h-full object-cover" style={{ objectPosition: section.image.position }} />
+              </div>
+              {section.extraImages && (
+                <div className="menu-photo-pair">
+                  {section.extraImages.map((im) => (
+                    <div key={im.src} className="menu-photo-sm card-shadow">
+                      <Image src={im.src} alt={im.alt} width={im.width} height={im.height} sizes="(max-width: 767px) 45vw, 20vw" className="w-full h-full object-cover" style={{ objectPosition: im.position }} />
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
             <div className="menu-with-photo-body">{content}</div>
           </div>
