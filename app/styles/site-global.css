@@ -58,8 +58,8 @@ html.has-promo { scroll-padding-top: 2.25rem; }
 .gift-card-body { display: flex; flex-direction: column; flex: 1; padding: 1.25rem 1.375rem 1.375rem; }
 .gift-card-top { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; margin-bottom: 0.5rem; }
 .gift-price { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 1.0625rem; color: #D91E18; white-space: nowrap; }
-.gift-price span { font-weight: 500; font-size: 0.8125rem; color: rgba(43,43,43,0.55); }
-.gift-desc { font-family: 'Inter', sans-serif; font-size: 0.875rem; line-height: 1.6; color: rgba(43,43,43,0.65); flex: 1; }
+.gift-price span { font-weight: 500; font-size: 0.8125rem; color: rgba(43,43,43,0.72); }
+.gift-desc { font-family: 'Inter', sans-serif; font-size: 0.875rem; line-height: 1.6; color: rgba(43,43,43,0.72); flex: 1; }
 .gift-cta { display: inline-flex; align-items: center; gap: 0.4rem; margin-top: 1rem; font-family: 'Inter', sans-serif; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #D91E18; }
 .gifts-foot { display: flex; justify-content: center; margin-top: 2.75rem; }
 .gifts-foot .btn-primary { display: inline-flex; align-items: center; gap: 0.5rem; background: #D91E18; color: #fff; padding: 0.875rem 2rem; border-radius: 3px; font-family: 'Inter', sans-serif; font-size: 0.8125rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; box-shadow: 0 2px 8px rgba(169,22,26,0.4); transition: background 0.2s, transform 0.15s; }
@@ -84,9 +84,9 @@ html.has-promo { scroll-padding-top: 2.25rem; }
 }
 .social-links .social-link:active { transform: scale(0.94); }
 .social-links .social-link:focus-visible { outline: 2px solid #D91E18; outline-offset: 2px; }
-.social-header .social-link { color: rgba(43,43,43,0.62); }
+.social-header .social-link { color: rgba(43,43,43,0.72); }
 .social-header .social-link:hover { color: #D91E18; background: #FDF1F0; }
-.social-light .social-link { color: rgba(43,43,43,0.62); border: 1px solid rgba(43,43,43,0.15); background: #fff; }
+.social-light .social-link { color: rgba(43,43,43,0.72); border: 1px solid rgba(43,43,43,0.15); background: #fff; }
 .social-light .social-link:hover { color: #D91E18; border-color: #D91E18; }
 .social-dark .social-link { color: rgba(255,255,255,0.65); border: 1px solid rgba(255,255,255,0.18); }
 .social-dark .social-link:hover { color: #fff; border-color: #fff; }

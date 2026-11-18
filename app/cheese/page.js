@@ -23,7 +23,7 @@ export default function CheesePage() {
       <SubpageNav current="/cheese" />
       {/* HERO */}
       <div className="relative overflow-hidden hero-mobile-pad" style={{ minHeight: "88vh", display: "flex", alignItems: "flex-end", paddingBottom: "6rem", paddingTop: "10rem" }}>
-        <Image src="/images/cheese-flatlay.jpg" alt="Artisanal cheese" width={1600} height={1066} sizes="(max-width: 767px) 286vw, 100vw" priority fetchPriority="high" className="absolute inset-0 w-full h-full object-cover" style={{ filter: "brightness(0.42) saturate(0.78)" }} />
+        <Image src="/images/cheese-flatlay.jpg" alt="Artisanal cheese" width={1600} height={1066} sizes="(max-width: 767px) 150vw, 100vw" priority fetchPriority="high" className="absolute inset-0 w-full h-full object-cover" style={{ filter: "brightness(0.42) saturate(0.78)" }} />
         <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.3) 55%, transparent 100%)" }}></div>
         <div className="relative max-w-7xl mx-auto px-6 w-full">
           <div className="max-w-2xl">
@@ -79,17 +79,17 @@ export default function CheesePage() {
                 <div>
                   <p className="font-display text-3xl font-bold" style={{ color: "#D91E18", letterSpacing: "-0.02em" }}>Small</p>
                   {" "}
-                  <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.52)", fontFamily: "'Inter',sans-serif", marginTop: "0.2rem" }}>Batch crafted</p>
+                  <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.72)", fontFamily: "'Inter',sans-serif", marginTop: "0.2rem" }}>Batch crafted</p>
                 </div>
                 <div>
                   <p className="font-display text-3xl font-bold" style={{ color: "#D91E18", letterSpacing: "-0.02em" }}>Local</p>
                   {" "}
-                  <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.52)", fontFamily: "'Inter',sans-serif", marginTop: "0.2rem" }}>MN ingredients</p>
+                  <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.72)", fontFamily: "'Inter',sans-serif", marginTop: "0.2rem" }}>MN ingredients</p>
                 </div>
                 <div>
                   <p className="font-display text-3xl font-bold" style={{ color: "#D91E18", letterSpacing: "-0.02em" }}>Aged</p>
                   {" "}
-                  <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.52)", fontFamily: "'Inter',sans-serif", marginTop: "0.2rem" }}>Time-honored process</p>
+                  <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.72)", fontFamily: "'Inter',sans-serif", marginTop: "0.2rem" }}>Time-honored process</p>
                 </div>
               </div>
             </div>
@@ -104,7 +104,7 @@ export default function CheesePage() {
             {" "}
             <h2 className="font-display text-4xl md:text-5xl font-bold text-charcoal mb-5" style={{ letterSpacing: "-0.03em", lineHeight: "1.1" }}>Our Cheese<br /><em>Selection</em></h2>
             {" "}
-            <div className="ornament-line max-w-xs mx-auto" style={{ color: "#B0B0B0", fontFamily: "'Inter',sans-serif", fontSize: "0.75rem", letterSpacing: "0.15em" }}><span>Every Cheese We Make, by Type</span></div>
+            <div className="ornament-line max-w-xs mx-auto" style={{ color: "rgba(43,43,43,0.72)", fontFamily: "'Inter',sans-serif", fontSize: "0.75rem", letterSpacing: "0.15em" }}><span>Every Cheese We Make, by Type</span></div>
           </div>
           {" "}
           <CheeseCatalog />
@@ -126,7 +126,7 @@ export default function CheesePage() {
                   <div>
                     <h3 className="font-display text-lg font-bold text-charcoal mb-1" style={{ letterSpacing: "-0.01em" }}>Quality Milk</h3>
                     {" "}
-                    <p style={{ fontSize: "0.875rem", color: "rgba(43,43,43,0.62)", fontFamily: "'Inter',sans-serif", lineHeight: "1.7" }}>It starts with good milk. Ours comes from Square Deal Dairy in Randolph, a fifth-generation family dairy farm just five miles from our cheese plant. Fresh, local milk from neighbors we know is where every great cheese begins.</p>
+                    <p style={{ fontSize: "0.875rem", color: "rgba(43,43,43,0.72)", fontFamily: "'Inter',sans-serif", lineHeight: "1.7" }}>It starts with good milk. Ours comes from Square Deal Dairy in Randolph, a fifth-generation family dairy farm just five miles from our cheese plant. Fresh, local milk from neighbors we know is where every great cheese begins.</p>
                   </div>
                 </div>
                 {" "}
@@ -136,7 +136,7 @@ export default function CheesePage() {
                   <div>
                     <h3 className="font-display text-lg font-bold text-charcoal mb-1" style={{ letterSpacing: "-0.01em" }}>Culturing &amp; Setting</h3>
                     {" "}
-                    <p style={{ fontSize: "0.875rem", color: "rgba(43,43,43,0.62)", fontFamily: "'Inter',sans-serif", lineHeight: "1.7" }}>We add cultures and rennet to develop flavor and structure. This step is where the character of each cheese begins to take shape.</p>
+                    <p style={{ fontSize: "0.875rem", color: "rgba(43,43,43,0.72)", fontFamily: "'Inter',sans-serif", lineHeight: "1.7" }}>We add cultures and rennet to develop flavor and structure. This step is where the character of each cheese begins to take shape.</p>
                   </div>
                 </div>
                 {" "}
@@ -146,7 +146,7 @@ export default function CheesePage() {
                   <div>
                     <h3 className="font-display text-lg font-bold text-charcoal mb-1" style={{ letterSpacing: "-0.01em" }}>Pressing &amp; Shaping</h3>
                     {" "}
-                    <p style={{ fontSize: "0.875rem", color: "rgba(43,43,43,0.62)", fontFamily: "'Inter',sans-serif", lineHeight: "1.7" }}>Each batch is carefully pressed and shaped by hand. No shortcuts, no assembly lines, just attention to detail in every step.</p>
+                    <p style={{ fontSize: "0.875rem", color: "rgba(43,43,43,0.72)", fontFamily: "'Inter',sans-serif", lineHeight: "1.7" }}>Each batch is carefully pressed and shaped by hand. No shortcuts, no assembly lines, just attention to detail in every step.</p>
                   </div>
                 </div>
                 {" "}
@@ -156,7 +156,7 @@ export default function CheesePage() {
                   <div>
                     <h3 className="font-display text-lg font-bold text-charcoal mb-1" style={{ letterSpacing: "-0.01em" }}>Aging &amp; Finishing</h3>
                     {" "}
-                    <p style={{ fontSize: "0.875rem", color: "rgba(43,43,43,0.62)", fontFamily: "'Inter',sans-serif", lineHeight: "1.7" }}>Good things take time. Our aged varieties are carefully tended through the aging process to develop the depth of flavor that makes them special.</p>
+                    <p style={{ fontSize: "0.875rem", color: "rgba(43,43,43,0.72)", fontFamily: "'Inter',sans-serif", lineHeight: "1.7" }}>Good things take time. Our aged varieties are carefully tended through the aging process to develop the depth of flavor that makes them special.</p>
                   </div>
                 </div>
               </div>
@@ -211,7 +211,7 @@ export default function CheesePage() {
                     <p style={{ fontWeight: "700", fontFamily: "'Inter',sans-serif", color: "#2B2B2B", marginBottom: "0.15rem" }}>CannonBelles Coffee &amp; Ice Cream</p>
                     <p style={{ fontWeight: "500", fontFamily: "'Inter',sans-serif", color: "#2B2B2B", marginBottom: "0.2rem" }}>{ADDRESS_FULL}</p>
                     {" "}
-                    <p style={{ fontSize: "0.875rem", color: "rgba(43,43,43,0.55)", fontFamily: "'Inter',sans-serif" }}>Our full cheese selection, every day we&apos;re open</p>
+                    <p style={{ fontSize: "0.875rem", color: "rgba(43,43,43,0.72)", fontFamily: "'Inter',sans-serif" }}>Our full cheese selection, every day we&apos;re open</p>
                   </div>
                 </div>
                 <div style={{ display: "flex", gap: "1rem", alignItems: "flex-start" }}>
@@ -224,11 +224,11 @@ export default function CheesePage() {
                   <div>
                     <p style={{ fontWeight: "600", fontFamily: "'Inter',sans-serif", color: "#2B2B2B", marginBottom: "0.35rem" }}>Hours</p>
                     {" "}
-                    <p style={{ fontSize: "0.875rem", color: "rgba(43,43,43,0.65)", fontFamily: "'Inter',sans-serif", marginBottom: "0.2rem" }}>{hoursAligned(BUSINESS.hours[0])}</p>
+                    <p style={{ fontSize: "0.875rem", color: "rgba(43,43,43,0.72)", fontFamily: "'Inter',sans-serif", marginBottom: "0.2rem" }}>{hoursAligned(BUSINESS.hours[0])}</p>
                     {" "}
-                    <p style={{ fontSize: "0.875rem", color: "rgba(43,43,43,0.65)", fontFamily: "'Inter',sans-serif", marginBottom: "0.2rem" }}>{hoursAligned(BUSINESS.hours[1])}</p>
+                    <p style={{ fontSize: "0.875rem", color: "rgba(43,43,43,0.72)", fontFamily: "'Inter',sans-serif", marginBottom: "0.2rem" }}>{hoursAligned(BUSINESS.hours[1])}</p>
                     {" "}
-                    <p style={{ fontSize: "0.875rem", color: "rgba(43,43,43,0.65)", fontFamily: "'Inter',sans-serif" }}>{hoursAligned(BUSINESS.hours[2])}</p>
+                    <p style={{ fontSize: "0.875rem", color: "rgba(43,43,43,0.72)", fontFamily: "'Inter',sans-serif" }}>{hoursAligned(BUSINESS.hours[2])}</p>
                   </div>
                 </div>
                 <div style={{ display: "flex", gap: "1rem", alignItems: "flex-start" }}>
@@ -240,7 +240,7 @@ export default function CheesePage() {
                   <div>
                     <p style={{ fontWeight: "600", fontFamily: "'Inter',sans-serif", color: "#2B2B2B", marginBottom: "0.2rem" }}>Get in Touch</p>
                     {" "}
-                    <p style={{ fontSize: "0.875rem", color: "rgba(43,43,43,0.55)", fontFamily: "'Inter',sans-serif" }}>
+                    <p style={{ fontSize: "0.875rem", color: "rgba(43,43,43,0.72)", fontFamily: "'Inter',sans-serif" }}>
                       <a href={TEL_HREF} style={{ color: "inherit" }}>{BUSINESS.phone.display}</a>
                       {" "}· cannonbelles.com
                     </p>

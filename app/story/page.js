@@ -18,7 +18,7 @@ export default function StoryPage() {
       <SubpageNav current="/story" />
       {/* HERO */}
       <div className="relative overflow-hidden" style={{ minHeight: "88vh", display: "flex", alignItems: "flex-end", paddingBottom: "6rem", paddingTop: "10rem" }}>
-        <Image src="/images/charcuterie-board.jpg" alt="CannonBelles story" width={1600} height={1068} sizes="(max-width: 767px) 286vw, 100vw" priority fetchPriority="high" className="absolute inset-0 w-full h-full object-cover" style={{ filter: "brightness(0.45) saturate(0.8)" }} />
+        <Image src="/images/charcuterie-board.jpg" alt="CannonBelles story" width={1600} height={1068} sizes="(max-width: 767px) 150vw, 100vw" priority fetchPriority="high" className="absolute inset-0 w-full h-full object-cover" style={{ filter: "brightness(0.45) saturate(0.8)" }} />
         <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.25) 55%, transparent 100%)" }}></div>
         <div className="relative max-w-7xl mx-auto px-6 w-full">
           <div className="max-w-2xl">
@@ -73,7 +73,7 @@ export default function StoryPage() {
             {" "}
             <h2 className="font-display text-4xl md:text-5xl font-bold text-charcoal mb-5" style={{ letterSpacing: "-0.03em", lineHeight: "1.1" }}>Meet the<br /><em>Owners</em></h2>
             {" "}
-            <div className="ornament-line max-w-xs mx-auto" style={{ color: "#B0B0B0", fontFamily: "'Inter',sans-serif", fontSize: "0.75rem", letterSpacing: "0.15em" }}><span>The Faces of CannonBelles</span></div>
+            <div className="ornament-line max-w-xs mx-auto" style={{ color: "rgba(43,43,43,0.72)", fontFamily: "'Inter',sans-serif", fontSize: "0.75rem", letterSpacing: "0.15em" }}><span>The Faces of CannonBelles</span></div>
           </div>
           {" "}
           {/* Owners photo (casual for now; swap in a professional photo of Kathy & Jackie when available) */}
@@ -90,9 +90,9 @@ export default function StoryPage() {
               {" "}
               <p className="font-display italic" style={{ fontSize: "1.0625rem", color: "#7A5C3E", marginBottom: "1rem", lineHeight: "1.4" }}>Spreading the good news… of cheese</p>
               {" "}
-              <p style={{ fontSize: "0.9rem", color: "rgba(43,43,43,0.68)", fontFamily: "'Inter',sans-serif", lineHeight: "1.75", marginBottom: "0.875rem" }}>For 15 years, Jackie Ohmann dedicated her life to ministry as a Director of Christian Education, but deep down, entrepreneurship was in her DNA. Coming from a family of business owners, it was only a matter of time before she jumped headfirst into building something of her own. Enter: cheese.</p>
-              <p style={{ fontSize: "0.9rem", color: "rgba(43,43,43,0.68)", fontFamily: "'Inter',sans-serif", lineHeight: "1.75", marginBottom: "0.875rem" }}>Marrying a dairy farmer sealed her fate in the world of dairy, but let&apos;s be honest, she was already a die-hard cheese lover. Whether she&apos;s dreaming up new ways to cook with CannonBelles cheese, meeting customers at events, or sharing her passion with her daughter Grace (future cheesemaker in training!), Jackie brings heart, hustle, and a whole lot of flavor to everything she does.</p>
-              <p style={{ fontSize: "0.9rem", color: "rgba(43,43,43,0.68)", fontFamily: "'Inter',sans-serif", lineHeight: "1.75" }}>Now, instead of spreading just the Good News, she&apos;s also spreading butter, queso fresco, and the magic of Minnesota-made cheese. And she wouldn&apos;t have it any other way!</p>
+              <p style={{ fontSize: "0.9rem", color: "rgba(43,43,43,0.72)", fontFamily: "'Inter',sans-serif", lineHeight: "1.75", marginBottom: "0.875rem" }}>For 15 years, Jackie Ohmann dedicated her life to ministry as a Director of Christian Education, but deep down, entrepreneurship was in her DNA. Coming from a family of business owners, it was only a matter of time before she jumped headfirst into building something of her own. Enter: cheese.</p>
+              <p style={{ fontSize: "0.9rem", color: "rgba(43,43,43,0.72)", fontFamily: "'Inter',sans-serif", lineHeight: "1.75", marginBottom: "0.875rem" }}>Marrying a dairy farmer sealed her fate in the world of dairy, but let&apos;s be honest, she was already a die-hard cheese lover. Whether she&apos;s dreaming up new ways to cook with CannonBelles cheese, meeting customers at events, or sharing her passion with her daughter Grace (future cheesemaker in training!), Jackie brings heart, hustle, and a whole lot of flavor to everything she does.</p>
+              <p style={{ fontSize: "0.9rem", color: "rgba(43,43,43,0.72)", fontFamily: "'Inter',sans-serif", lineHeight: "1.75" }}>Now, instead of spreading just the Good News, she&apos;s also spreading butter, queso fresco, and the magic of Minnesota-made cheese. And she wouldn&apos;t have it any other way!</p>
             </div>
             <div className="owner-card owner-bio">
               <p className="section-label mb-3">Co-Owner</p>
@@ -101,9 +101,9 @@ export default function StoryPage() {
               {" "}
               <p className="font-display italic" style={{ fontSize: "1.0625rem", color: "#7A5C3E", marginBottom: "1rem", lineHeight: "1.4" }}>From milking cows to making cheese</p>
               {" "}
-              <p style={{ fontSize: "0.9rem", color: "rgba(43,43,43,0.68)", fontFamily: "'Inter',sans-serif", lineHeight: "1.75", marginBottom: "0.875rem" }}>Kathy Hupf&apos;s love for dairy runs deeper than a fresh wheel of aged cheddar. She grew up on a dairy farm, earned a degree in animal husbandry, and spent 18 years wrangling cows and running her own dairy farm, mastering the art of early mornings, hard work, and the magic of milk. Now, instead of managing a herd, she&apos;s helping to craft award-winning cheese. A full-circle dairy dream!</p>
-              <p style={{ fontSize: "0.9rem", color: "rgba(43,43,43,0.68)", fontFamily: "'Inter',sans-serif", lineHeight: "1.75", marginBottom: "0.875rem" }}>With a strong background in marketing, organization, and leadership, Kathy is a powerhouse behind the scenes at CannonBelles. She brings her passion for local food, her can-do farm-girl grit, and her endless enthusiasm for all things dairy to the world of cheesemaking.</p>
-              <p style={{ fontSize: "0.9rem", color: "rgba(43,43,43,0.68)", fontFamily: "'Inter',sans-serif", lineHeight: "1.75" }}>Whether she&apos;s helping promote local cheese, strategizing business growth, or just taste-testing (for quality control, of course!), she&apos;s all in. From cows to curds, Kathy&apos;s journey proves that once dairy gets in your veins, there&apos;s no turning back!</p>
+              <p style={{ fontSize: "0.9rem", color: "rgba(43,43,43,0.72)", fontFamily: "'Inter',sans-serif", lineHeight: "1.75", marginBottom: "0.875rem" }}>Kathy Hupf&apos;s love for dairy runs deeper than a fresh wheel of aged cheddar. She grew up on a dairy farm, earned a degree in animal husbandry, and spent 18 years wrangling cows and running her own dairy farm, mastering the art of early mornings, hard work, and the magic of milk. Now, instead of managing a herd, she&apos;s helping to craft award-winning cheese. A full-circle dairy dream!</p>
+              <p style={{ fontSize: "0.9rem", color: "rgba(43,43,43,0.72)", fontFamily: "'Inter',sans-serif", lineHeight: "1.75", marginBottom: "0.875rem" }}>With a strong background in marketing, organization, and leadership, Kathy is a powerhouse behind the scenes at CannonBelles. She brings her passion for local food, her can-do farm-girl grit, and her endless enthusiasm for all things dairy to the world of cheesemaking.</p>
+              <p style={{ fontSize: "0.9rem", color: "rgba(43,43,43,0.72)", fontFamily: "'Inter',sans-serif", lineHeight: "1.75" }}>Whether she&apos;s helping promote local cheese, strategizing business growth, or just taste-testing (for quality control, of course!), she&apos;s all in. From cows to curds, Kathy&apos;s journey proves that once dairy gets in your veins, there&apos;s no turning back!</p>
             </div>
           </div>
         </div>
@@ -126,11 +126,11 @@ export default function StoryPage() {
                   </div>
                   {" "}
                   <div>
-                    <p style={{ fontSize: "0.75rem", fontWeight: "600", fontFamily: "'Inter',sans-serif", letterSpacing: "0.15em", textTransform: "uppercase", color: "#B0B0B0", marginBottom: "0.35rem" }}>The Beginning</p>
+                    <p style={{ fontSize: "0.75rem", fontWeight: "600", fontFamily: "'Inter',sans-serif", letterSpacing: "0.15em", textTransform: "uppercase", color: "rgba(43,43,43,0.72)", marginBottom: "0.35rem" }}>The Beginning</p>
                     {" "}
                     <h3 className="font-display text-xl font-bold text-charcoal mb-2" style={{ letterSpacing: "-0.01em" }}>A Passion for Craft</h3>
                     {" "}
-                    <p style={{ fontSize: "0.875rem", color: "rgba(43,43,43,0.65)", fontFamily: "'Inter',sans-serif", lineHeight: "1.75" }}>It started with a love of handcrafted cheese and a commitment to making something real, something the community of Cannon Falls could be proud of.</p>
+                    <p style={{ fontSize: "0.875rem", color: "rgba(43,43,43,0.72)", fontFamily: "'Inter',sans-serif", lineHeight: "1.75" }}>It started with a love of handcrafted cheese and a commitment to making something real, something the community of Cannon Falls could be proud of.</p>
                   </div>
                 </div>
                 {" "}
@@ -142,11 +142,11 @@ export default function StoryPage() {
                   </div>
                   {" "}
                   <div>
-                    <p style={{ fontSize: "0.75rem", fontWeight: "600", fontFamily: "'Inter',sans-serif", letterSpacing: "0.15em", textTransform: "uppercase", color: "#B0B0B0", marginBottom: "0.35rem" }}>Growing Roots</p>
+                    <p style={{ fontSize: "0.75rem", fontWeight: "600", fontFamily: "'Inter',sans-serif", letterSpacing: "0.15em", textTransform: "uppercase", color: "rgba(43,43,43,0.72)", marginBottom: "0.35rem" }}>Growing Roots</p>
                     {" "}
                     <h3 className="font-display text-xl font-bold text-charcoal mb-2" style={{ letterSpacing: "-0.01em" }}>The Community Responds</h3>
                     {" "}
-                    <p style={{ fontSize: "0.875rem", color: "rgba(43,43,43,0.65)", fontFamily: "'Inter',sans-serif", lineHeight: "1.75" }}>Word spread quickly. Neighbors, farmers markets, and loyal regulars made it clear: Cannon Falls was hungry for something local, honest, and made with care.</p>
+                    <p style={{ fontSize: "0.875rem", color: "rgba(43,43,43,0.72)", fontFamily: "'Inter',sans-serif", lineHeight: "1.75" }}>Word spread quickly. Neighbors, farmers markets, and loyal regulars made it clear: Cannon Falls was hungry for something local, honest, and made with care.</p>
                   </div>
                 </div>
                 {" "}
@@ -158,11 +158,11 @@ export default function StoryPage() {
                   </div>
                   {" "}
                   <div>
-                    <p style={{ fontSize: "0.75rem", fontWeight: "600", fontFamily: "'Inter',sans-serif", letterSpacing: "0.15em", textTransform: "uppercase", color: "#B0B0B0", marginBottom: "0.35rem" }}>Expanding the Vision</p>
+                    <p style={{ fontSize: "0.75rem", fontWeight: "600", fontFamily: "'Inter',sans-serif", letterSpacing: "0.15em", textTransform: "uppercase", color: "rgba(43,43,43,0.72)", marginBottom: "0.35rem" }}>Expanding the Vision</p>
                     {" "}
                     <h3 className="font-display text-xl font-bold text-charcoal mb-2" style={{ letterSpacing: "-0.01em" }}>Coffee &amp; Ice Cream Opens</h3>
                     {" "}
-                    <p style={{ fontSize: "0.875rem", color: "rgba(43,43,43,0.65)", fontFamily: "'Inter',sans-serif", lineHeight: "1.75" }}>The same spirit that built the cheese business carried into a full coffee and ice cream shop, a warm, welcoming space for the whole community to gather.</p>
+                    <p style={{ fontSize: "0.875rem", color: "rgba(43,43,43,0.72)", fontFamily: "'Inter',sans-serif", lineHeight: "1.75" }}>The same spirit that built the cheese business carried into a full coffee and ice cream shop, a warm, welcoming space for the whole community to gather.</p>
                   </div>
                 </div>
                 {" "}
@@ -174,11 +174,11 @@ export default function StoryPage() {
                   </div>
                   {" "}
                   <div>
-                    <p style={{ fontSize: "0.75rem", fontWeight: "600", fontFamily: "'Inter',sans-serif", letterSpacing: "0.15em", textTransform: "uppercase", color: "#B0B0B0", marginBottom: "0.35rem" }}>Today</p>
+                    <p style={{ fontSize: "0.75rem", fontWeight: "600", fontFamily: "'Inter',sans-serif", letterSpacing: "0.15em", textTransform: "uppercase", color: "rgba(43,43,43,0.72)", marginBottom: "0.35rem" }}>Today</p>
                     {" "}
                     <h3 className="font-display text-xl font-bold text-charcoal mb-2" style={{ letterSpacing: "-0.01em" }}>A Cannon Falls Destination</h3>
                     {" "}
-                    <p style={{ fontSize: "0.875rem", color: "rgba(43,43,43,0.65)", fontFamily: "'Inter',sans-serif", lineHeight: "1.75" }}>CannonBelles is now two businesses under one name, united by the same values that started it all: local, handcrafted, and made for the community.</p>
+                    <p style={{ fontSize: "0.875rem", color: "rgba(43,43,43,0.72)", fontFamily: "'Inter',sans-serif", lineHeight: "1.75" }}>CannonBelles is now two businesses under one name, united by the same values that started it all: local, handcrafted, and made for the community.</p>
                   </div>
                 </div>
               </div>
@@ -192,7 +192,7 @@ export default function StoryPage() {
               <div style={{ background: "#EFE6D8", borderRadius: "3px", padding: "1.5rem", borderLeft: "3px solid #D91E18" }}>
                 <p className="font-display italic text-charcoal text-lg leading-relaxed">"We're not trying to be trendy. We're just a local business that cares deeply about quality, our neighbors, and the idea that the best things in life are made by hand."</p>
                 {" "}
-                <p style={{ fontSize: "0.8125rem", fontWeight: "600", fontFamily: "'Inter',sans-serif", color: "rgba(43,43,43,0.55)", marginTop: "1rem", letterSpacing: "0.04em" }}>CannonBelles</p>
+                <p style={{ fontSize: "0.8125rem", fontWeight: "600", fontFamily: "'Inter',sans-serif", color: "rgba(43,43,43,0.72)", marginTop: "1rem", letterSpacing: "0.04em" }}>CannonBelles</p>
               </div>
             </div>
           </div>

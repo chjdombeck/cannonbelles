@@ -21,7 +21,7 @@ export default function CoffeePage() {
       <SubpageNav current="/coffee" />
       {/* HERO */}
       <div className="relative overflow-hidden hero-mobile-pad" style={{ minHeight: "88vh", display: "flex", alignItems: "flex-end", paddingBottom: "6rem", paddingTop: "10rem" }}>
-        <Image src="/images/espresso-pour.jpg" alt="Espresso pouring into a cup at CannonBelles" width={1600} height={1067} sizes="(max-width: 767px) 286vw, 100vw" priority fetchPriority="high" className="absolute inset-0 w-full h-full object-cover" style={{ filter: "brightness(0.78) saturate(0.95)" }} />
+        <Image src="/images/espresso-pour.jpg" alt="Espresso pouring into a cup at CannonBelles" width={1600} height={1067} sizes="(max-width: 767px) 150vw, 100vw" priority fetchPriority="high" className="absolute inset-0 w-full h-full object-cover" style={{ filter: "brightness(0.78) saturate(0.95)" }} />
         <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.3) 55%, transparent 100%)" }}></div>
         <div className="relative max-w-7xl mx-auto px-6 w-full">
           <div className="max-w-2xl">
@@ -59,17 +59,17 @@ export default function CoffeePage() {
                 <div>
                   <p className="font-display text-3xl font-bold" style={{ color: "#D91E18", letterSpacing: "-0.02em" }}>Daily</p>
                   {" "}
-                  <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.52)", fontFamily: "'Inter',sans-serif", marginTop: "0.2rem" }}>Fresh brewed</p>
+                  <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.72)", fontFamily: "'Inter',sans-serif", marginTop: "0.2rem" }}>Fresh brewed</p>
                 </div>
                 <div>
                   <p className="font-display text-3xl font-bold" style={{ color: "#D91E18", letterSpacing: "-0.02em" }}>Local</p>
                   {" "}
-                  <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.52)", fontFamily: "'Inter',sans-serif", marginTop: "0.2rem" }}>Cannon Falls, MN</p>
+                  <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.72)", fontFamily: "'Inter',sans-serif", marginTop: "0.2rem" }}>Cannon Falls, MN</p>
                 </div>
                 <div>
                   <p className="font-display text-3xl font-bold" style={{ color: "#D91E18", letterSpacing: "-0.02em" }}>Warm</p>
                   {" "}
-                  <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.52)", fontFamily: "'Inter',sans-serif", marginTop: "0.2rem" }}>Always welcoming</p>
+                  <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.72)", fontFamily: "'Inter',sans-serif", marginTop: "0.2rem" }}>Always welcoming</p>
                 </div>
               </div>
             </div>
@@ -97,7 +97,7 @@ export default function CoffeePage() {
             {" "}
             <h2 className="font-display text-4xl md:text-5xl font-bold text-charcoal mb-5" style={{ letterSpacing: "-0.03em", lineHeight: "1.1" }}>Our Coffee Menu</h2>
             {" "}
-            <div className="ornament-line max-w-xs mx-auto" style={{ color: "#B0B0B0", fontFamily: "'Inter',sans-serif", fontSize: "0.75rem", letterSpacing: "0.15em" }}><span>Handcrafted Every Cup</span></div>
+            <div className="ornament-line max-w-xs mx-auto" style={{ color: "rgba(43,43,43,0.72)", fontFamily: "'Inter',sans-serif", fontSize: "0.75rem", letterSpacing: "0.15em" }}><span>Handcrafted Every Cup</span></div>
           </div>
           {" "}
           <div className="grid md:grid-cols-2 gap-8 mb-16">
@@ -132,7 +132,7 @@ export default function CoffeePage() {
           {/* Note */}
           {" "}
           <div style={{ textAlign: "center" }}>
-            <p style={{ fontSize: "0.9375rem", color: "rgba(43,43,43,0.65)", fontFamily: "'Inter',sans-serif", marginBottom: "1.25rem" }}>Plus rotating seasonal drink specials, smoothies, frappes, sodas, and 30 flavored syrups.</p>
+            <p style={{ fontSize: "0.9375rem", color: "rgba(43,43,43,0.72)", fontFamily: "'Inter',sans-serif", marginBottom: "1.25rem" }}>Plus rotating seasonal drink specials, smoothies, frappes, sodas, and 30 flavored syrups.</p>
             <Link href="/menu" className="btn-primary">See the Full Menu</Link>
           </div>
         </div>
@@ -145,7 +145,7 @@ export default function CoffeePage() {
             {" "}
             <h2 className="font-display text-4xl md:text-5xl font-bold text-charcoal mb-5" style={{ letterSpacing: "-0.03em", lineHeight: "1.1" }}>Ice Cream &amp;<br /><em>Frozen Treats</em></h2>
             {" "}
-            <div className="ornament-line max-w-xs mx-auto" style={{ color: "#B0B0B0", fontFamily: "'Inter',sans-serif", fontSize: "0.75rem", letterSpacing: "0.15em" }}><span>16 Flavors Offered Daily</span></div>
+            <div className="ornament-line max-w-xs mx-auto" style={{ color: "rgba(43,43,43,0.72)", fontFamily: "'Inter',sans-serif", fontSize: "0.75rem", letterSpacing: "0.15em" }}><span>16 Flavors Offered Daily</span></div>
           </div>
           {" "}
           {/* Big image + text */}
@@ -160,22 +160,22 @@ export default function CoffeePage() {
                 <div className="hover-lift rounded-sm card-shadow bg-white" style={{ padding: "1.25rem" }}>
                   <p className="font-display font-bold text-lg text-charcoal mb-1" style={{ letterSpacing: "-0.02em" }}>Cups &amp; Cones</p>
                   {" "}
-                  <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.55)", fontFamily: "'Inter',sans-serif", lineHeight: "1.6" }}>In a cup or a waffle, cake, or gluten-free cone.</p>
+                  <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.72)", fontFamily: "'Inter',sans-serif", lineHeight: "1.6" }}>In a cup or a waffle, cake, or gluten-free cone.</p>
                 </div>
                 <div className="hover-lift rounded-sm card-shadow bg-white" style={{ padding: "1.25rem" }}>
                   <p className="font-display font-bold text-lg text-charcoal mb-1" style={{ letterSpacing: "-0.02em" }}>Sundaes</p>
                   {" "}
-                  <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.55)", fontFamily: "'Inter',sans-serif", lineHeight: "1.6" }}>Classic sundaes, made to order.</p>
+                  <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.72)", fontFamily: "'Inter',sans-serif", lineHeight: "1.6" }}>Classic sundaes, made to order.</p>
                 </div>
                 <div className="hover-lift rounded-sm card-shadow bg-white" style={{ padding: "1.25rem" }}>
                   <p className="font-display font-bold text-lg text-charcoal mb-1" style={{ letterSpacing: "-0.02em" }}>Malts &amp; Shakes</p>
                   {" "}
-                  <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.55)", fontFamily: "'Inter',sans-serif", lineHeight: "1.6" }}>Malts and milkshakes, blended to order.</p>
+                  <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.72)", fontFamily: "'Inter',sans-serif", lineHeight: "1.6" }}>Malts and milkshakes, blended to order.</p>
                 </div>
                 <div className="hover-lift rounded-sm card-shadow bg-white" style={{ padding: "1.25rem" }}>
                   <p className="font-display font-bold text-lg text-charcoal mb-1" style={{ letterSpacing: "-0.02em" }}>Floats &amp; Affogato</p>
                   {" "}
-                  <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.55)", fontFamily: "'Inter',sans-serif", lineHeight: "1.6" }}>Coffee and root beer floats, or ice cream with a shot of espresso.</p>
+                  <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.72)", fontFamily: "'Inter',sans-serif", lineHeight: "1.6" }}>Coffee and root beer floats, or ice cream with a shot of espresso.</p>
                 </div>
               </div>
             </div>
@@ -249,7 +249,7 @@ export default function CoffeePage() {
                   <div>
                     <p style={{ fontWeight: "600", fontFamily: "'Inter',sans-serif", color: "#2B2B2B", marginBottom: "0.2rem" }}>{ADDRESS_FULL}</p>
                     {" "}
-                    <p style={{ fontSize: "0.875rem", color: "rgba(43,43,43,0.55)", fontFamily: "'Inter',sans-serif" }}>
+                    <p style={{ fontSize: "0.875rem", color: "rgba(43,43,43,0.72)", fontFamily: "'Inter',sans-serif" }}>
                       Downtown Cannon Falls ·{" "}
                       <a href={TEL_HREF} style={{ color: "inherit" }}>{BUSINESS.phone.display}</a>
                     </p>
@@ -265,11 +265,11 @@ export default function CoffeePage() {
                   <div>
                     <p style={{ fontWeight: "600", fontFamily: "'Inter',sans-serif", color: "#2B2B2B", marginBottom: "0.35rem" }}>Hours</p>
                     {" "}
-                    <p style={{ fontSize: "0.875rem", color: "rgba(43,43,43,0.65)", fontFamily: "'Inter',sans-serif", marginBottom: "0.2rem" }}>{hoursAligned(BUSINESS.hours[0])}</p>
+                    <p style={{ fontSize: "0.875rem", color: "rgba(43,43,43,0.72)", fontFamily: "'Inter',sans-serif", marginBottom: "0.2rem" }}>{hoursAligned(BUSINESS.hours[0])}</p>
                     {" "}
-                    <p style={{ fontSize: "0.875rem", color: "rgba(43,43,43,0.65)", fontFamily: "'Inter',sans-serif", marginBottom: "0.2rem" }}>{hoursAligned(BUSINESS.hours[1])}</p>
+                    <p style={{ fontSize: "0.875rem", color: "rgba(43,43,43,0.72)", fontFamily: "'Inter',sans-serif", marginBottom: "0.2rem" }}>{hoursAligned(BUSINESS.hours[1])}</p>
                     {" "}
-                    <p style={{ fontSize: "0.875rem", color: "rgba(43,43,43,0.65)", fontFamily: "'Inter',sans-serif" }}>{hoursAligned(BUSINESS.hours[2])}</p>
+                    <p style={{ fontSize: "0.875rem", color: "rgba(43,43,43,0.72)", fontFamily: "'Inter',sans-serif" }}>{hoursAligned(BUSINESS.hours[2])}</p>
                   </div>
                 </div>
               </div>

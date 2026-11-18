@@ -7,7 +7,7 @@ import { PAGES, ORDER_ONLINE_URL } from "@/lib/site";
 import { PromoBar, GiftButton, GiftMenuLink } from "@/components/Holiday";
 import SocialLinks from "@/components/SocialLinks";
 
-const linkStyle = { fontSize: "0.875rem", fontWeight: "500", fontFamily: "'Inter',sans-serif", color: "rgba(43,43,43,0.55)", textDecoration: "none", transition: "color 0.15s" };
+const linkStyle = { fontSize: "0.875rem", fontWeight: "500", fontFamily: "'Inter',sans-serif", color: "rgba(43,43,43,0.72)", textDecoration: "none", transition: "color 0.15s" };
 const menuLinkStyle = { fontFamily: "'Inter',sans-serif", color: "#2B2B2B" };
 const barStyle = { background: "#2B2B2B" };
 
@@ -33,7 +33,7 @@ export default function SubpageNav({ current }) {
           Back to Home
         </Link>
         <Link href="/" className="md:hidden nav-back-m" aria-label="Back to Home">
-          <BackArrow style={{ color: "rgba(43,43,43,0.55)" }} />
+          <BackArrow style={{ color: "rgba(43,43,43,0.72)" }} />
         </Link>
         </div>
         <Link href="/">

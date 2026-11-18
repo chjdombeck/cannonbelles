@@ -24,7 +24,7 @@ export default function HomePage() {
       <section className="flex flex-col md:flex-row split-container" id="hero-split" style={{ minHeight: "100vh", position: "relative" }}>
         {/* Left: Coffee & Ice Cream */}
         <Link href="/coffee" className="split-panel flex-1 relative flex flex-col items-center justify-end pb-16 px-8 text-center" style={{ minHeight: "50vh" }}>
-          <Image src="/images/shop-interior.jpg" alt="Coffee and ice cream" width={1600} height={1068} sizes="(max-width: 767px) 163vw, 94vw" priority fetchPriority="high" className="absolute inset-0 w-full h-full object-cover" style={{ filter: "brightness(0.52) saturate(0.85)" }} />
+          <Image src="/images/shop-interior.jpg" alt="Coffee and ice cream" width={1600} height={1068} sizes="(max-width: 767px) 130vw, 94vw" priority fetchPriority="high" className="absolute inset-0 w-full h-full object-cover" style={{ filter: "brightness(0.52) saturate(0.85)" }} />
           <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.28) 50%, transparent 100%)" }}></div>
           <div className="relative z-10">
             <p className="section-label mb-3" style={{ color: "rgba(239,230,216,0.85)" }}>Coffee &amp; Ice Cream</p>
@@ -40,7 +40,7 @@ export default function HomePage() {
         <div className="hidden md:block w-px relative z-10" style={{ background: "rgba(255,255,255,0.15)" }}></div>
         {/* Right: Artisanal Cheese */}
         <Link href="/cheese" className="split-panel flex-1 relative flex flex-col items-center justify-end pb-16 px-8 text-center" style={{ minHeight: "50vh" }}>
-          <Image src="/images/painted-desert-cheddar.jpg" alt="Artisanal cheese" width={1402} height={1122} sizes="(max-width: 767px) 136vw, 79vw" loading="eager" className="absolute inset-0 w-full h-full object-cover" style={{ filter: "brightness(0.48) saturate(0.8)" }} />
+          <Image src="/images/painted-desert-cheddar.jpg" alt="Artisanal cheese" width={1402} height={1122} sizes="(max-width: 767px) 100vw, 79vw" loading="eager" className="absolute inset-0 w-full h-full object-cover" style={{ filter: "brightness(0.48) saturate(0.8)" }} />
           <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.22) 50%, transparent 100%)" }}></div>
           <div className="relative z-10">
             <p className="section-label mb-3" style={{ color: "rgba(239,230,216,0.85)" }}>Artisanal Cheese</p>
@@ -67,7 +67,7 @@ export default function HomePage() {
             {" "}
             <h2 className="font-display text-4xl md:text-5xl font-bold text-charcoal mb-5" style={{ letterSpacing: "-0.03em", lineHeight: "1.1" }}>Coffee, Ice Cream<br /><em>&amp; Community</em></h2>
             {" "}
-            <div className="ornament-line max-w-xs mx-auto text-xs" style={{ fontFamily: "'Inter',sans-serif", letterSpacing: "0.15em", color: "#B0B0B0" }}><span>Your Cannon Falls Gathering Place</span></div>
+            <div className="ornament-line max-w-xs mx-auto text-xs" style={{ fontFamily: "'Inter',sans-serif", letterSpacing: "0.15em", color: "rgba(43,43,43,0.72)" }}><span>Your Cannon Falls Gathering Place</span></div>
           </div>
           {" "}
           {/* Feature row */}
@@ -102,7 +102,7 @@ export default function HomePage() {
                 {" "}
                 <h4 className="font-display text-xl font-bold text-charcoal mb-3" style={{ letterSpacing: "-0.02em" }}>Crafted Coffee</h4>
                 {" "}
-                <p style={{ fontSize: "0.875rem", color: "rgba(43,43,43,0.62)", fontFamily: "'Inter',sans-serif", lineHeight: "1.7" }}>From your morning latte to an afternoon cold brew, every cup is made with care and quality beans.</p>
+                <p style={{ fontSize: "0.875rem", color: "rgba(43,43,43,0.72)", fontFamily: "'Inter',sans-serif", lineHeight: "1.7" }}>From your morning latte to an afternoon cold brew, every cup is made with care and quality beans.</p>
               </div>
             </div>
             <div className="hover-lift rounded-sm overflow-hidden card-shadow bg-white">
@@ -115,7 +115,7 @@ export default function HomePage() {
                 {" "}
                 <h4 className="font-display text-xl font-bold text-charcoal mb-3" style={{ letterSpacing: "-0.02em" }}>Sweet Scoops</h4>
                 {" "}
-                <p style={{ fontSize: "0.875rem", color: "rgba(43,43,43,0.62)", fontFamily: "'Inter',sans-serif", lineHeight: "1.7" }}>Generous scoops of premium ice cream in classic and seasonal flavors. The kind that drips a little. The good kind.</p>
+                <p style={{ fontSize: "0.875rem", color: "rgba(43,43,43,0.72)", fontFamily: "'Inter',sans-serif", lineHeight: "1.7" }}>Generous scoops of premium ice cream in classic and seasonal flavors. The kind that drips a little. The good kind.</p>
               </div>
             </div>
             <div className="hover-lift rounded-sm overflow-hidden card-shadow bg-white">
@@ -128,7 +128,7 @@ export default function HomePage() {
                 {" "}
                 <h4 className="font-display text-xl font-bold text-charcoal mb-3" style={{ letterSpacing: "-0.02em" }}>A Town Hangout</h4>
                 {" "}
-                <p style={{ fontSize: "0.875rem", color: "rgba(43,43,43,0.62)", fontFamily: "'Inter',sans-serif", lineHeight: "1.7" }}>Comfortable seating, friendly faces, and a neighborhood feel. Whether catching up or sitting solo, you belong here.</p>
+                <p style={{ fontSize: "0.875rem", color: "rgba(43,43,43,0.72)", fontFamily: "'Inter',sans-serif", lineHeight: "1.7" }}>Comfortable seating, friendly faces, and a neighborhood feel. Whether catching up or sitting solo, you belong here.</p>
               </div>
             </div>
           </div>
@@ -160,7 +160,7 @@ export default function HomePage() {
             {" "}
             <h2 className="font-display text-4xl md:text-5xl font-bold text-charcoal mb-5" style={{ letterSpacing: "-0.03em", lineHeight: "1.1" }}>Handcrafted Cheese<br /><em>Quality You Can Taste</em></h2>
             {" "}
-            <div className="ornament-line max-w-xs mx-auto text-xs" style={{ fontFamily: "'Inter',sans-serif", letterSpacing: "0.15em", color: "#B0B0B0" }}><span style={{ whiteSpace: "nowrap" }}>Small‑Batch · Locally&nbsp;Made · Time‑Honored</span></div>
+            <div className="ornament-line max-w-xs mx-auto text-xs" style={{ fontFamily: "'Inter',sans-serif", letterSpacing: "0.15em", color: "rgba(43,43,43,0.72)" }}><span style={{ whiteSpace: "nowrap" }}>Small‑Batch · Locally&nbsp;Made · Time‑Honored</span></div>
           </div>
           {" "}
           {/* Editorial feature */}
@@ -189,7 +189,7 @@ export default function HomePage() {
               <div style={{ padding: "1.25rem" }}>
                 <h4 className="font-display text-lg font-bold text-charcoal mb-1" style={{ letterSpacing: "-0.02em" }}>Queso Fresco</h4>
                 {" "}
-                <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.55)", fontFamily: "'Inter',sans-serif", lineHeight: "1.65" }}>Our award winner: mild, creamy, and the cheese in every grilled cheese we serve.</p>
+                <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.72)", fontFamily: "'Inter',sans-serif", lineHeight: "1.65" }}>Our award winner: mild, creamy, and the cheese in every grilled cheese we serve.</p>
               </div>
             </div>
             <div className="hover-lift bg-white rounded-sm overflow-hidden card-shadow">
@@ -200,7 +200,7 @@ export default function HomePage() {
               <div style={{ padding: "1.25rem" }}>
                 <h4 className="font-display text-lg font-bold text-charcoal mb-1" style={{ letterSpacing: "-0.02em" }}>Aged Cheddar</h4>
                 {" "}
-                <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.55)", fontFamily: "'Inter',sans-serif", lineHeight: "1.65" }}>Bold, sharp, and full-bodied. Aged 8+ years right here in Cannon Falls.</p>
+                <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.72)", fontFamily: "'Inter',sans-serif", lineHeight: "1.65" }}>Bold, sharp, and full-bodied. Aged 8+ years right here in Cannon Falls.</p>
               </div>
             </div>
             <div className="hover-lift bg-white rounded-sm overflow-hidden card-shadow">
@@ -211,7 +211,7 @@ export default function HomePage() {
               <div style={{ padding: "1.25rem" }}>
                 <h4 className="font-display text-lg font-bold text-charcoal mb-1" style={{ letterSpacing: "-0.02em" }}>Gouda</h4>
                 {" "}
-                <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.55)", fontFamily: "'Inter',sans-serif", lineHeight: "1.65" }}>Creamy and mellow with a buttery finish. Aged at least 3 months.</p>
+                <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.72)", fontFamily: "'Inter',sans-serif", lineHeight: "1.65" }}>Creamy and mellow with a buttery finish. Aged at least 3 months.</p>
               </div>
             </div>
             <div className="hover-lift bg-white rounded-sm overflow-hidden card-shadow">
@@ -222,7 +222,7 @@ export default function HomePage() {
               <div style={{ padding: "1.25rem" }}>
                 <h4 className="font-display text-lg font-bold text-charcoal mb-1" style={{ letterSpacing: "-0.02em" }}>Cheese Curds</h4>
                 {" "}
-                <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.55)", fontFamily: "'Inter',sans-serif", lineHeight: "1.65" }}>Squeaky and fresh in eight flavors, from plain and dill to Grim Reaper.</p>
+                <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.72)", fontFamily: "'Inter',sans-serif", lineHeight: "1.65" }}>Squeaky and fresh in eight flavors, from plain and dill to Grim Reaper.</p>
               </div>
             </div>
           </div>
@@ -247,17 +247,17 @@ export default function HomePage() {
                 <div>
                   <p className="font-display text-2xl font-bold" style={{ color: "#D91E18", marginBottom: "0.25rem" }}>Local</p>
                   {" "}
-                  <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.52)", fontFamily: "'Inter',sans-serif" }}>Rooted in Cannon Falls, MN</p>
+                  <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.72)", fontFamily: "'Inter',sans-serif" }}>Rooted in Cannon Falls, MN</p>
                 </div>
                 <div>
                   <p className="font-display text-2xl font-bold" style={{ color: "#D91E18", marginBottom: "0.25rem" }}>Craft</p>
                   {" "}
-                  <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.52)", fontFamily: "'Inter',sans-serif" }}>Small-batch, made by hand</p>
+                  <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.72)", fontFamily: "'Inter',sans-serif" }}>Small-batch, made by hand</p>
                 </div>
                 <div>
                   <p className="font-display text-2xl font-bold" style={{ color: "#D91E18", marginBottom: "0.25rem" }}>Warm</p>
                   {" "}
-                  <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.52)", fontFamily: "'Inter',sans-serif" }}>Community-first always</p>
+                  <p style={{ fontSize: "0.8125rem", color: "rgba(43,43,43,0.72)", fontFamily: "'Inter',sans-serif" }}>Community-first always</p>
                 </div>
               </div>
             </div>

@@ -4,8 +4,8 @@ import { COPYRIGHT_YEAR } from "@/lib/site";
 import SocialLinks from "@/components/SocialLinks";
 
 const headingStyle = { fontSize: "0.6875rem", fontWeight: "600", color: "#2B2B2B", fontFamily: "'Inter',sans-serif", letterSpacing: "0.18em", textTransform: "uppercase", marginBottom: "1rem" };
-const linkStyle = { fontSize: "0.875rem", color: "rgba(43,43,43,0.58)", textDecoration: "none", transition: "color 0.15s" };
-const smallPrint = { fontSize: "0.75rem", color: "rgba(43,43,43,0.38)", fontFamily: "'Inter',sans-serif" };
+const linkStyle = { fontSize: "0.875rem", color: "rgba(43,43,43,0.72)", textDecoration: "none", transition: "color 0.15s" };
+const smallPrint = { fontSize: "0.75rem", color: "rgba(43,43,43,0.72)", fontFamily: "'Inter',sans-serif" };
 
 const COLUMNS = [
   {
@@ -38,7 +38,7 @@ export default function HomeFooter() {
             <span style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", background: "white", borderRadius: "9999px", width: "96px", height: "96px", overflow: "hidden", boxShadow: "0 1px 6px rgba(43,43,43,0.12)", marginBottom: "1rem", flexShrink: "0" }}>
               <Image src="/Logos.png" alt="CannonBelles" width={1080} height={1080} sizes="96px" style={{ width: "100%", height: "100%", objectFit: "contain", display: "block" }} />
             </span>
-            <p style={{ fontSize: "0.875rem", color: "rgba(43,43,43,0.58)", fontFamily: "'Inter',sans-serif", lineHeight: "1.75", maxWidth: "20rem" }}>Small-town charm meets elevated, handcrafted quality. Coffee, ice cream, and artisanal cheese, made with care in Cannon Falls, Minnesota.</p>
+            <p style={{ fontSize: "0.875rem", color: "rgba(43,43,43,0.72)", fontFamily: "'Inter',sans-serif", lineHeight: "1.75", maxWidth: "20rem" }}>Small-town charm meets elevated, handcrafted quality. Coffee, ice cream, and artisanal cheese, made with care in Cannon Falls, Minnesota.</p>
             <SocialLinks variant="light" className="mt-5" />
           </div>
           {COLUMNS.map((col) => (

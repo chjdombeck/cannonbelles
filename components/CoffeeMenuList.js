@@ -7,7 +7,7 @@ const ITEMS = Object.fromEntries(
 );
 
 const nameStyle = { fontWeight: "600", fontFamily: "'Inter',sans-serif", fontSize: "0.9375rem", color: "#2B2B2B" };
-const descStyle = { fontSize: "0.8125rem", color: "rgba(43,43,43,0.52)", fontFamily: "'Inter',sans-serif", marginTop: "0.15rem" };
+const descStyle = { fontSize: "0.8125rem", color: "rgba(43,43,43,0.72)", fontFamily: "'Inter',sans-serif", marginTop: "0.15rem" };
 
 export default function CoffeeMenuList({ names }) {
   return (
