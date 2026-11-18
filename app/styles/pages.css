@@ -661,7 +661,7 @@
 
 @media (max-width: 767px) {
   :where(.pg-fund) .fund-section, :where(.pg-fund) .fund-cta { padding: 3.75rem 1.25rem; }
-  :where(.pg-fund) .fund-hero { min-height: 78vh; padding: 8rem 0 3.5rem; }
+  :where(.pg-fund) .fund-hero { min-height: 78vh; padding: 10.5rem 0 3.5rem; }
   :where(.pg-fund) .fund-head { margin-bottom: 2rem; }
   :where(.pg-fund) .fund-hero-ctas > a, :where(.pg-fund) .fund-cta-row > a { flex: 1 1 100%; }
 }
@@ -672,4 +672,18 @@
   :where(.pg-fund) .fund-box-body h3 { font-size: 1.125rem; margin-bottom: 0.45rem; }
   :where(.pg-fund) .fund-box-body li { font-size: 0.78rem; margin-bottom: 0.2rem; }
   :where(.pg-fund) .fund-fridge { font-size: 0.625rem; padding-top: 0.6rem; }
+}
+
+/* Cheese hero buttons: two on top, a full-width "Find Our Cheese Near You" below */
+:where(.pg-cheese) .hero-ctas { display: inline-grid; grid-template-columns: auto auto; gap: 0.875rem; }
+:where(.pg-cheese) .hero-ctas > a { justify-content: center; text-align: center; }
+:where(.pg-cheese) .btn-find { grid-column: 1 / -1; display: inline-flex; align-items: center; justify-content: center; gap: 0.6rem; font-family: 'Inter', sans-serif; font-size: 0.8125rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #2B2B2B; background: #EFE6D8; border-radius: 3px; padding: 0.95rem 1.5rem; box-shadow: 0 1px 2px rgba(0,0,0,0.2), 0 6px 18px rgba(0,0,0,0.22); transition: transform 0.25s cubic-bezier(0.34,1.56,0.64,1), background-color 0.2s ease, box-shadow 0.25s ease; }
+:where(.pg-cheese) .btn-find svg { color: #D91E18; flex-shrink: 0; }
+:where(.pg-cheese) .btn-find-arrow { display: inline-block; color: #D91E18; transition: transform 0.25s cubic-bezier(0.34,1.56,0.64,1); }
+:where(.pg-cheese) .btn-find:hover { background: #fff; transform: translateY(-1px); box-shadow: 0 2px 4px rgba(0,0,0,0.2), 0 10px 26px rgba(0,0,0,0.28); }
+:where(.pg-cheese) .btn-find:hover .btn-find-arrow { transform: translateY(2px); }
+:where(.pg-cheese) .btn-find:active { transform: translateY(0) scale(0.99); background: #E4DACB; }
+:where(.pg-cheese) .btn-find:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+@media (max-width: 479px) {
+  :where(.pg-cheese) .hero-ctas { display: grid; grid-template-columns: 1fr; width: 100%; }
 }

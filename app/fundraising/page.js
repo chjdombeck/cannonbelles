@@ -61,8 +61,8 @@ export default function FundraisingPage() {
 
       {/* HERO */}
       <div className="fund-hero relative overflow-hidden">
-        <Image src="/images/cheese-flatlay.jpg" alt="CannonBelles cheeses and curds on a board" width={1600} height={1066} sizes="(max-width: 767px) 286vw, 100vw" priority fetchPriority="high" className="absolute inset-0 w-full h-full object-cover" style={{ filter: "brightness(0.42) saturate(0.85)" }} />
-        <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.3) 55%, rgba(0,0,0,0.1) 100%)" }}></div>
+        <Image src="/images/hero-fundraising.jpg" alt="Award-winning CannonBelles Grim Reaper Cheddar with its 2024 American Cheese Society medal" width={2390} height={1792} sizes="(max-width: 767px) 240vw, 100vw" priority fetchPriority="high" className="absolute inset-0 w-full h-full object-cover" style={{ filter: "brightness(0.5) saturate(0.9)", objectPosition: "62% 55%" }} />
+        <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.25) 55%, rgba(0,0,0,0.1) 100%), linear-gradient(to right, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.25) 45%, transparent 70%)" }}></div>
         <div className="relative max-w-7xl mx-auto px-6 w-full">
           <div className="max-w-2xl">
             <p className="section-label mb-4" style={{ color: "rgba(239,230,216,0.85)" }}>Schools · Teams · Clubs · Churches</p>

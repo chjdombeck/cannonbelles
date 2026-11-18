@@ -33,9 +33,14 @@ export default function CheesePage() {
             {" "}
             <p style={{ color: "rgba(255,255,255,0.65)", fontFamily: "'Inter',sans-serif", fontSize: "1.0625rem", lineHeight: "1.75", maxWidth: "32rem", marginBottom: "2rem" }}>Small-batch, handcrafted cheese made right here in Cannon Falls using time-honored techniques and quality local ingredients. Taste the difference that care makes.</p>
             {" "}
-            <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
+            <div className="hero-ctas">
               <a href={SHOP_ALL_URL} target="_blank" rel="noopener" className="btn-primary">Shop Online <ExternalIcon /></a>
               <a href="#selection" className="btn-ghost-light">See Our Selection</a>
+              <a href="#stores" className="btn-find">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z" /><circle cx="12" cy="10" r="3" /></svg>
+                Find Our Cheese Near You
+                <span className="btn-find-arrow" aria-hidden="true">↓</span>
+              </a>
             </div>
           </div>
         </div>
