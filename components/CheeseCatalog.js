@@ -41,7 +41,7 @@ export default function CheeseCatalog() {
       {CHEESE_GROUPS.map((g) => (
         <section key={g.id} id={g.id} className="cat-group card-shadow">
           <div className="cat-group-img img-hover">
-            <Image src={g.image.src} alt={g.image.alt} width={g.image.width} height={g.image.height} sizes="(max-width: 767px) 92vw, 30vw" className="w-full h-full object-cover" />
+            <Image src={g.image.src} alt={g.image.alt} width={g.image.width} height={g.image.height} sizes="(max-width: 767px) 92vw, 30vw" className="w-full h-full object-cover" style={g.image.position ? { objectPosition: g.image.position } : undefined} />
           </div>
           <div className="cat-group-body">
             <div className="cat-group-head">
