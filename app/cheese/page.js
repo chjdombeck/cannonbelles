@@ -6,7 +6,7 @@ import { BUSINESS, ADDRESS_FULL, TEL_HREF, MAPS_URL, SHOP_ALL_URL, hoursAligned 
 import ExternalIcon from "@/components/ExternalIcon";
 import CheeseCatalog from "@/components/CheeseCatalog";
 import StoreFinder from "@/components/StoreFinder";
-import { CANNON_FALLS_STOCKISTS } from "@/lib/cheeses";
+import { CANNON_FALLS_STOCKISTS, LOCAL_PARTNERS } from "@/lib/cheeses";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
@@ -160,11 +160,34 @@ export default function CheesePage() {
                   </div>
                 </div>
               </div>
+              {/* Locally sourced: the producers behind our ingredients */}
+              <div className="local-partners">
+                <p className="section-label mb-2">Locally Sourced</p>
+                <h3 className="font-display local-partners-title">Meet Our Local Producers</h3>
+                <p className="local-partners-intro">Great cheese starts with great ingredients, so we partner with local producers who share our passion for quality.</p>
+                <ul className="local-partners-list">
+                  {LOCAL_PARTNERS.map((lp) => (
+                    <li key={lp.name}>
+                      <a href={lp.href} target="_blank" rel="noopener" className="local-partner">
+                        <Image src={lp.thumb} alt="" width={240} height={240} sizes="56px" className="local-partner-img" />
+                        <span className="local-partner-body">
+                          <span className="local-partner-name">{lp.name} <span className="local-partner-role">{lp.role}</span></span>
+                          <span className="local-partner-text">{lp.text}</span>
+                        </span>
+                        <span className="local-partner-arrow" aria-hidden="true">↗</span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
             <div className="process-sticky" style={{ position: "sticky", top: "5rem" }}>
-              <div className="img-hover rounded-sm card-shadow" style={{ aspectRatio: "3/4", overflow: "hidden", marginBottom: "1.25rem" }}>
-                <Image src="/images/painted-desert-cheddar.jpg" alt="CannonBelles Painted Desert Cheddar" width={1402} height={1122} sizes="(max-width: 767px) 117vw, 57vw" className="w-full h-full object-cover" />
-              </div>
+              <figure className="dairy-figure card-shadow">
+                <div className="img-hover" style={{ aspectRatio: "3/2", overflow: "hidden" }}>
+                  <Image src="/images/partners/square-deal-dairy.jpg" alt="The Square Deal Dairy family on their farm in Randolph, Minnesota" width={1440} height={960} sizes="(max-width: 767px) 92vw, 44vw" className="w-full h-full object-cover" />
+                </div>
+                <figcaption><strong>Square Deal Dairy</strong> · Randolph, MN<span>The family behind every drop of our milk</span></figcaption>
+              </figure>
               {" "}
               <div style={{ background: "#EFE6D8", borderRadius: "3px", padding: "1.5rem", borderLeft: "3px solid #D91E18" }}>
                 <p className="font-display italic text-charcoal text-lg leading-relaxed">"Made with patience, care, and a genuine love for the craft, the same way it's always been done."</p>
