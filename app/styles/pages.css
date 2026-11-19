@@ -682,3 +682,47 @@
 :where(.pg-menu) .menu-photo-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 1.5rem; }
 @media (min-width: 900px) { :where(.pg-menu) .menu-photo-pair { margin: 0.75rem 0 0; } }
 :where(.pg-menu) .menu-photo-sm { position: relative; overflow: hidden; border-radius: 3px; aspect-ratio: 1/1; }
+
+/* Store map: schools (gold) */
+:where(.pg-cheese) .sf-pin-school { background: #E0A526; color: #2B2B2B; border-radius: 6px; transform: rotate(0deg); }
+:where(.pg-cheese) .sf-pin-school svg { display: block; }
+:where(.pg-cheese) .sf-pop-school .sf-pop-kicker { margin: 0 0 0.1rem; font: 700 0.5938rem/1.4 'Inter', sans-serif; letter-spacing: 0.16em; text-transform: uppercase; color: #9A6B00; }
+:where(.pg-cheese) .sf-pop-school li::before { color: #E0A526; }
+:where(.pg-cheese) .sf-legend { position: absolute; left: 0.75rem; bottom: 0.75rem; z-index: 500; display: flex; gap: 0.9rem; padding: 0.45rem 0.75rem; background: rgba(255,255,255,0.94); border-radius: 3px; box-shadow: 0 1px 4px rgba(43,43,43,0.15); font: 600 0.75rem/1 'Inter', sans-serif; color: #2B2B2B; pointer-events: none; }
+:where(.pg-cheese) .sf-legend span { display: inline-flex; align-items: center; gap: 0.4rem; }
+:where(.pg-cheese) .sf-legend-dot { display: inline-block; width: 12px; height: 12px; border-radius: 50%; background: #D91E18; border: 2px solid #fff; box-shadow: 0 0 0 1px rgba(43,43,43,0.15); }
+:where(.pg-cheese) .sf-legend-school { background: #E0A526; border-radius: 3px; }
+
+:where(.pg-cheese) .sf-extra { margin-top: 1.75rem; display: grid; grid-template-columns: 1fr; gap: 1rem; align-items: start; }
+@media (min-width: 1024px) { :where(.pg-cheese) .sf-extra { grid-template-columns: 2fr 1fr; } }
+:where(.pg-cheese) .sf-schools { padding: 1.5rem 1.5rem 1.6rem; background: linear-gradient(135deg, #FBF3DD 0%, #F7EBC8 100%); border: 1px solid rgba(224,165,38,0.45); border-left: 4px solid #E0A526; border-radius: 3px; box-shadow: 0 1px 2px rgba(43,43,43,0.05), 0 8px 24px rgba(154,107,0,0.08); }
+:where(.pg-cheese) .sf-schools-head { display: flex; align-items: center; gap: 0.9rem; margin-bottom: 1.1rem; }
+:where(.pg-cheese) .sf-schools-icon { flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; width: 2.75rem; height: 2.75rem; border-radius: 6px; background: #E0A526; color: #2B2B2B; box-shadow: 0 2px 6px rgba(154,107,0,0.3); }
+:where(.pg-cheese) .sf-schools-title { font-size: 1.5rem; font-weight: 700; color: #2B2B2B; letter-spacing: -0.02em; line-height: 1.15; }
+:where(.pg-cheese) .sf-schools-sub { margin-top: 0.2rem; font-family: 'Inter', sans-serif; font-size: 0.875rem; line-height: 1.55; color: rgba(43,43,43,0.75); }
+:where(.pg-cheese) .sf-schools-list { display: grid; grid-template-columns: 1fr; gap: 0.5rem; }
+@media (min-width: 560px) { :where(.pg-cheese) .sf-schools-list { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1280px) { :where(.pg-cheese) .sf-schools-list { grid-template-columns: repeat(3, 1fr); } }
+:where(.pg-cheese) .sf-school { width: 100%; height: 100%; display: flex; flex-direction: column; align-items: flex-start; gap: 0.1rem; text-align: left; padding: 0.6rem 0.8rem; background: rgba(255,255,255,0.8); border-radius: 3px; box-shadow: 0 1px 2px rgba(154,107,0,0.12); transition: transform 0.2s cubic-bezier(0.34,1.56,0.64,1), background-color 0.2s ease, box-shadow 0.2s ease; }
+:where(.pg-cheese) .sf-school:hover { background: #fff; transform: translateY(-1px); box-shadow: 0 2px 4px rgba(154,107,0,0.15), 0 6px 14px rgba(154,107,0,0.12); }
+:where(.pg-cheese) .sf-school:active { transform: translateY(0); }
+:where(.pg-cheese) .sf-school-name { font-family: 'Inter', sans-serif; font-size: 0.875rem; font-weight: 600; color: #2B2B2B; line-height: 1.35; }
+:where(.pg-cheese) .sf-school-city { font-family: 'Inter', sans-serif; font-size: 0.75rem; color: #7A5C3E; }
+@media (max-width: 559px) { :where(.pg-cheese) .sf-schools { padding: 1.15rem 1rem 1.2rem; } :where(.pg-cheese) .sf-schools-title { font-size: 1.3rem; } }
+
+/* Store map: distributors (brown) */
+:where(.pg-cheese) .sf-pin-dist { background: #7A5C3E; color: #fff; border-radius: 6px; }
+:where(.pg-cheese) .sf-pin-dist svg { display: block; }
+:where(.pg-cheese) .sf-pop-dist .sf-pop-kicker { margin: 0 0 0.1rem; font: 700 0.5938rem/1.4 'Inter', sans-serif; letter-spacing: 0.16em; text-transform: uppercase; color: #7A5C3E; }
+:where(.pg-cheese) .sf-pop-dist li::before { color: #7A5C3E; }
+:where(.pg-cheese) .sf-legend-dist { background: #7A5C3E; border-radius: 3px; }
+:where(.pg-cheese) .sf-dists { padding: 1.5rem 1.5rem 1.6rem; background: linear-gradient(135deg, #F3ECE3 0%, #EADFD0 100%); border: 1px solid rgba(122,92,62,0.3); border-left: 4px solid #7A5C3E; border-radius: 3px; box-shadow: 0 1px 2px rgba(43,43,43,0.05), 0 8px 24px rgba(122,92,62,0.08); }
+:where(.pg-cheese) .sf-dists-icon { flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; width: 2.75rem; height: 2.75rem; border-radius: 6px; background: #7A5C3E; color: #fff; box-shadow: 0 2px 6px rgba(122,92,62,0.3); }
+:where(.pg-cheese) .sf-dists-list { display: grid; gap: 0.5rem; }
+:where(.pg-cheese) .sf-dist { width: 100%; display: flex; flex-direction: column; align-items: flex-start; gap: 0.1rem; text-align: left; padding: 0.6rem 0.8rem; background: rgba(255,255,255,0.8); border-radius: 3px; box-shadow: 0 1px 2px rgba(122,92,62,0.12); transition: transform 0.2s cubic-bezier(0.34,1.56,0.64,1), background-color 0.2s ease, box-shadow 0.2s ease; }
+:where(.pg-cheese) .sf-dist:hover { background: #fff; transform: translateY(-1px); box-shadow: 0 2px 4px rgba(122,92,62,0.15), 0 6px 14px rgba(122,92,62,0.12); }
+:where(.pg-cheese) .sf-dist:active { transform: translateY(0); }
+:where(.pg-cheese) .sf-tag { display: inline-block; margin-left: 0.4rem; padding: 0.1rem 0.4rem; border-radius: 2px; font: 700 0.5625rem/1.5 'Inter', sans-serif; letter-spacing: 0.1em; text-transform: uppercase; vertical-align: 1px; white-space: nowrap; }
+:where(.pg-cheese) .sf-tag-school { background: #F5DFA0; color: #5C4000; }
+:where(.pg-cheese) .sf-tag-dist { background: #7A5C3E; color: #fff; }
+@media (max-width: 559px) { :where(.pg-cheese) .sf-dists { padding: 1.15rem 1rem 1.2rem; } }
