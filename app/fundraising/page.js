@@ -3,19 +3,18 @@ import Link from "next/link";
 import SubpageNav from "@/components/SubpageNav";
 import SubpageFooter from "@/components/SubpageFooter";
 import { FUNDRAISING } from "@/lib/site";
-import { FUND_BOXES, MARKUPS, money } from "@/lib/fundraising";
+import { FUND_BOXES } from "@/lib/fundraising";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
   path: "/fundraising",
   title: "Fundraising with CannonBelles Cheese | Cannon Falls, MN",
   description:
-    "Raise money for your school, team, or organization with award-winning CannonBelles cheese gift boxes, handcrafted in Cannon Falls, MN. See the boxes, how it works, and potential profits.",
+    "Raise money for your school, team, or organization with award-winning CannonBelles cheese gift boxes, handcrafted in Cannon Falls, MN. See the boxes and how it works, then contact us for pricing.",
 });
 
 const MAILTO = `mailto:${FUNDRAISING.email}?subject=${encodeURIComponent("CannonBelles fundraiser")}`;
 const TEL = `tel:${FUNDRAISING.phone.tel}`;
-const PACKET = "/fundraising/CannonBelles-Fundraising-Packet-2026.pdf";
 
 const WHY = [
   { icon: "award", title: "Award-Winning Cheese", text: "Our cheeses have won top honors at international and state competitions." },
@@ -48,7 +47,7 @@ const STEPS = [
       { label: "Option 2", text: "Your organization assembles the boxes (box, label, fluff, cheese, and so on). It's easier for storing the cheese, and you can add your own twist." },
     ],
   },
-  { title: "Raise funds", body: "Your organization sets its own selling prices (see the profit chart below). You'll get the sales flyer and order form as editable electronic files." },
+  { title: "Raise funds", body: "Your organization sets its own selling prices. Contact us for pricing, and we'll send the sales flyer and order form as editable electronic files." },
   { title: "Place your final order", body: <>Email <a href={MAILTO} className="fund-link">{FUNDRAISING.email}</a> with your order at least {FUNDRAISING.leadWeeks} weeks before your preferred delivery date.</> },
   { title: "Delivery", body: "Once your final order is placed, we'll schedule your delivery date. Every box except the Coffee Box must be refrigerated, but not frozen." },
   { title: "Payment", body: `CannonBelles invoices your organization at delivery, with a ${FUNDRAISING.paymentDays}-day payment period.` },
@@ -70,7 +69,7 @@ export default function FundraisingPage() {
             <p className="fund-hero-text">CannonBelles Cheese is a women-owned artisan cheese business in Cannon Falls, MN. Our gift boxes make an easy, delicious fundraiser that people are happy to buy.</p>
             <div className="fund-hero-ctas">
               <a href={MAILTO} className="btn-primary">Start a Fundraiser</a>
-              <a href={PACKET} target="_blank" rel="noopener" className="fund-btn-ghost">Download the Packet (PDF)</a>
+              <a href={TEL} className="fund-btn-ghost">Call {FUNDRAISING.phone.display}</a>
             </div>
           </div>
         </div>
@@ -154,77 +153,18 @@ export default function FundraisingPage() {
         </div>
       </section>
 
-      {/* PROFITS */}
-      <section id="profits" className="fund-section" style={{ background: "#EFE6D8" }}>
-        <div className="max-w-6xl mx-auto">
-          <div className="fund-head">
-            <p className="section-label mb-3">You Set the Price</p>
-            <h2 className="fund-h2 font-display">Potential<br /><em>Profits</em></h2>
-            <p className="fund-lede">Your cost per box, with example selling prices and what your organization makes on each box.</p>
-          </div>
-
-          {/* table (tablet and up) */}
-          <div className="fund-table-wrap card-shadow">
-            <table className="fund-table">
-              <thead>
-                <tr>
-                  <th rowSpan={2} scope="col" className="fund-th-box">Gift Box</th>
-                  <th rowSpan={2} scope="col">Your Cost</th>
-                  {MARKUPS.map((m, i) => <th key={m} colSpan={2} scope="colgroup" className={`fund-tier fund-tier-${i}`}>{m} markup</th>)}
-                </tr>
-                <tr>
-                  {MARKUPS.map((m, i) => (
-                    <FragmentCells key={m} i={i} />
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {FUND_BOXES.map((b) => (
-                  <tr key={b.name}>
-                    <th scope="row" className="fund-th-box">{b.name}</th>
-                    <td>{money(b.cost)}</td>
-                    {b.tiers.map((p, i) => (
-                      <TierCells key={i} i={i} price={p} make={p - b.cost} />
-                    ))}
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-
-          {/* cards (phones) */}
-          <div className="fund-profit-cards">
-            {FUND_BOXES.map((b) => (
-              <div key={b.name} className="fund-profit-card">
-                <div className="fund-profit-top"><h3 className="font-display">{b.name}</h3><p>Your cost <strong>{money(b.cost)}</strong></p></div>
-                <div className="fund-profit-tiers">
-                  {b.tiers.map((p, i) => (
-                    <div key={i} className={`fund-profit-tier fund-tier-${i}`}>
-                      <p className="fund-profit-mk">{MARKUPS[i]}</p>
-                      <p>Sell <strong>${p}</strong></p>
-                      <p className="fund-profit-make">Make {money(p - b.cost)}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-          <p className="fund-note">Prices are per box for the 2026 season. Your organization chooses its own selling price.</p>
-        </div>
-      </section>
-
       {/* CONTACT */}
       <section className="fund-cta">
         <div className="max-w-3xl mx-auto text-center relative">
           <p className="section-label mb-3" style={{ color: "rgba(239,230,216,0.75)" }}>Questions? Ready to Start?</p>
           <h2 className="fund-h2 font-display text-white">Let&apos;s Plan<br /><em>Your Fundraiser</em></h2>
-          <p className="fund-cta-text">Contact {FUNDRAISING.contact}, co-owner of CannonBelles, and we&apos;ll get you set up with flyers and order forms.</p>
+          <p className="fund-cta-text">For pricing and to get started, contact {FUNDRAISING.contact}, co-owner of CannonBelles. We&apos;ll walk you through everything and set you up with flyers and order forms.</p>
           <div className="fund-cta-row">
             <a href={MAILTO} className="btn-primary">Email {FUNDRAISING.contact.split(" ")[0]}</a>
             <a href={TEL} className="fund-btn-ghost">Call {FUNDRAISING.phone.display}</a>
           </div>
           <p className="fund-cta-small">
-            {FUNDRAISING.email} · <a href={PACKET} target="_blank" rel="noopener" className="fund-link-light">Fundraising packet &amp; order form (PDF)</a> · <Link href="/cheese" className="fund-link-light">Meet our cheeses</Link>
+            {FUNDRAISING.email} · <Link href="/cheese" className="fund-link-light">Meet our cheeses</Link>
           </p>
         </div>
       </section>
@@ -234,20 +174,3 @@ export default function FundraisingPage() {
   );
 }
 
-function FragmentCells({ i }) {
-  return (
-    <>
-      <th scope="col" className={`fund-sub fund-tier-${i}`}>Sell Price</th>
-      <th scope="col" className={`fund-sub fund-tier-${i}`}>You Make</th>
-    </>
-  );
-}
-
-function TierCells({ i, price, make }) {
-  return (
-    <>
-      <td className={`fund-tier-${i}`}>${price}</td>
-      <td className={`fund-tier-${i} fund-make`}>{money(make)}</td>
-    </>
-  );
-}
