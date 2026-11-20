@@ -57,6 +57,7 @@ export default function HomeFooter() {
         <div style={{ borderTop: "1px solid #E5E5E5", paddingTop: "1.75rem", display: "flex", flexDirection: "column", alignItems: "center", gap: "0.75rem" }}>
           <p style={{ ...smallPrint, textAlign: "center" }}>© {COPYRIGHT_YEAR} CannonBelles · Cannon Falls, Minnesota · All rights reserved</p>
           <p style={{ ...smallPrint, letterSpacing: "0.1em" }}>Simple · Local · Delicious</p>
+          <p className="site-credit">Site by <a href="https://www.ceejaysocial.com/" target="_blank" rel="noopener">CeeJay Social</a></p>
         </div>
       </div>
     </footer>

@@ -30,6 +30,7 @@ export default function SubpageFooter({ current }) {
         </div>
         <div style={{ borderTop: "1px solid rgba(255,255,255,0.1)", paddingTop: "1.5rem", textAlign: "center" }}>
           <p style={{ fontSize: "0.75rem", color: "rgba(255,255,255,0.6)", fontFamily: "'Inter',sans-serif" }}>© {COPYRIGHT_YEAR} CannonBelles · Cannon Falls, Minnesota · Simple · Local · Delicious</p>
+          <p className="site-credit site-credit-dark">Site by <a href="https://www.ceejaysocial.com/" target="_blank" rel="noopener">CeeJay Social</a></p>
         </div>
       </div>
     </footer>
