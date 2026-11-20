@@ -416,7 +416,9 @@
 }
 
 /* Our Story: owners photo (centered portrait frame above the owner cards) */
-:where(.pg-story) .owners-photo-frame { max-width: 21rem; margin: 0 auto 2.5rem; }
+:where(.pg-story) .owners-photo-frame { max-width: 45rem; margin: 0 auto 2.5rem; }
+:where(.pg-story) .owners-photo-caption { margin-top: 0.9rem; text-align: center; font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-size: 1.0625rem; color: rgba(43,43,43,0.72); }
+:where(.pg-story) .owners-photo-caption span[aria-hidden] { color: #BC1914; font-style: normal; margin: 0 0.15rem; }
 @media (min-width: 768px) { :where(.pg-story) .owners-photo-frame { margin-bottom: 3rem; } }
 
 /* ---------- Cheese page: catalog by type (components/CheeseCatalog.js) ---------- */

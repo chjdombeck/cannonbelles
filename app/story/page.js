@@ -76,12 +76,13 @@ export default function StoryPage() {
             <div className="ornament-line max-w-xs mx-auto" style={{ color: "rgba(43,43,43,0.72)", fontFamily: "'Inter',sans-serif", fontSize: "0.75rem", letterSpacing: "0.15em" }}><span>The Faces of CannonBelles</span></div>
           </div>
           {" "}
-          {/* Owners photo (casual for now; swap in a professional photo of Kathy & Jackie when available) */}
-          <div className="owners-photo-frame">
-            <div className="img-hover rounded-sm card-shadow" style={{ aspectRatio: "4/5", overflow: "hidden" }}>
-              <Image src="/images/cheesemakers-duo.jpg" alt="CannonBelles owners Jackie Ohmann (left) and Kathy Hupf (right)" width={397} height={640} sizes="(max-width: 767px) 88vw, 340px" className="w-full h-full object-cover" style={{ objectPosition: "center 25%" }} />
+          {/* Owners photo: Jackie Ohmann (left) and Kathy Hupf (right) at the CannonBelles booth */}
+          <figure className="owners-photo-frame">
+            <div className="img-hover rounded-sm card-shadow" style={{ aspectRatio: "1800/1455", overflow: "hidden" }}>
+              <Image src="/images/owners-booth.jpg" alt="CannonBelles owners Jackie Ohmann (left) and Kathy Hupf (right) at the CannonBelles cheese booth" width={1800} height={1455} sizes="(max-width: 767px) 92vw, 720px" className="w-full h-full object-cover" />
             </div>
-          </div>
+            <figcaption className="owners-photo-caption">Jackie Ohmann <span aria-hidden="true">&amp;</span><span className="sr-only">and</span> Kathy Hupf</figcaption>
+          </figure>
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             <div className="owner-card owner-bio">
               <p className="section-label mb-3">Co-Owner</p>
